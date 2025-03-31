@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Discount" transform="translate(0 0)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M9.25-.75c3.813,0,6.205.692,7.757,2.243S19.25,5.437,19.25,9.25s-.692,6.205-2.243,7.757S13.063,19.25,9.25,19.25s-6.205-.692-7.757-2.243S-.75,13.063-.75,9.25s.692-6.205,2.243-7.757S5.437-.75,9.25-.75Zm0,18.5c6.514,0,8.5-1.986,8.5-8.5S15.764.75,9.25.75.75,2.736.75,9.25,2.736,17.75,9.25,17.75Z" transform="translate(0.75 0.75)"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M0,5.89a.748.748,0,0,1-.53-.22.75.75,0,0,1,0-1.061L4.61-.53a.75.75,0,0,1,1.061,0A.75.75,0,0,1,5.67.53L.53,5.67A.748.748,0,0,1,0,5.89Z" transform="translate(7.43 7.43)"/>
+    <path id="Stroke_15" data-name="Stroke 15" d="M.5,1.5H.5a1,1,0,0,1,0-2H.5a1,1,0,1,1,0,2Z" transform="translate(12 12)"/>
+    <path id="Stroke_15-2" data-name="Stroke 15" d="M.5,1.5H.5a1,1,0,0,1,0-2H.5a1,1,0,1,1,0,2Z" transform="translate(7 7)"/>
+  </g>
+</svg>

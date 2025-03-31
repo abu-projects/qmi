@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.049" height="21.5" viewBox="0 0 20.049 21.5">
+  <g id="Calendar" transform="translate(0.75 0.75)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M9.274-.75C13.1-.75,15.5-.057,17.05,1.5S19.3,5.451,19.3,9.274s-.694,6.221-2.249,7.776S13.1,19.3,9.274,19.3,3.054,18.6,1.5,17.05-.75,13.1-.75,9.274-.057,3.053,1.5,1.5,5.452-.75,9.274-.75Zm0,18.548c6.533,0,8.525-1.992,8.525-8.524S15.807.75,9.274.75.75,2.742.75,9.274,2.742,17.8,9.274,17.8Z" transform="translate(0 1.452)"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M18.008,1.25H0A.75.75,0,1,1,0-.25H18.008a.75.75,0,0,1,0,1.5Z" transform="translate(0.275 6.774)"/>
+    <path id="Stroke_5" data-name="Stroke 5" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(13.183 10.711)"/>
+    <path id="Stroke_7" data-name="Stroke 7" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(8.784 10.711)"/>
+    <path id="Stroke_9" data-name="Stroke 9" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(4.376 10.711)"/>
+    <path id="Stroke_11" data-name="Stroke 11" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(13.183 14.563)"/>
+    <path id="Stroke_13" data-name="Stroke 13" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(8.784 14.563)"/>
+    <path id="Stroke_15" data-name="Stroke 15" d="M.5,1.25H.5a.75.75,0,0,1,0-1.5H.5a.75.75,0,1,1,0,1.5Z" transform="translate(4.376 14.563)"/>
+    <path id="Stroke_17" data-name="Stroke 17" d="M.5,4.012a.75.75,0,0,1-.75-.75V0a.75.75,0,0,1,1.5,0V3.262A.75.75,0,0,1,.5,4.012Z" transform="translate(12.783 0)"/>
+    <path id="Stroke_19" data-name="Stroke 19" d="M.5,4.012a.75.75,0,0,1-.75-.75V0a.75.75,0,0,1,1.5,0V3.262A.75.75,0,0,1,.5,4.012Z" transform="translate(4.775 0)"/>
+  </g>
+</svg>

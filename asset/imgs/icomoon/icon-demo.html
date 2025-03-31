@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Font Demo</title>
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- IcoMoon Font CSS -->
+    <link rel="stylesheet" href="icomoon.css">
+      <!-- canvas CSS -->
+     <link rel="stylesheet" href="../..//css/canvas.css">
+        <!-- style CSS -->
+     <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="mb-4">Icon Font Demo</h1>
+        <div class="alert alert-info">
+            <h4 class="alert-heading">Font Generation Required</h4>
+            <p>The icons on this page are placeholders. To see the actual icons, you need to generate a font from your SVG files.</p>
+            <p>Please follow the instructions in <code>fonts/FONT_GENERATION_GUIDE.md</code> to generate the icon font.</p>
+            <p>Once you've generated the font files, place them in the <code>fonts</code> directory and the icons will appear correctly.</p>
+        </div>
+        <p class="mb-4">This page demonstrates the icon font system and provides a cheat sheet for all available icons.</p>
+        
+        <div id="iconCheatSheet" class="icon-cheat-sheet" style="display: block;">
+            <div class="container py-5">
+                <h2 class="mb-4">Icon Cheat Sheet</h2>
+                <button id="toggleIconSheet" class="btn btn-sm btn-outline-secondary mb-3">Toggle Icon Sheet</button>
+                
+                <div class="row g-3" id="iconGrid">
+                    <!-- Home icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-home icon-lg"></i>
+                            <div class="mt-2 small">.icon-home</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-search icon-lg"></i>
+                            <div class="mt-2 small">.icon-search</div>
+                        </div>
+                    </div>
+                    
+                    <!-- User icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-user icon-lg"></i>
+                            <div class="mt-2 small">.icon-user</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Heart icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-heart icon-lg icon-pink"></i>
+                            <div class="mt-2 small">.icon-heart</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendar icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-calendar icon-lg icon-blue"></i>
+                            <div class="mt-2 small">.icon-calendar</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-settings icon-lg"></i>
+                            <div class="mt-2 small">.icon-settings</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow Right icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-arrow-right icon-lg icon-yellow"></i>
+                            <div class="mt-2 small">.icon-arrow-right</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow Left icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-arrow-left icon-lg icon-yellow"></i>
+                            <div class="mt-2 small">.icon-arrow-left</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow Up icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-arrow-up icon-lg"></i>
+                            <div class="mt-2 small">.icon-arrow-up</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow Down icon -->
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <div class="icon-demo-box p-3 border rounded text-center">
+                            <i class="icon-arrow-down icon-lg"></i>
+                            <div class="mt-2 small">.icon-arrow-down</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4>Color Options</h4>
+                    <div class="d-flex flex-wrap gap-3 mt-3">
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg"></i>
+                            <span class="ms-2">Default</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg icon-yellow"></i>
+                            <span class="ms-2">.icon-yellow</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg icon-blue"></i>
+                            <span class="ms-2">.icon-blue</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg icon-pink"></i>
+                            <span class="ms-2">.icon-pink</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg icon-black"></i>
+                            <span class="ms-2">.icon-black</span>
+                        </div>
+                        <div class="p-3 border bg-dark rounded">
+                            <i class="icon-heart icon-lg icon-white"></i>
+                            <span class="ms-2 text-white">.icon-white</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4>Size Options</h4>
+                    <div class="d-flex flex-wrap gap-3 mt-3 align-items-center">
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-sm icon-pink"></i>
+                            <span class="ms-2">.icon-sm</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-md icon-pink"></i>
+                            <span class="ms-2">.icon-md (default)</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-lg icon-pink"></i>
+                            <span class="ms-2">.icon-lg</span>
+                        </div>
+                        <div class="p-3 border rounded">
+                            <i class="icon-heart icon-xl icon-pink"></i>
+                            <span class="ms-2">.icon-xl</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

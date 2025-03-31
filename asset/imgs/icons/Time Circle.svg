@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Time_Circle" data-name="Time Circle" transform="translate(0 0)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M9.25-.75a10,10,0,1,1-10,10A10.011,10.011,0,0,1,9.25-.75Zm0,18.5a8.5,8.5,0,1,0-8.5-8.5A8.51,8.51,0,0,0,9.25,17.75Z" transform="translate(0.75 0.75)"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M4.53,5.671H4.518L-.012,5.6a.75.75,0,0,1-.738-.75V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V4.109l3.792.062a.75.75,0,0,1-.012,1.5Z" transform="translate(9.661 5.846)"/>
+  </g>
+</svg>

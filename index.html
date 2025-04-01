@@ -36,95 +36,58 @@
                 </div>
 
                 <!-- Main Navigation -->
+
                 <nav class="navbar navbar-expand-lg">
                   <div class="container-fluid">
-                    <!-- Toggle visible only below 992px -->
-                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">
-                      <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler d-lg-none" id="menuToggle" type="button">
+                      <i class="bi bi-list fs-2"></i>
                     </button>
-
-                    <!-- Desktop Navigation -->
-                    <div class="collapse navbar-collapse d-none d-lg-block">
+                
+                    <div class="responsive-menu" id="mainMenu">
+                      <div class="d-flex justify-content-end d-lg-none">
+                        <button type="button" id="closeMenuBtn" class="btn btn-outline-secondary btn-sm mb-3">
+                          <i class="bi bi-x-lg"></i> 
+                        </button>
+                      </div>
                       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Welcome to QM
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">About QM</a></li>
-                            <li><a class="dropdown-item" href="#">History</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Our Teams
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Team Directory</a></li>
-                            <li><a class="dropdown-item" href="#">Departments</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Work Applications
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">HR Portal</a></li>
-                            <li><a class="dropdown-item" href="#">IT Services</a></li>
-                            <li><a class="dropdown-item" href="#">Finance</a></li>
-                          </ul>
-                        </li>
+                     
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Welcome to QM
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">About QM</a></li>
+                              <li><a class="dropdown-item" href="#">History</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Our Teams
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                              <li><a class="dropdown-item" href="#">Departments</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Work Applications
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                              <li><a class="dropdown-item" href="#">IT Services</a></li>
+                              <li><a class="dropdown-item" href="#">Finance</a></li>
+                            </ul>
+                          </li>
+                        
                       </ul>
                     </div>
                   </div>
                 </nav>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="sideMenuLabel">Navigation</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Welcome to QM
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">About QM</a></li>
-                          <li><a class="dropdown-item" href="#">History</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Our Teams
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Team Directory</a></li>
-                          <li><a class="dropdown-item" href="#">Departments</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Work Applications
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">HR Portal</a></li>
-                          <li><a class="dropdown-item" href="#">IT Services</a></li>
-                          <li><a class="dropdown-item" href="#">Finance</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
 
                 <!-- Right Side - Search, Notifications, Language -->
                 <div class="d-flex align-items-center wrap-checker ">
@@ -340,6 +303,30 @@
       document.addEventListener('click', (e) => {
         if (!themeDropdown.contains(e.target) && !themeBtn.contains(e.target)) {
           themeDropdown.classList.add('d-none');
+        }
+      });
+    });
+  </script>
+  <!-- menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('menuToggle');
+      const menu = document.getElementById('mainMenu');
+  
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      const closeBtn = document.getElementById('closeMenuBtn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      }
+  
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+          menu.classList.remove('active');
         }
       });
     });

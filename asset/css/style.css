@@ -11,8 +11,10 @@
     --border-color: var(--gray);
     --head-color: var(--black);
     --card-color:white;
-    --selection-border:#333
-  }
+    --selection-border:#333;
+    --wb-color: #333;
+
+}
   .head-color{
     color: var(--black);
     }
@@ -23,6 +25,7 @@
     --head-color: var(--white);
     --card-color:#292A2C;
     --selection-border:var(--white);
+    --wb-color: #fff;
 .head-color{
 color: var(--white);
 --card-color:white
@@ -298,7 +301,9 @@ canvas {
   /* ===================== 
        Header Start
   ====================== */
-
+  .responsive-menu {
+    display: flex;
+  }
 .nav-link {
     color: var(--head-color);
     font-weight: 700;

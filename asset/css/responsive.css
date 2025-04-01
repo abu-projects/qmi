@@ -23,6 +23,49 @@ border-top: 1px solid var(--border-color);
 
 .navbar {  margin-left: auto; }
 }
+/* menu */
+@media (max-width: 991.98px) {
+    .responsive-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 260px;
+      height: 100%;
+      background: var(--card-color);
+      flex-direction: column;
+      padding: 1.5rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+    }
+
+    .responsive-menu.active {
+      right: 0;
+    }
+
+    .responsive-menu ul {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+      width: 100%;
+    }
+
+    .responsive-menu ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .responsive-menu ul li:last-child {
+      border-bottom: none;
+    }
+}
+.dark-theme .navbar-toggler {
+ 
+    filter: brightness(0) invert(1);
+
+}
+
+  
 /* ===================== 
       Header End
   ====================== */

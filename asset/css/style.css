@@ -4,11 +4,11 @@
     --blue: #1292E5;
     --black: #000;
     --white: #fff;
-    --gray: #d1d1d1;
+    --gray: #ddd;
     --main-color: var(--pink);
     --bg-color: #F7F7F7;
     --text-color: #333;
-    --border-color: #333;
+    --border-color: var(--gray);
     --head-color: var(--black);
     --card-color:white;
     --selection-border:#333
@@ -318,6 +318,45 @@ canvas {
 }
 .dark-theme .logo-w{
     display: block;
+}
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+    .wrap-checker {
+        flex-grow: 1;
+padding-top: 10px;
+border-top: 1px solid var(--border-color);
+
+    }
+     .wrap-checker .lang-toggle {
+        margin-left: auto;
+        display: contents;
+        
+     }
+     .wrap-checker .notifi{
+        margin-left: auto;
+        
+     }
+}
+@media screen and (max-width: 630px)  {
+    .wrap-checker {
+        flex-grow: 1;
+padding-top: 10px;
+border-top: 1px solid var(--border-color);
+
+    }
+     .wrap-checker .lang-toggle {
+        margin-left: auto;
+        display: contents;
+        
+     }
+     .wrap-checker .notifi{
+        margin-left: auto;
+        
+     }
+}
+@media screen and (max-width: 992px) and (min-width: 630px) {
+    .logo-container { order: 0; }
+.wrap-checker { order: 1; }
+.navbar { order: 2; margin-left: auto; }
 }
 /* ===================== 
       Header End

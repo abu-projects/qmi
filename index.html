@@ -99,7 +99,7 @@
                     </form>
                     
                     <!-- Notifications -->
-                    <div class="position-relative me-3">
+                    <div class="position-relative me-3 notifi">
                         <a href="#" class="text-decoration-none position-relative  ">
                             <i class="icon-Notification btn-main-link  icon-md"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -109,7 +109,7 @@
                     </div>
                     
                     <!-- Language Toggle -->
-                    <div>
+                    <div class="lang-toggle">
                         <a href="#" class="btn btn-sm btn-main-link">
                             عربي
                             <span class="icon-lang icon-md mx-1"></span>
@@ -320,11 +320,7 @@ window.addEventListener('resize', checkWrap);
 
       themeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        if (themeDropdown.classList.contains('d-none')) {
-          themeDropdown.classList.remove('d-none');
-        } else {
-          themeDropdown.classList.add('d-none');
-        }
+        themeDropdown.classList.remove('d-none');
       });
 
       document.addEventListener('click', (e) => {

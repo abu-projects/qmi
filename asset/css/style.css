@@ -1,10 +1,10 @@
 :root {
-    --pink: #ED3C8A;
+    --pink: #ed3b88;
     --orange: #FFC200;
     --blue: #1292E5;
     --black: #000;
     --white: #fff;
-    --gray: #ddd;
+    --gray: #cfcdcd;
     --main-color: var(--pink);
     --bg-color: #F7F7F7;
     --text-color: #333;
@@ -32,7 +32,25 @@ color: var(--white);
 }
 
   }
+   
+  .bg-main-50 {
+     
+    background-color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;
 
+}
+.bg-main-30 {
+     
+    background-color: color-mix(in srgb, var(--main-color) 30%, transparent) !important;
+
+}
+.text-primary {
+    color: var(--main-color) !important;
+}
+hr {
+  
+    /* border-top: var(--bs-border-width) solid; */
+    border-color: var(--selection-border);
+}
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -129,7 +147,7 @@ width: 100%;
 
 .btn-main {
     color: var(--white);
-    background-color: var(--main-color) !important;
+    background-color: var(--main-color)!important;
     transition: opacity 0.3s ease;
     padding: 10px 20px;
     border-radius: 5px;
@@ -167,6 +185,8 @@ width: 100%;
     outline: none;
     text-decoration: underline;
 }
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;;}
 
 .btn {
 
@@ -408,3 +428,6 @@ color: var(--head-color);
     .dropdown-menu {
     
         --bs-dropdown-bg: var(--card-color);}
+
+    
+     

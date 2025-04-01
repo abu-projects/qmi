@@ -65,7 +65,50 @@ border-top: 1px solid var(--border-color);
 
 }
 
-  
 /* ===================== 
-      Header End
+/* slider responsive */ 
+@media (max-width: 1200px) {
+ #qmCarousel .carousel-inner {
+    padding: 0 2rem;
+  }
+  #qmCarousel .carousel-caption.slider-over {
+    max-width: 100%;
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    text-align: left;
+    border-top-left-radius: 0%;
+  
+  }
+}
+
+@media (max-width: 991.98px) {
+    #qmCarousel  .carousel-inner {
+    padding: 0 1rem;
+    overflow-x: auto;
+  }
+
+  #qmCarousel  .carousel-inner .carousel-item {
+    min-width: 280px;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+    #qmCarousel  .carousel-inner .carousel-item {
+    min-width: 420px;
+    margin-right: 0.75rem;
+  }
+  #qmCarousel  .carousel-inner .carousel-item img {
+    height: 220px;
+    object-fit: cover;
+  }
+  
+
+}
+
+/* ===================== 
+   Header End
   ====================== */

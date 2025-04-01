@@ -1,0 +1,28 @@
+/* ===================== 
+      Header Start
+  ====================== */
+@media screen and (max-width: 1400px)  {
+    .wrap-checker {
+     width: 100%;
+padding-top: 10px;
+border-top: 1px solid var(--border-color);
+
+    }
+     .wrap-checker .lang-toggle {
+        margin-left: auto;
+        display: contents;
+        
+     }
+     .wrap-checker .notifi{
+        margin-left: auto;
+        
+     }
+}
+
+@media screen and (max-width: 992px) and (min-width: 630px) {
+
+.navbar {  margin-left: auto; }
+}
+/* ===================== 
+      Header End
+  ====================== */

@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- IcoMoon Font CSS -->
     <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
-      <!-- canvas CSS -->
-     <link rel="stylesheet" href="asset/css/canvas.css">
+ 
         <!-- style CSS -->
      <link rel="stylesheet" href="asset/css/style.css">
+
+          <!--  Birthday canvas CSS -->
+          <link rel="stylesheet" href="asset/css/canvas.css">
+          <link rel="stylesheet" href="asset/css/responsive.css">
 
 </head>
 <body>
@@ -34,59 +37,94 @@
 
                 <!-- Main Navigation -->
                 <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- This div might wrap if menu items exceed width -->
-                        <div class="collapse navbar-collapse" id="navbarMain">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Welcome to QM
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">About QM</a></li>
-                                        <li><a class="dropdown-item" href="#">History</a></li>
-                                    </ul>
-                                </li>
-                             
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Our Leadership</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">  Mission And Vision</a>
-                              </li>
-                               
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Our Structure</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Our Teams
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Team Directory</a></li>
-                                        <li><a class="dropdown-item" href="#">Departments</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">IN-Q</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Work Applications
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">HR Portal</a></li>
-                                        <li><a class="dropdown-item" href="#">IT Services</a></li>
-                                        <li><a class="dropdown-item" href="#">Finance</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                  <div class="container-fluid">
+                    <!-- Toggle visible only below 992px -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Desktop Navigation -->
+                    <div class="collapse navbar-collapse d-none d-lg-block">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Welcome to QM
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About QM</a></li>
+                            <li><a class="dropdown-item" href="#">History</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Teams
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                            <li><a class="dropdown-item" href="#">Departments</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Work Applications
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                            <li><a class="dropdown-item" href="#">IT Services</a></li>
+                            <li><a class="dropdown-item" href="#">Finance</a></li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </nav>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="sideMenuLabel">Navigation</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Welcome to QM
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">About QM</a></li>
+                          <li><a class="dropdown-item" href="#">History</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Our Teams
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                          <li><a class="dropdown-item" href="#">Departments</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Work Applications
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                          <li><a class="dropdown-item" href="#">IT Services</a></li>
+                          <li><a class="dropdown-item" href="#">Finance</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
                 <!-- Right Side - Search, Notifications, Language -->
                 <div class="d-flex align-items-center wrap-checker ">
@@ -222,33 +260,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- Script to detect if navigation menu wraps and apply border-top -->
   <!-- JavaScript -->
-  <script>
-function checkWrap() {
-  const wrapChecker = document.querySelector('.wrap-checker');
-  if (!wrapChecker) return;
 
-  const visibleChildren = Array.from(wrapChecker.children).filter(
-    el => el.offsetParent !== null
-  );
-  if (visibleChildren.length < 2) {
-    wrapChecker.classList.remove('wrapped');
-    return;
-  }
-
-  const firstTop = visibleChildren[0].getBoundingClientRect().top;
-  const hasWrapped = visibleChildren.slice(1).some(child =>
-    child.getBoundingClientRect().top > firstTop
-  );
-
-  wrapChecker.classList.toggle('wrapped', hasWrapped);
-}
-
-window.addEventListener('load', checkWrap);
-window.addEventListener('resize', checkWrap);
-</script>
-  
+ 
   <script>
     const colorCircles = document.querySelectorAll('.color-circle');
   

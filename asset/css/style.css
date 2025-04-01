@@ -18,6 +18,9 @@
   .head-color{
     color: var(--black);
     }
+    .card-color{
+        background-color: var(--card-color);
+    }
   .dark-theme {
     --bg-color: #1B1C1E;
     --text-color: #71737F;
@@ -43,7 +46,7 @@ color: var(--white);
     background-color: color-mix(in srgb, var(--main-color) 30%, transparent) !important;
 
 }
-.text-primary {
+.text-primary  , .main-color{
     color: var(--main-color) !important;
 }
 hr {
@@ -174,7 +177,7 @@ width: 100%;
     text-decoration: none;
     color: var(--main-color);
     font-weight: bold;
-    display: flex;
+
 }
 
 .btn-main-link:hover {
@@ -183,7 +186,10 @@ width: 100%;
 
 .btn-main-link:focus {
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
+}
+.btn-main-link:active {
+    border: none;
 }
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;;}
@@ -430,4 +436,51 @@ color: var(--head-color);
         --bs-dropdown-bg: var(--card-color);}
 
     
-     
+     /* =======
+     news
+     ======= */
+     .news-section{
+        .news-title {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          .overlay-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+          }
+          .category-label {
+      
+            font-weight: bold;
+            margin-top: 0.5rem;
+          }
+          .main-news img {
+            height: 285px;
+            object-fit: cover;
+            width: 100%;
+          }
+          
+          .side-news img {
+            height: 90px;
+            object-fit: cover;
+            width: 100%;
+          }
+     }
+     .section-card {
+   .tittle{
+    font-weight: bold;
+    font-size: 1.5rem;
+  
+    margin-top: 1rem;
+    border-bottom: solid 1px var(--border-color);
+   }
+     }
+     .card-footer {
+      
+        background-color: var(--card-color);
+        border-top: var(--bs-card-border-width) solid var(--border-color);
+    }

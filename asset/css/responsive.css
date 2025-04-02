@@ -98,11 +98,11 @@ border-top: 1px solid var(--border-color);
 
 @media (max-width: 576px) {
     #qmCarousel  .carousel-inner .carousel-item {
-    min-width: 420px;
+    min-width: 100%;
     margin-right: 0.75rem;
   }
   #qmCarousel  .carousel-inner .carousel-item img {
-    height: 220px;
+    height: 50vh;
     object-fit: cover;
   }
   

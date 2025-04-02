@@ -109,7 +109,7 @@
                         </span>
                       </a>
                       <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
-                        <div class="mb-3 d-flex align-items-start">
+                        <a href="#"  class="mb-3 d-flex align-items-start text-decoration-none">
                           <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
                             <i class="icon-Setting icon-md text-primary"></i>
                           </div>
@@ -117,9 +117,9 @@
                             <strong class="head-color">Happy Birthday</strong><br />
                             <small class="text-color">03/12/2024</small>
                           </div>
-                        </div>
+                        </a>
                         <hr class="my-2">
-                        <div class="mb-3 d-flex align-items-start">
+                        <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
                           <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
                             <i class="icon-Ticket icon-md text-primary"></i>
                           </div>
@@ -128,7 +128,7 @@
                             <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
                             <small class="text-color">03/12/2024</small>
                           </div>
-                        </div>
+                        </a>
                         <hr class="my-2">
                  
                         <div class="text-end">
@@ -192,68 +192,353 @@
         </div>
     </div>
     </section>
-    <section class="my-5 ">
+    <section class="my-4 ">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row d-md-flex align-items-stretch">
+          <div class="col-lg-9">
+            <section class="news-section 4-news">
+              <div class="card section-card card-color">
+                <div class="container  ">
+                  <h2 class="fw-bold tittle head-color">QM in the News</h2>
+                
+                  <div class="row g-3 ">
+                    <!-- Main News -->
+                    <div class="col-lg-8">
+                      <div class="position-relative h-100 main-news">
+                        <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg" alt="Main News" class="img-fluid ">
+                        <div class="overlay-text">
+                          <h5 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h5>
+                          <div class="category-label main-color">Digital</div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Side News -->
+                    <div class="col-md-4 d-flex flex-column justify-content-between">
+                      <div class="mb-2 side-news 4-news">
+                        <div class="row g-2">
+                          <div class="col-lg-4">
+                            <img src="asset/imgs/news/Mask Group 104.jpg" class="img-fluid" alt="News Thumbnail 1">
+                          </div>
+                          <div class="col-lg-8">
+                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2 side-news ">
+                        <div class="row g-2">
+                          <div class="col-4">
+                            <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 1">
+                          </div>
+                          <div class="col-8">
+                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class=" side-news">
+                        <div class="row g-2">
+                          <div class="col-4">
+                            <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 2">
+                          </div>
+                          <div class="col-8">
+                            <p class="news-title head-color" >AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               
+                  <!-- View All -->
+                  <div class="text-end mt-3 card-footer">
+                    <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+  
+          </div>
+
+          <div class="col-md-3">
+            <section class="events-section h-100">
+              <div class="card section-card card-color px-3 pt-3 h-100">
+                
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-bold" id="whatson-tab" data-bs-toggle="tab" data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
+                      WHAT’S ON
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="preregister-tab" data-bs-toggle="tab" data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister" aria-selected="false">
+                      Pre-Register Events
+                    </button>
+                  </li>
+                </ul>
+            
+                <!-- Tab Content -->
+                <div class="tab-content" id="eventTabsContent">
+                  
+                  <!-- WHAT’S ON Tab -->
+                  <div class="tab-pane fade show active" id="whatson" role="tabpanel" aria-labelledby="whatson-tab">
+                 
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel">date</h6>
+                        <div class="d-flex ">
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn">
+                            <i class="bi bi-chevron-left"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn">
+                            <i class="bi bi-chevron-right"></i>
+                          </button>
+                        </div> 
+                      </div>
+                     
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
+                        <!-- JS will inject weekdays here -->
+                      </div>
+                    </div>
+                 
+                    <div style="height: 182px; overflow-y: auto; " class="flex-grow-1">
+                      <!-- Event Card -->
+                 
+                      <div class="text-center flex-grow-1">
+                        <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
+                          <!-- JS will inject weekdays here -->
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-orange text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">26</div>
+                        </div>
+                        <div>
+                          <h6 class="fw-bold mb-1 head-color">Interactive Art Night</h6>
+                          <small class="text-color">Sat, Feb 15, 7:00 PM</small>
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-blue text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">27</div>
+                        </div>
+                        <div>
+                          <h6 class="fw-bold mb-1 head-color">Cultural Storytelling</h6>
+                          <small class="text-color">Sun, Feb 16, 6:30 PM</small>
+                        </div>
+                        
+                      </div>
+                     
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+            
+                  <!-- Pre-Register Events Tab -->
+                  <div class="tab-pane fade" id="preregister" role="tabpanel" aria-labelledby="preregister-tab">
+
+                   
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">date</h6>
+                      <div class="d-flex ">
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn2">
+                          <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn2">
+                          <i class="bi bi-chevron-right"></i>
+                        </button>
+                      </div> 
+                    </div>
+                    
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer2">
+                        <!-- JS will inject weekdays here -->
+                      </div>
+                    </div>
+                    <div style="height: 182px; overflow-y: auto;">
+                      <div class="d-flex no-data justify-content-center">
+                        <img src="asset/imgs/Empty File V5-3.svg" alt="">
+                                            </div>
+                                            <div class="text-muted text-center py-2">No Pre-Register Events at the moment.</div>
+                                          
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          
+
+        </div>
+      </div>
+     
+     
+    </section>
+    <section class="my-4 ">
+      <div class="container-fluid">
+        <div class="row d-md-flex align-items-stretch">
           <div class="col-md-9">
-  <div class="card section-card card-color">
-    <div class="container  news-section 4-news">
-      <h2 class="fw-bold tittle head-color">QM in the News</h2>
-    
-      <div class="row g-3 ">
-        <!-- Main News -->
-        <div class="col-lg-8">
-          <div class="position-relative h-100 main-news">
-            <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg" alt="Main News" class="img-fluid ">
-            <div class="overlay-text">
-              <h5 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h5>
-              <div class="category-label main-color">Digital</div>
-            </div>
+            <section class="news-section our-people h-100">
+              <div class="card section-card card-color h-100">
+                <div class="container  ">
+                  <h2 class="fw-bold tittle head-color">Our People</h2>
+                
+                  <div class="row g-3 ">
+                    <!-- Employee Directory  -->
+                    
+                    <a href="#" class="col-lg-4 text-decoration-none">
+                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+<img src="asset/imgs/our people/Employee Directory.svg" alt="Employee Directory">
+<h5 class="head-color mt-3">Employee Directory</h5>
+                    </div>
+                   </a>
+                   <a href="#" class="col-lg-4 text-decoration-none">
+                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+<img src="asset/imgs/our people/Employee Testimonials.svg" alt="Employee Directory">
+<h5 class="head-color mt-3">Employee Testimonials  </h5>
+                    </div>
+                   </a>
+                   <a href="#" class="col-lg-4 text-decoration-none">
+                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+<img src="asset/imgs/our people/Our Communities.svg" alt="Employee Directory">
+<h5 class="head-color mt-3">Our Communities   </h5>
+                    </div>
+                   </a>
+                  </div>
+               
+                  <!-- View All -->
+                  <div class="text-end mt-3 card-footer">
+                    <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+  
           </div>
-        </div>
-    
-        <!-- Side News -->
-        <div class="col-lg-4 d-flex flex-column justify-content-between">
-          <div class="mb-2 side-news 4-news">
-            <div class="row g-2">
-              <div class="col-4">
-                <img src="asset/imgs/news/Mask Group 104.jpg" class="img-fluid" alt="News Thumbnail 1">
+
+          <div class="col-md-3">
+            <section class="events-section h-100">
+              <div class="card section-card card-color px-3 pt-3 h-100 d-flex flex-column">
+                
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-bold" id="whatson-tab" data-bs-toggle="tab" data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
+                      WHAT’S ON
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="preregister-tab" data-bs-toggle="tab" data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister" aria-selected="false">
+                      Pre-Register Events
+                    </button>
+                  </li>
+                </ul>
+            
+                <!-- Tab Content -->
+                <div class="tab-content" id="eventTabsContent">
+                  
+                  <!-- WHAT’S ON Tab -->
+                  <div class="tab-pane fade show active" id="whatson" role="tabpanel" aria-labelledby="whatson-tab">
+                 
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel">date</h6>
+                        <div class="d-flex ">
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn">
+                            <i class="bi bi-chevron-left"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn">
+                            <i class="bi bi-chevron-right"></i>
+                          </button>
+                        </div> 
+                      </div>
+                     
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
+                        <!-- JS will inject weekdays here -->
+                      </div>
+                    </div>
+                 
+                    <div style="height: 182px; overflow-y: auto;">
+                      <!-- Event Card -->
+                 
+                      <div class="text-center flex-grow-1">
+                        <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
+                          <!-- JS will inject weekdays here -->
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-orange text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">26</div>
+                        </div>
+                        <div>
+                          <h6 class="fw-bold mb-1 head-color">Interactive Art Night</h6>
+                          <small class="text-color">Sat, Feb 15, 7:00 PM</small>
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-blue text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">27</div>
+                        </div>
+                        <div>
+                          <h6 class="fw-bold mb-1 head-color">Cultural Storytelling</h6>
+                          <small class="text-color">Sun, Feb 16, 6:30 PM</small>
+                        </div>
+                        
+                      </div>
+                     
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+            
+                  <!-- Pre-Register Events Tab -->
+                  <div class="tab-pane fade" id="preregister" role="tabpanel" aria-labelledby="preregister-tab">
+
+                   
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">date</h6>
+                      <div class="d-flex ">
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn2">
+                          <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn2">
+                          <i class="bi bi-chevron-right"></i>
+                        </button>
+                      </div> 
+                    </div>
+                    
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer2">
+                        <!-- JS will inject weekdays here -->
+                      </div>
+                    </div>
+                    <div style="height: 182px; overflow-y: auto;">
+                      <div class="d-flex no-data justify-content-center">
+                        <img src="asset/imgs/Empty File V5-3.svg" alt="">
+                                            </div>
+                                            <div class="text-muted text-center py-2">No Pre-Register Events at the moment.</div>
+                                          
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-8">
-                <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
-              </div>
-            </div>
+            </section>
           </div>
-          <div class="mb-2 side-news ">
-            <div class="row g-2">
-              <div class="col-4">
-                <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 1">
-              </div>
-              <div class="col-8">
-                <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
-              </div>
-            </div>
-          </div>
-          <div class=" side-news">
-            <div class="row g-2">
-              <div class="col-4">
-                <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 2">
-              </div>
-              <div class="col-8">
-                <p class="news-title head-color" >AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   
-      <!-- View All -->
-      <div class="text-end mt-3 card-footer">
-        <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
-      </div>
-    </div>
-  </div>
-          </div>
+          
+
         </div>
       </div>
      
@@ -426,5 +711,113 @@
       });
     });
   </script>
-</body>
+
+<!-- whats on  -->
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const weekContainer = document.getElementById('weekDaysContainer');
+  const monthLabel = document.getElementById('calendarMonthLabel');
+  const prevBtn = document.getElementById('prevWeekBtn');
+  const nextBtn = document.getElementById('nextWeekBtn');
+
+  let currentDate = new Date();
+
+  function getStartOfWeek(date) {
+    const day = date.getDay();
+    return new Date(date.setDate(date.getDate() - day));
+  }
+
+  function renderWeek(date) {
+    const start = getStartOfWeek(new Date(date));
+    const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    weekContainer.innerHTML = '';
+
+    monthLabel.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    for (let i = 0; i < 7; i++) {
+      const day = new Date(start);
+      day.setDate(start.getDate() + i);
+
+      const dayBlock = document.createElement('div');
+      dayBlock.className = 'cursor-pointer';
+      const isToday = new Date().toDateString() === day.toDateString();
+
+      dayBlock.innerHTML = `
+        <div class="fw-bold small">${dayNames[i]}</div>
+        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
+          ${day.getDate()}
+        </div>
+      `;
+      weekContainer.appendChild(dayBlock);
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentDate.setDate(currentDate.getDate() - 7);
+    renderWeek(currentDate);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentDate.setDate(currentDate.getDate() + 7);
+    renderWeek(currentDate);
+  });
+
+  renderWeek(currentDate);
+});
+ </script>
+ <!--  pre regester events -->
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const weekContainer2 = document.getElementById('weekDaysContainer2');
+  const monthLabel2 = document.getElementById('calendarMonthLabel2');
+  const prevBtn2 = document.getElementById('prevWeekBtn2');
+  const nextBtn2 = document.getElementById('nextWeekBtn2');
+
+  let currentDate2 = new Date();
+
+  function getStartOfWeek(date) {
+    const day = date.getDay();
+    return new Date(date.setDate(date.getDate() - day));
+  }
+
+  function renderWeek2(date) {
+    const start = getStartOfWeek(new Date(date));
+    const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    weekContainer2.innerHTML = '';
+
+    monthLabel2.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    for (let i = 0; i < 7; i++) {
+      const day = new Date(start);
+      day.setDate(start.getDate() + i);
+
+      const dayBlock = document.createElement('div');
+      dayBlock.className = 'cursor-pointer';
+      const isToday = new Date().toDateString() === day.toDateString();
+
+      dayBlock.innerHTML = `
+        <div class="fw-bold small">${dayNames[i]}</div>
+        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
+          ${day.getDate()}
+        </div>
+      `;
+      weekContainer2.appendChild(dayBlock);
+    }
+  }
+
+  prevBtn2.addEventListener('click', () => {
+    currentDate2.setDate(currentDate2.getDate() - 7);
+    renderWeek2(currentDate2);
+  });
+
+  nextBtn2.addEventListener('click', () => {
+    currentDate2.setDate(currentDate2.getDate() + 7);
+    renderWeek2(currentDate2);
+  });
+
+  renderWeek2(currentDate2);
+});
+   </script>
 </html>
+
+                  

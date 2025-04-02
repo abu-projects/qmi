@@ -13,8 +13,12 @@
     --card-color:white;
     --selection-border:#333;
     --wb-color: #333;
+    --bs-btn-active-bg: var(--main-color);
+    --bs-border-color: var(--border-color);
+    --bs-nav-tabs-link-active-border-color: var(--border-color) ;
 
 }
+
   .head-color{
     color: var(--black);
     }
@@ -36,6 +40,25 @@ color: var(--white);
 
   }
    
+  .btn-outline-primary {
+    --bs-btn-color: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-active-border-color: var(--main-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--main-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--main-color);
+   
+}
+.bg-main {
+    background-color: var(--main-color) !important;
+}
   .bg-main-50 {
      
     background-color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;
@@ -473,9 +496,10 @@ color: var(--head-color);
      .section-card {
    .tittle{
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   
-    margin-top: 1rem;
+    margin-top: .5rem;
+    padding-bottom: .5rem;
     border-bottom: solid 1px var(--border-color);
    }
      }
@@ -484,3 +508,26 @@ color: var(--head-color);
         background-color: var(--card-color);
         border-top: var(--bs-card-border-width) solid var(--border-color);
     }
+    /* =========
+    Events Section
+    */
+    .events-section {
+      .nav-link.active {
+            color: var(--white);
+            background-color: var(--main-color) !important;
+          
+        }
+    }
+    .no-data img {
+      
+        height: 100px;
+   
+    }
+    /* =======
+    Our people
+ ========*/
+ .our-people{
+    img{
+        height: 175px;
+    }
+ }

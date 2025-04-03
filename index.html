@@ -1,179 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QM Intranet </title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
-    <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- IcoMoon Font CSS -->
-    <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
- 
-        <!-- style CSS -->
-     <link rel="stylesheet" href="asset/css/style.css">
 
-          <!--  Birthday canvas CSS -->
-          <link rel="stylesheet" href="asset/css/canvas.css">
-          <link rel="stylesheet" href="asset/css/responsive.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Intranet </title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+
+  <!--  Birthday canvas CSS -->
+  <link rel="stylesheet" href="asset/css/canvas.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
 
 </head>
+
 <body>
 
-    <!-- Header with Navigation -->
-    <header class="py-2 border-bottom ">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                <!-- Logo -->
-                <div class="logo-container d-flex align-items-center">
-                    <a href="/" class="d-flex align-items-center text-decoration-none">
-                        <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
-                        <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
-                    </a>
-                </div>
-
-                <!-- Main Navigation -->
-
-                <nav class="navbar navbar-expand-lg">
-                  <div class="container-fluid">
-                    <button class="navbar-toggler d-lg-none" id="menuToggle" type="button">
-                      <i class="bi bi-list fs-2"></i>
-                    </button>
-                
-                    <div class="responsive-menu" id="mainMenu">
-                      <div class="d-flex justify-content-end d-lg-none">
-                        <button type="button" id="closeMenuBtn" class="btn btn-outline-secondary btn-sm mb-3">
-                          <i class="bi bi-x-lg"></i> 
-                        </button>
-                      </div>
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                     
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Welcome to QM
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">About QM</a></li>
-                              <li><a class="dropdown-item" href="#">History</a></li>
-                            </ul>
-                          </li>
-                          <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Our Teams
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Team Directory</a></li>
-                              <li><a class="dropdown-item" href="#">Departments</a></li>
-                            </ul>
-                          </li>
-                          <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Work Applications
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">HR Portal</a></li>
-                              <li><a class="dropdown-item" href="#">IT Services</a></li>
-                              <li><a class="dropdown-item" href="#">Finance</a></li>
-                            </ul>
-                          </li>
-                        
-                      </ul>
-                    </div>
-                  </div>
-                </nav>
-
-                <!-- Right Side - Search, Notifications, Language -->
-                <div class="d-flex align-items-center wrap-checker ">
-                    <!-- Search Form -->
-                    <form class="d-flex me-3 position-relative">
-                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" type="submit">
-                            <i class="icon-Search icon-white"></i>
-                        </button>
-                    </form>
-                    
-                    <!-- Notifications -->
-                    <!-- Notifications Dropdown -->
-                    <div class="dropdown position-relative me-3 notifi">
-                      <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="icon-Notification btn-main-link icon-md "></i>
-                        <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
-                          2
-                        </span>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
-                        <a href="#"  class="mb-3 d-flex align-items-start text-decoration-none">
-                          <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
-                            <i class="icon-Setting icon-md text-primary"></i>
-                          </div>
-                          <div>
-                            <strong class="head-color">Happy Birthday</strong><br />
-                            <small class="text-color">03/12/2024</small>
-                          </div>
-                        </a>
-                        <hr class="my-2">
-                        <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
-                          <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
-                            <i class="icon-Ticket icon-md text-primary"></i>
-                          </div>
-                          <div>
-                            <strong class="head-color">The Art of Color and Form:</strong><br />
-                            <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
-                            <small class="text-color">03/12/2024</small>
-                          </div>
-                        </a>
-                        <hr class="my-2">
-                 
-                        <div class="text-end">
-                          <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Language Toggle -->
-                    <div class="lang-toggle">
-                        <a href="#" class="btn btn-sm btn-main-link   d-flex">
-                            عربي
-                            <span class="icon-lang icon-md mx-1"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom ">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="/" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
         </div>
-    </header>
-    <main>
-      <section>
-        <!-- Carousel Wrapper -->
-    <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- Main Navigation -->
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About QM</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                    <li><a class="dropdown-item" href="#">Departments</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                    <li><a class="dropdown-item" href="#">IT Services</a></li>
+                    <li><a class="dropdown-item" href="#">Finance</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker ">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <!-- Notifications Dropdown -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-Notification btn-main-link icon-md "></i>
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Setting icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Ticket icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">The Art of Color and Form:</strong><br />
+                  <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link   d-flex">
+              عربي
+              <span class="icon-lang icon-md mx-1"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <!-- Carousel Wrapper -->
+      <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-      
+
           <!-- Slide 1 -->
           <div class="carousel-item active">
             <img src="asset/imgs/silder banner.jpg" class="d-block w-100 object-fit-cover" alt="Slide 1" />
-            
+
             <!-- Text Overlay -->
-            <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box"  >
+            <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box">
               <h3 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h3>
               <p class="text-color">
-                Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum of Qatar, on behalf of
+                Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China
+                and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director
+                of National Museum of Qatar, on behalf of
               </p>
               <a href="#" class="btn btn-link text-decoration-none fw-bold btn-main-link">
                 Discover More →
               </a>
             </div>
-        </div>
-      
+          </div>
+
           <!-- Add More Slides Here... -->
-      
+
         </div>
-      
+
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#qmCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -183,14 +190,15 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-    
+
         <!-- Added Indicators -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </div>
+      </div>
     </section>
     <section class="my-4 ">
       <div class="container-fluid">
@@ -200,19 +208,21 @@
               <div class="card section-card card-color">
                 <div class="container-fluid  ">
                   <h2 class="fw-bold tittle head-color">QM in the News</h2>
-                
+
                   <div class="row g-3 ">
                     <!-- Main News -->
                     <div class="col-lg-8">
                       <div class="position-relative h-100 main-news">
-                        <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg" alt="Main News" class="img-fluid ">
+                        <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg"
+                          alt="Main News" class="img-fluid ">
                         <div class="overlay-text">
-                          <h5 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h5>
+                          <h5 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project
+                          </h5>
                           <div class="category-label main-color">Digital</div>
                         </div>
                       </div>
                     </div>
-                
+
                     <!-- Side News -->
                     <div class="col-lg-4 d-flex flex-column justify-content-between">
                       <div class="mb-2 side-news 4-news">
@@ -221,7 +231,8 @@
                             <img src="asset/imgs/news/Mask Group 104.jpg" class="img-fluid" alt="News Thumbnail 1">
                           </div>
                           <div class="col-8">
-                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
+                              &Technology Project</p>
                           </div>
                         </div>
                       </div>
@@ -231,7 +242,8 @@
                             <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 1">
                           </div>
                           <div class="col-8">
-                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
+                              &Technology Project</p>
                           </div>
                         </div>
                       </div>
@@ -241,13 +253,14 @@
                             <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 2">
                           </div>
                           <div class="col-8">
-                            <p class="news-title head-color" >AI Digital Centre Unveils Gazan Students Robotics &Technology Project</p>
+                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
+                              &Technology Project</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-               
+
                   <!-- View All -->
                   <div class="text-end mt-3 card-footer">
                     <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
@@ -255,33 +268,36 @@
                 </div>
               </div>
             </section>
-  
+
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <section class="events-section h-100">
               <div class="card section-card card-color px-3 pt-3 h-100">
-                
+
                 <!-- Tabs -->
                 <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active fw-bold" id="whatson-tab" data-bs-toggle="tab" data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
+                    <button class="nav-link active fw-bold" id="whatson-tab" data-bs-toggle="tab"
+                      data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
                       WHAT’S ON
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="preregister-tab" data-bs-toggle="tab" data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister" aria-selected="false">
+                    <button class="nav-link fw-bold" id="preregister-tab" data-bs-toggle="tab"
+                      data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister"
+                      aria-selected="false">
                       Pre-Register Events
                     </button>
                   </li>
                 </ul>
-            
+
                 <!-- Tab Content -->
                 <div class="tab-content" id="eventTabsContent">
-                  
+
                   <!-- WHAT’S ON Tab -->
                   <div class="tab-pane fade show active" id="whatson" role="tabpanel" aria-labelledby="whatson-tab">
-                 
+
                     <div class="text-center flex-grow-1">
                       <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel">date</h6>
@@ -292,17 +308,17 @@
                           <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn">
                             <i class="bi bi-chevron-right"></i>
                           </button>
-                        </div> 
+                        </div>
                       </div>
-                     
+
                       <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
                         <!-- JS will inject weekdays here -->
                       </div>
                     </div>
-                 
+
                     <div style="height: 182px; overflow-y: auto; " class="flex-grow-1">
                       <!-- Event Card -->
-                 
+
                       <div class="text-center flex-grow-1">
                         <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
                           <!-- JS will inject weekdays here -->
@@ -327,19 +343,19 @@
                           <h6 class="fw-bold mb-1 head-color">Cultural Storytelling</h6>
                           <small class="text-color">Sun, Feb 16, 6:30 PM</small>
                         </div>
-                        
+
                       </div>
-                     
+
                     </div>
                     <div class="card-footer text-end">
                       <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
                     </div>
                   </div>
-            
+
                   <!-- Pre-Register Events Tab -->
                   <div class="tab-pane fade" id="preregister" role="tabpanel" aria-labelledby="preregister-tab">
 
-                   
+
 
                     <div class="d-flex justify-content-between align-items-center mb-2">
                       <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">date</h6>
@@ -350,9 +366,9 @@
                         <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn2">
                           <i class="bi bi-chevron-right"></i>
                         </button>
-                      </div> 
+                      </div>
                     </div>
-                    
+
                     <div class="text-center flex-grow-1">
                       <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer2">
                         <!-- JS will inject weekdays here -->
@@ -361,9 +377,9 @@
                     <div style="height: 182px; overflow-y: auto;">
                       <div class="d-flex no-data justify-content-center">
                         <img src="asset/imgs/Empty File V5-3.svg" alt="">
-                                            </div>
-                                            <div class="text-muted text-center py-2">No Pre-Register Events at the moment.</div>
-                                          
+                      </div>
+                      <div class="text-color text-center py-2">No Pre-Register Events at the moment.</div>
+
                     </div>
                     <div class="card-footer text-end">
                       <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
@@ -373,14 +389,14 @@
               </div>
             </section>
           </div>
-          
+
 
         </div>
       </div>
-     
-     
+
+
     </section>
-    <section class="my-4 ">
+    <div class="my-4 ">
       <div class="container-fluid">
         <div class="row d-md-flex align-items-stretch">
           <div class="col-lg-9">
@@ -388,220 +404,289 @@
               <div class="card section-card card-color h-100">
                 <div class="container-fluid   ">
                   <h2 class="fw-bold tittle head-color">Our People</h2>
-                
+
                   <div class="row g-3 ">
                     <!-- Employee Directory  -->
-                    
+
                     <a href="#" class="col-lg-4 text-decoration-none">
-                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
-<img src="asset/imgs/our people/Employee Directory.svg" alt="Employee Directory">
-<h5 class="head-color mt-3">Employee Directory</h5>
-                    </div>
-                   </a>
-                   <a href="#" class="col-lg-4 text-decoration-none">
-                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
-<img src="asset/imgs/our people/Employee Testimonials.svg" alt="Employee Directory">
-<h5 class="head-color mt-3">Employee Testimonials  </h5>
-                    </div>
-                   </a>
-                   <a href="#" class="col-lg-4 text-decoration-none">
-                    <div class="border d-flex flex-column justify-content-center align-items-center p-3">
-<img src="asset/imgs/our people/Our Communities.svg" alt="Employee Directory">
-<h5 class="head-color mt-3">Our Communities   </h5>
-                    </div>
-                   </a>
+                      <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="asset/imgs/our people/Employee Directory.svg" alt="Employee Directory">
+                        <h5 class="head-color mt-3">Employee Directory</h5>
+                      </div>
+                    </a>
+                    <a href="#" class="col-lg-4 text-decoration-none">
+                      <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="asset/imgs/our people/Employee Testimonials.svg" alt="Employee Directory">
+                        <h5 class="head-color mt-3">Employee Testimonials </h5>
+                      </div>
+                    </a>
+                    <a href="#" class="col-lg-4 text-decoration-none">
+                      <div class="border d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="asset/imgs/our people/Our Communities.svg" alt="Employee Directory">
+                        <h5 class="head-color mt-3">Our Communities </h5>
+                      </div>
+                    </a>
                   </div>
-               
-                
+
+
                 </div>
               </div>
             </section>
-  
           </div>
-
           <div class="col-lg-3 mt-4 mt-lg-0">
             <section class="q-section  h-100">
               <div class="card section-card card-color h-100">
                 <div class="container-fluid   ">
                   <h2 class="fw-bold tittle head-color">Quick Access </h2>
-                
+
                   <div class="q-box ">
-             <a href="#" class="mx-2 text-decoration-none" >
-           <div class="img-container">
-            <img src="asset/imgs/q links/Achievements.svg" alt="">
-       
-
-           </div>
-           <h6 class="text-center head-color mt-2">Achievements</h6>
-
-             </a>
-             <a href="#" class="mx-2 text-decoration-none" >
-              <div class="img-container">
-               <img src="asset/imgs/q links/Sustainability.svg" alt="">
-          
-   
-              </div>
-              <h6 class="text-center head-color mt-2">Sustainability</h6>
-   
-                </a>
-                <a href="#" class="mx-2 text-decoration-none" >
-                  <div class="img-container">
-                   <img src="asset/imgs/q links/Policies and  Procedures.svg" alt="">
-              
-       
-                  </div>
-                  <h6 class="text-center head-color mt-2">Policies and
-                    Procedures</h6>
-       
-                    </a>
-                    <a href="#" class="mx-2 text-decoration-none" >
+                    <a href="#" class="mx-2 text-decoration-none">
                       <div class="img-container">
-                       <img src="asset/imgs/q links/Department Location.svg" alt="">
-                  
-           
+                        <img src="asset/imgs/q links/Achievements.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">Achievements</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/Sustainability.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">Sustainability</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/Policies and  Procedures.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">Policies and
+                        Procedures</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/Department Location.svg" alt="">
+
+
                       </div>
                       <h6 class="text-center head-color mt-2">Department
                         Location</h6>
-           
-                        </a>
-                        <a href="#" class="mx-2 text-decoration-none" >
-                         <div class="img-container">
-                          <img src="asset/imgs/q links/QM Important  Links.svg" alt="">
-                     
-              
-                         </div>
-                         <h6 class="text-center head-color mt-2">QM Important
-                          Links</h6>
-              
-                           </a>
-                           <a href="#" class="mx-2 text-decoration-none" >
-                            <div class="img-container">
-                             <img src="asset/imgs/q links/QM Important  Contacts.svg" alt="">
-                        
-                 
-                            </div>
-                            <h6 class="text-center head-color mt-2">QM Important
-                              Contacts</h6>
-                 
-                              </a>
-                           <a href="#" class="mx-2 text-decoration-none" >
-                             <div class="img-container">
-                              <img src="asset/imgs/q links/Photo-Video  Gallery.svg" alt="">
-                         
-                  
-                             </div>
-                             <h6 class="text-center head-color mt-2">   
-                              Photo/Video 
-Gallery</h6>
-                  
-                               </a>
-                               <a href="#" class="mx-2 text-decoration-none" >
-                                <div class="img-container">
-                                 <img src="asset/imgs/q links/Intranet  Guidelines.svg" alt="">
-                            
-                     
-                                </div>
-                                <h6 class="text-center head-color mt-2">Intranet 
-                                  Guidelines</h6>
-                     
-                                  </a>
-                            
-                                
-                    
-                  
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/QM Important  Links.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">QM Important
+                        Links</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/QM Important  Contacts.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">QM Important
+                        Contacts</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/Photo-Video  Gallery.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">
+                        Photo/Video
+                        Gallery</h6>
+
+                    </a>
+                    <a href="#" class="mx-2 text-decoration-none">
+                      <div class="img-container">
+                        <img src="asset/imgs/q links/Intranet  Guidelines.svg" alt="">
+
+
+                      </div>
+                      <h6 class="text-center head-color mt-2">Intranet
+                        Guidelines</h6>
+
+                    </a>
+
+
+
+
                   </div>
-               
-              
+
+
                 </div>
               </div>
             </section>
           </div>
-          
+        </div>
+      </div>
+    </div>
+    <section class=" benefits-section h-100">
+      <div class="card section-card card-color h-100">
+        <div class="container-fluid   ">
+          <h2 class="fw-bold tittle head-color">Enjoy Employee Benefits</h2>
+
+          <div class="row g-3 mb-2">
+
+
+            <a href="#" class="col-lg-4 col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3" src="asset/imgs/benf/Well Being.svg" alt="Well Being">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">Well Being </h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+            <a href="#" class="col-lg-4 col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3" src="asset/imgs/benf/Ghurza.svg" alt="The Ghurza collection">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">The Ghurza collection </h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+            <a href="#" class="col-lg-4  col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3 mazya" src="asset/imgs/benf/mazaya.svg" alt="Mazaya">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">Mazaya</h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+            <a href="#" class="col-lg-4 col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3" src="asset/imgs/benf/health.svg" alt="Alkoot Insurance">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">Alkoot Insurance </h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+            <a href="#" class="col-lg-4 col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3" src="asset/imgs/benf/Vacancies.svg" alt="Internal Vacancies">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">Internal Vacancies</h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+            <a href="#" class="col-lg-4 col-md-6 text-decoration-none">
+              <div class="border d-flex  justify-content-start align-items-center p-3">
+                <img class="mx-3" src="asset/imgs/benf/market.svg" alt="Market Place">
+                <div class="flex-column d-flex">
+                  <h5 class="head-color mt-3">Market Place</h5>
+                  <p class="text-color "> Description comes here</p>
+                </div>
+
+              </div>
+            </a>
+          </div>
+
 
         </div>
       </div>
-     
-     
     </section>
-    </main>
+
+  </main>
 
 
   <footer>
-<!-- Fixed Settings Button -->
-<div class="theme-toggle-btn ">
-  <button class="btn btn-main rounded-1 " id="themeBtn">
-      <span class="icon-Setting mx-1 "></span>
-       Settings
-  </button>
-  <div class="dropdown-panel d-none" id="themeDropdown">
-    <div class="py-3 px-4 panel-container">
-      <div class="d-flex justify-content-start align-items-center mb-3">
-<div class="theme px-4">
-  <h4 class="head-color">
-      Theme
-  </h4>
-<!-- Theme Toggle Options -->
-<div class="theme-options d-flex gap-1 mt-2">
-  <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
-    <i class="bi bi-sun"></i>
-    <span>Light</span>
-  </div>
-  <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
-    <i class="bi bi-moon"></i>
-    <span>Dark</span>
-  </div>
-</div>
-</div>
-<div class="colors px-4">
-  <h4 class="head-color">
-    Colors
-</h4>
-  <div class="color-palette d-flex gap-2">
-      <div class="color-circle bg-pink" data-color="--pink"></div>
-      <div class="color-circle bg-orange" data-color="--orange"></div>
-      <div class="color-circle bg-blue" data-color="--blue"></div>
-    </div>
-</div>
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn btn-main rounded-1 " id="themeBtn">
+        <span class="icon-Setting mx-1 "></span>
+        Settings
+      </button>
+      <div class="dropdown-panel d-none" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <div class="theme px-4">
+              <h4 class="head-color">
+                Theme
+              </h4>
+              <!-- Theme Toggle Options -->
+              <div class="theme-options d-flex gap-1 mt-2">
+                <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                  <i class="bi bi-sun"></i>
+                  <span>Light</span>
+                </div>
+                <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                  <i class="bi bi-moon"></i>
+                  <span>Dark</span>
+                </div>
+              </div>
+            </div>
+            <div class="colors px-4">
+              <h4 class="head-color">
+                Colors
+              </h4>
+              <div class="color-palette d-flex gap-2">
+                <div class="color-circle bg-pink" data-color="--pink"></div>
+                <div class="color-circle bg-orange" data-color="--orange"></div>
+                <div class="color-circle bg-blue" data-color="--blue"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       </div>
-    
-      
     </div>
-  </div>
-</div>
-<span class="">
-  <a href="#" class="text-decoration-none mx-4 text-white">
-    Disclaimer </a>
-</span>
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">
+        Disclaimer </a>
+    </span>
 
   </footer>
 
 
- 
-    <!-- Bootstrap JS and dependencies -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
 
-  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
- 
+
+
+  <!-- color changer -->
   <script>
     const colorCircles = document.querySelectorAll('.color-circle');
-  
+
     function updateSelectedColor(element) {
       // Remove 'selected' from all
       colorCircles.forEach(c => c.classList.remove('selected'));
       element.classList.add('selected');
-  
+
       // Get color value and apply it
       const selectedColor = getComputedStyle(document.documentElement)
         .getPropertyValue(element.dataset.color);
       document.documentElement.style.setProperty('--main-color', selectedColor);
-  
+
       // Save color key to localStorage
       localStorage.setItem('selectedColorKey', element.dataset.color);
     }
-  
+
     // Apply saved color on load
     window.addEventListener('DOMContentLoaded', () => {
       const savedColorKey = localStorage.getItem('selectedColorKey');
@@ -613,41 +698,42 @@ Gallery</h6>
         if (defaultColor) updateSelectedColor(defaultColor);
       }
     });
-  
+
     colorCircles.forEach(circle => {
       circle.addEventListener('click', () => updateSelectedColor(circle));
     });
   </script>
+  <!-- Theme changer -->
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const lightOption = document.getElementById('lightOption');
-    const darkOption = document.getElementById('darkOption');
+    window.addEventListener('DOMContentLoaded', () => {
+      const lightOption = document.getElementById('lightOption');
+      const darkOption = document.getElementById('darkOption');
 
-    function activateLightTheme() {
-      document.documentElement.classList.remove('dark-theme');
-      lightOption.classList.add('selected');
-      darkOption.classList.remove('selected');
-      localStorage.setItem('theme', 'light');
-    }
+      function activateLightTheme() {
+        document.documentElement.classList.remove('dark-theme');
+        lightOption.classList.add('selected');
+        darkOption.classList.remove('selected');
+        localStorage.setItem('theme', 'light');
+      }
 
-    function activateDarkTheme() {
-      document.documentElement.classList.add('dark-theme');
-      darkOption.classList.add('selected');
-      lightOption.classList.remove('selected');
-      localStorage.setItem('theme', 'dark');
-    }
+      function activateDarkTheme() {
+        document.documentElement.classList.add('dark-theme');
+        darkOption.classList.add('selected');
+        lightOption.classList.remove('selected');
+        localStorage.setItem('theme', 'dark');
+      }
 
-    lightOption.addEventListener('click', activateLightTheme);
-    darkOption.addEventListener('click', activateDarkTheme);
+      lightOption.addEventListener('click', activateLightTheme);
+      darkOption.addEventListener('click', activateDarkTheme);
 
-    // Apply saved theme on load
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      activateDarkTheme();
-    } else {
-      activateLightTheme();
-    }
-  });
+      // Apply saved theme on load
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        activateDarkTheme();
+      } else {
+        activateLightTheme();
+      }
+    });
   </script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -671,7 +757,7 @@ Gallery</h6>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('menuToggle');
       const menu = document.getElementById('mainMenu');
-  
+
       toggleBtn.addEventListener('click', () => {
         menu.classList.toggle('active');
       });
@@ -682,7 +768,7 @@ Gallery</h6>
           menu.classList.remove('active');
         });
       }
-  
+
       document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
           menu.classList.remove('active');
@@ -691,112 +777,111 @@ Gallery</h6>
     });
   </script>
 
-<!-- whats on  -->
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const weekContainer = document.getElementById('weekDaysContainer');
-  const monthLabel = document.getElementById('calendarMonthLabel');
-  const prevBtn = document.getElementById('prevWeekBtn');
-  const nextBtn = document.getElementById('nextWeekBtn');
-
-  let currentDate = new Date();
-
-  function getStartOfWeek(date) {
-    const day = date.getDay();
-    return new Date(date.setDate(date.getDate() - day));
-  }
-
-  function renderWeek(date) {
-    const start = getStartOfWeek(new Date(date));
-    const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    weekContainer.innerHTML = '';
-
-    monthLabel.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-
-    for (let i = 0; i < 7; i++) {
-      const day = new Date(start);
-      day.setDate(start.getDate() + i);
-
-      const dayBlock = document.createElement('div');
-      dayBlock.className = 'cursor-pointer';
-      const isToday = new Date().toDateString() === day.toDateString();
-
-      dayBlock.innerHTML = `
-        <div class="fw-bold small">${dayNames[i]}</div>
-        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
-          ${day.getDate()}
-        </div>
-      `;
-      weekContainer.appendChild(dayBlock);
-    }
-  }
-
-  prevBtn.addEventListener('click', () => {
-    currentDate.setDate(currentDate.getDate() - 7);
-    renderWeek(currentDate);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentDate.setDate(currentDate.getDate() + 7);
-    renderWeek(currentDate);
-  });
-
-  renderWeek(currentDate);
-});
- </script>
- <!--  pre regester events -->
-   <script>
+  <!-- whats on  events -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-  const weekContainer2 = document.getElementById('weekDaysContainer2');
-  const monthLabel2 = document.getElementById('calendarMonthLabel2');
-  const prevBtn2 = document.getElementById('prevWeekBtn2');
-  const nextBtn2 = document.getElementById('nextWeekBtn2');
+      const weekContainer = document.getElementById('weekDaysContainer');
+      const monthLabel = document.getElementById('calendarMonthLabel');
+      const prevBtn = document.getElementById('prevWeekBtn');
+      const nextBtn = document.getElementById('nextWeekBtn');
 
-  let currentDate2 = new Date();
+      let currentDate = new Date();
 
-  function getStartOfWeek(date) {
-    const day = date.getDay();
-    return new Date(date.setDate(date.getDate() - day));
-  }
+      function getStartOfWeek(date) {
+        const day = date.getDay();
+        return new Date(date.setDate(date.getDate() - day));
+      }
 
-  function renderWeek2(date) {
-    const start = getStartOfWeek(new Date(date));
-    const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-    weekContainer2.innerHTML = '';
+      function renderWeek(date) {
+        const start = getStartOfWeek(new Date(date));
+        const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        weekContainer.innerHTML = '';
 
-    monthLabel2.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        monthLabel.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
-    for (let i = 0; i < 7; i++) {
-      const day = new Date(start);
-      day.setDate(start.getDate() + i);
+        for (let i = 0; i < 7; i++) {
+          const day = new Date(start);
+          day.setDate(start.getDate() + i);
 
-      const dayBlock = document.createElement('div');
-      dayBlock.className = 'cursor-pointer';
-      const isToday = new Date().toDateString() === day.toDateString();
+          const dayBlock = document.createElement('div');
+          dayBlock.className = 'cursor-pointer';
+          const isToday = new Date().toDateString() === day.toDateString();
 
-      dayBlock.innerHTML = `
+          dayBlock.innerHTML = `
         <div class="fw-bold small">${dayNames[i]}</div>
         <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
           ${day.getDate()}
         </div>
       `;
-      weekContainer2.appendChild(dayBlock);
-    }
-  }
+          weekContainer.appendChild(dayBlock);
+        }
+      }
 
-  prevBtn2.addEventListener('click', () => {
-    currentDate2.setDate(currentDate2.getDate() - 7);
-    renderWeek2(currentDate2);
-  });
+      prevBtn.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() - 7);
+        renderWeek(currentDate);
+      });
 
-  nextBtn2.addEventListener('click', () => {
-    currentDate2.setDate(currentDate2.getDate() + 7);
-    renderWeek2(currentDate2);
-  });
+      nextBtn.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() + 7);
+        renderWeek(currentDate);
+      });
 
-  renderWeek2(currentDate2);
-});
-   </script>
+      renderWeek(currentDate);
+    });
+  </script>
+  <!--  pre regester events -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const weekContainer2 = document.getElementById('weekDaysContainer2');
+      const monthLabel2 = document.getElementById('calendarMonthLabel2');
+      const prevBtn2 = document.getElementById('prevWeekBtn2');
+      const nextBtn2 = document.getElementById('nextWeekBtn2');
+
+      let currentDate2 = new Date();
+
+      function getStartOfWeek(date) {
+        const day = date.getDay();
+        return new Date(date.setDate(date.getDate() - day));
+      }
+
+      function renderWeek2(date) {
+        const start = getStartOfWeek(new Date(date));
+        const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        weekContainer2.innerHTML = '';
+
+        monthLabel2.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+        for (let i = 0; i < 7; i++) {
+          const day = new Date(start);
+          day.setDate(start.getDate() + i);
+
+          const dayBlock = document.createElement('div');
+          dayBlock.className = 'cursor-pointer';
+          const isToday = new Date().toDateString() === day.toDateString();
+
+          dayBlock.innerHTML = `
+        <div class="fw-bold small">${dayNames[i]}</div>
+        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
+          ${day.getDate()}
+        </div>
+      `;
+          weekContainer2.appendChild(dayBlock);
+        }
+      }
+
+      prevBtn2.addEventListener('click', () => {
+        currentDate2.setDate(currentDate2.getDate() - 7);
+        renderWeek2(currentDate2);
+      });
+
+      nextBtn2.addEventListener('click', () => {
+        currentDate2.setDate(currentDate2.getDate() + 7);
+        renderWeek2(currentDate2);
+      });
+
+      renderWeek2(currentDate2);
+    });
+  </script>
+
 </html>
-
-                  

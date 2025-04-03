@@ -176,6 +176,7 @@ document.ontouchstart = evt => birthday.onClick(evt)
     closeButton.style.display = 'none';
     let startBtn = document.getElementById('startbtn');
     startBtn.style.display = 'block'; // Show the start button when closing
+    document.body.classList.remove('canvas-active'); // Remove the class when canvas is hidden
   });
 
   document.getElementById('startbtn').addEventListener('click', function() {
@@ -187,6 +188,7 @@ document.ontouchstart = evt => birthday.onClick(evt)
       closeButton.style.display = 'block'; // Show the close button when the canvas starts
       let h1 = document.querySelector('h1');
       h1.style.display = 'block'; // Show the Happy Birthday message
+      document.body.classList.add('canvas-active'); // Add the class when canvas is displayed
 
       let then = timestamp();
       birthday = new Birthday();
@@ -212,6 +214,7 @@ document.ontouchstart = evt => birthday.onClick(evt)
     // Auto-start canvas
     birthdayCanvas.style.display = 'block';
     startBtn.style.display = 'none';
+    document.body.classList.add('canvas-active'); // Add the class when canvas is displayed
 
     let then = timestamp();
     birthday = new Birthday();

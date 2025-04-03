@@ -88,7 +88,7 @@ hr {
     min-height: 100vh;
     font-family: 'din', sans-serif;
   }
-  body.canvas-visible {
+  body.canvas-active {
     overflow: hidden;
   }
   main{

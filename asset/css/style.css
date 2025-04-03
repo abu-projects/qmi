@@ -25,6 +25,9 @@
     .card-color{
         background-color: var(--card-color);
     }
+    .main-color-hover:hover    {
+        color: var(--main-color);
+    }
   .dark-theme {
     --bg-color: #1B1C1E;
     --text-color: #71737F;
@@ -606,3 +609,57 @@ a:hover img{
  .dark-theme .mazya{
     filter: brightness(0) invert(1);
 }
+/* ========
+ the collections 
+ =============*/
+ .collection-section{
+    /* Hover effect for overlay */
+.carousel-item:hover .overlay-hover {
+    display: block !important;
+  }
+  
+  .overlay-hover {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+  /* Container: maintain height for images */
+#collectionCarousel .carousel-item img {
+    height: 258px; /* Adjust as needed */
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Overlay only on bottom */
+  .overlay-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Show overlay on hover */
+  .carousel-item:hover .overlay-hover {
+    display: block !important;
+  }
+  
+  /* Responsive behavior: remove fixed height below 992px */
+  @media (max-width: 991.98px) {
+    #collectionCarousel .carousel-item img {
+      height: 400px;
+    }
+  }
+
+ }
+
+
+ .inspire-section{
+
+    #quoteCarousel .carousel-item  {
+        height: 175px; /* Adjust as needed */
+
+      }
+ }

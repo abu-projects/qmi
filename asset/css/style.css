@@ -496,7 +496,7 @@ color: var(--head-color);
      .section-card {
    .tittle{
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   
     margin-top: .5rem;
     padding-bottom: .5rem;
@@ -531,3 +531,59 @@ color: var(--head-color);
         height: 175px;
     }
  }
+ /* ======
+Quick Access
+ ======= */
+ .q-section{
+    .img-container{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        border-radius: 50%;
+ background-color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;
+    
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container img{
+        width: 100%;
+        height: 38px;
+  
+    }
+ 
+   a:has(.img-container):hover img{
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+        filter: brightness(0) invert(1);
+    }
+    a:has(.img-container):hover .img-container{
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+        background-color: var(--main-color) !important;
+
+    
+    }
+    .img-container:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+  h6{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  a:has(.img-container){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 30%;
+    margin: 10px 0;
+}
+.q-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+height: 300px;
+overflow: auto;}
+ }
+ 

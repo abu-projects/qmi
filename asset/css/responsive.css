@@ -1,6 +1,4 @@
-/* ===================== 
-      Header Start
-  ====================== */
+
 @media screen and (max-width: 1400px)  {
     .wrap-checker {
      width: 100%;
@@ -58,6 +56,13 @@ border-top: 1px solid var(--border-color);
     .responsive-menu ul li:last-child {
       border-bottom: none;
     }
+    .q-section .q-box{
+      height: auto;
+      overflow: hidden;
+    }
+    .q-section .q-box a{
+     flex: 0 0 35%;
+    }
 }
 .dark-theme .navbar-toggler {
  
@@ -65,8 +70,7 @@ border-top: 1px solid var(--border-color);
 
 }
 
-/* ===================== 
-/* slider responsive */ 
+
 @media (max-width: 1200px) {
  #qmCarousel .carousel-inner {
     padding: 0 2rem;
@@ -86,7 +90,7 @@ border-top: 1px solid var(--border-color);
 @media (max-width: 991.98px) {
     #qmCarousel  .carousel-inner {
     padding: 0 1rem;
-    overflow-x: auto;
+
   }
 
   #qmCarousel  .carousel-inner .carousel-item {
@@ -109,6 +113,3 @@ border-top: 1px solid var(--border-color);
 
 }
 
-/* ===================== 
-   Header End
-  ====================== */

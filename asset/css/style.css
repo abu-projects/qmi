@@ -13,7 +13,7 @@
     --card-color:white;
     --selection-border:#333;
     --wb-color: #333;
-    --bs-btn-active-bg: var(--main-color);
+    /* --bs-btn-active-bg: var(--main-color); */
     --bs-border-color: var(--border-color);
     --bs-nav-tabs-link-active-border-color: var(--border-color) ;
 
@@ -218,7 +218,7 @@ width: 100%;
     border: none;
 }
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;;}
+    color: color-mix(in srgb, var(--main-color) 50%, transparent) !important;}
 
 .btn {
 

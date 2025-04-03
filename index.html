@@ -17,13 +17,31 @@
   <!-- style CSS -->
   <link rel="stylesheet" href="asset/css/style.css">
 
+
+  <link rel="stylesheet" href="asset/css/responsive.css">
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
-  <link rel="stylesheet" href="asset/css/responsive.css">
-
 </head>
 
 <body>
+  <section class="canvas">
+    <a id="startbtn" class="btn">
+      <i class="bi bi-balloon-fill"></i>
+        <br>
+        Start
+    </a>
+        <canvas id="birthday"></canvas>
+      
+        <h1>Happy Birthday   <br>
+          <span class="text-center d-block">   
+            <span class="main-color">Elisa</span>
+            <i class="bi bi-balloon-heart-fill main-color"></i>
+        
+          
+              </span>
+          </h1>
+        <button id="closeButton"><i class="bi bi-x-circle"></i></button>
+  </section>
 
   <!-- Header with Navigation -->
   <header class="py-2 border-bottom ">
@@ -805,6 +823,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="asset/js/canvas.js"></script>
 
 
 
@@ -1021,6 +1040,20 @@
 
       renderWeek2(currentDate2);
     });
+  </script>
+  <script>
+    const canvas = document.querySelector('.canvas');
+const body = document.body;
+
+const observer = new MutationObserver(() => {
+  if (getComputedStyle(canvas).display === 'block') {
+    body.classList.add('canvas-visible');
+  } else {
+    body.classList.remove('canvas-visible');
+  }
+});
+
+observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
   </script>
 
 </html>

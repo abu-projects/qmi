@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QM Intranet </title>
+  <meta name="description" content="QM Intranet">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
   <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
@@ -19,12 +20,13 @@
 
 
   <link rel="stylesheet" href="asset/css/responsive.css">
- 
+
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- <section class="canvas">
     <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
       <i class="bi bi-balloon-fill"></i>
@@ -60,13 +62,14 @@
 
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
-            <button class="navbar-toggler d-lg-none" id="menuToggle" type="button">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
               <i class="bi bi-list fs-2"></i>
             </button>
 
             <div class="responsive-menu" id="mainMenu">
               <div class="d-flex justify-content-end d-lg-none">
-                <button type="button" id="closeMenuBtn" class="btn btn-outline-secondary btn-sm mb-3">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
                   <i class="bi bi-x-lg"></i>
                 </button>
               </div>
@@ -118,7 +121,7 @@
           <!-- Search Form -->
           <form class="d-flex me-3 position-relative">
             <input class="form-control " type="search" placeholder="" aria-label="Search">
-            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" type="submit">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
               <i class="icon-Search icon-white"></i>
             </button>
           </form>
@@ -172,7 +175,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section>
       <!-- Carousel Wrapper -->
       <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -201,21 +204,25 @@
         </div>
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#qmCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" aria-label="prev" data-bs-target="#qmCarousel"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#qmCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" aria-label="next" data-bs-target="#qmCarousel"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
 
         <!-- Added Indicators -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#qmCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="0" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="1" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="2" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
@@ -235,8 +242,8 @@
                         <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg"
                           alt="Main News" class="img-fluid ">
                         <div class="overlay-text">
-                          <h5 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project
-                          </h5>
+                          <h3 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project
+                          </h3>
                           <div class="category-label main-color">Digital</div>
                         </div>
                       </div>
@@ -297,15 +304,16 @@
                 <!-- Tabs -->
                 <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active fw-bold" id="whatson-tab" data-bs-toggle="tab"
-                      data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
+                    <button class="nav-link active fw-bold" aria-label="whatson-tab" id="whatson-tab"
+                      data-bs-toggle="tab" data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson"
+                      aria-selected="true">
                       WHAT’S ON
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="preregister-tab" data-bs-toggle="tab"
-                      data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister"
-                      aria-selected="false">
+                    <button class="nav-link fw-bold" aria-label="preregister-tab" id="preregister-tab"
+                      data-bs-toggle="tab" data-bs-target="#preregister" type="button" role="tab"
+                      aria-controls="preregister" aria-selected="false">
                       Pre-Register Events
                     </button>
                   </li>
@@ -319,12 +327,14 @@
 
                     <div class="text-center flex-grow-1">
                       <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel">date</h6>
+                        <h3 class="fw-bold mb-1 head-color" id="calendarMonthLabel">date</h3>
                         <div class="d-flex ">
-                          <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn">
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" aria-label="prevWeekBtn"
+                            id="prevWeekBtn">
                             <i class="bi bi-chevron-left"></i>
                           </button>
-                          <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn">
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1" aria-label="nextWeekBtn"
+                            id="nextWeekBtn">
                             <i class="bi bi-chevron-right"></i>
                           </button>
                         </div>
@@ -349,7 +359,7 @@
                           <div class="fw-bold">26</div>
                         </div>
                         <div>
-                          <h6 class="fw-bold mb-1 head-color">Interactive Art Night</h6>
+                          <h3 class="fw-bold mb-1 head-color">Interactive Art Night</h3>
                           <small class="text-color">Sat, Feb 15, 7:00 PM</small>
                         </div>
                       </div>
@@ -359,7 +369,7 @@
                           <div class="fw-bold">27</div>
                         </div>
                         <div>
-                          <h6 class="fw-bold mb-1 head-color">Cultural Storytelling</h6>
+                          <h3 class="fw-bold mb-1 head-color">Cultural Storytelling</h3>
                           <small class="text-color">Sun, Feb 16, 6:30 PM</small>
                         </div>
 
@@ -377,12 +387,14 @@
 
 
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h6 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">date</h6>
+                      <h3 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">date</h3>
                       <div class="d-flex ">
-                        <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" id="prevWeekBtn2">
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" aria-label="prevWeekBtn2"
+                          id="prevWeekBtn2">
                           <i class="bi bi-chevron-left"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-primary px-2 py-1" id="nextWeekBtn2">
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1" aria-label="nextWeekBtn2"
+                          id="nextWeekBtn2">
                           <i class="bi bi-chevron-right"></i>
                         </button>
                       </div>
@@ -429,20 +441,20 @@
 
                     <a href="#" class="col-lg-4 text-decoration-none">
                       <div class="border d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src="asset/imgs/our people/Employee Directory.svg" alt="Employee Directory">
-                        <h5 class="head-color mt-3">Employee Directory</h5>
+                        <img src="asset/imgs/our people/Employee Directory.svg" alt="Employeee Directory ">
+                        <h3 class="head-color mt-3">Employee Directory</h3>
                       </div>
                     </a>
                     <a href="#" class="col-lg-4 text-decoration-none">
                       <div class="border d-flex flex-column justify-content-center align-items-center p-3">
                         <img src="asset/imgs/our people/Employee Testimonials.svg" alt="Employee Directory">
-                        <h5 class="head-color mt-3">Employee Testimonials </h5>
+                        <h3 class="head-color mt-3">Employee Testimonials </h3>
                       </div>
                     </a>
                     <a href="#" class="col-lg-4 text-decoration-none">
                       <div class="border d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src="asset/imgs/our people/Our Communities.svg" alt="Employee Directory">
-                        <h5 class="head-color mt-3">Our Communities </h5>
+                        <img src="asset/imgs/our people/Our Communities.svg" alt="Employe Directory">
+                        <h3 class="head-color mt-3">Our Communities </h3>
                       </div>
                     </a>
                   </div>
@@ -465,7 +477,7 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">Achievements</h6>
+                      <h3 class="text-center head-color mt-2">Achievements</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -474,7 +486,7 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">Sustainability</h6>
+                      <h3 class="text-center head-color mt-2">Sustainability</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -483,8 +495,8 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">Policies and
-                        Procedures</h6>
+                      <h3 class="text-center head-color mt-2">Policies and
+                        Procedures</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -493,8 +505,8 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">Department
-                        Location</h6>
+                      <h3 class="text-center head-color mt-2">Department
+                        Location</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -503,8 +515,8 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">QM Important
-                        Links</h6>
+                      <h3 class="text-center head-color mt-2">QM Important
+                        Links</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -513,8 +525,8 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">QM Important
-                        Contacts</h6>
+                      <h3 class="text-center head-color mt-2">QM Important
+                        Contacts</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -523,9 +535,9 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">
+                      <h3 class="text-center head-color mt-2">
                         Photo/Video
-                        Gallery</h6>
+                        Gallery</h3>
 
                     </a>
                     <a href="#" class="mx-2 text-decoration-none">
@@ -534,8 +546,8 @@
 
 
                       </div>
-                      <h6 class="text-center head-color mt-2">Intranet
-                        Guidelines</h6>
+                      <h3 class="text-center head-color mt-2">Intranet
+                        Guidelines</h3>
 
                     </a>
 
@@ -564,7 +576,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3" src="asset/imgs/benf/Well Being.svg" alt="Well Being">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">Well Being </h5>
+                  <h3 class="head-color mt-3">Well Being </h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -574,7 +586,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3" src="asset/imgs/benf/Ghurza.svg" alt="The Ghurza collection">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">The Ghurza collection </h5>
+                  <h3 class="head-color mt-3">The Ghurza collection </h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -584,7 +596,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3 mazya" src="asset/imgs/benf/mazaya.svg" alt="Mazaya">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">Mazaya</h5>
+                  <h3 class="head-color mt-3">Mazaya</h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -594,7 +606,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3" src="asset/imgs/benf/health.svg" alt="Alkoot Insurance">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">Alkoot Insurance </h5>
+                  <h3 class="head-color mt-3">Alkoot Insurance </h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -604,7 +616,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3" src="asset/imgs/benf/Vacancies.svg" alt="Internal Vacancies">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">Internal Vacancies</h5>
+                  <h3 class="head-color mt-3">Internal Vacancies</h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -614,7 +626,7 @@
               <div class="border d-flex  justify-content-start align-items-center p-3">
                 <img class="mx-3" src="asset/imgs/benf/market.svg" alt="Market Place">
                 <div class="flex-column d-flex">
-                  <h5 class="head-color mt-3">Market Place</h5>
+                  <h3 class="head-color mt-3">Market Place</h3>
                   <p class="text-color "> Description comes here</p>
                 </div>
 
@@ -636,160 +648,184 @@
                 <div class="container-fluid   ">
                   <h2 class="fw-bold tittle head-color">Our Stories</h2>
                   <div class="d-flex flex-column">
-<a href="W" class="text-decoration-none my-2"><span class="head-color fw-bold mt-3 main-color-hover">  Qatar Museums at University of Doha for Science & Techonlogy  Career Fair</span> </a>
-<a href="W" class="text-decoration-none my-2"><span class="head-color fw-bold mt-3 main-color-hover">  Qatar Museums at University of Doha for Science & Techonlogy  Career Fair</span> </a>
-<a href="W" class="text-decoration-none my-2"><span class="head-color fw-bold mt-3 main-color-hover">  Qatar Museums at University of Doha for Science & Techonlogy  Career Fair</span> </a>
-<a href="W" class="text-decoration-none my-2"><span class="head-color fw-bold mt-3 main-color-hover">  Qatar Museums at University of Doha for Science & Techonlogy  Career Fair</span> </a>
+                    <a href="W" class="text-decoration-none my-2"><span
+                        class="head-color fw-bold mt-3 main-color-hover"> Qatar Museums at University of Doha for
+                        Science & Techonlogy Career Fair</span> </a>
+                    <a href="W" class="text-decoration-none my-2"><span
+                        class="head-color fw-bold mt-3 main-color-hover"> Qatar Museums at University of Doha for
+                        Science & Techonlogy Career Fair</span> </a>
+                    <a href="W" class="text-decoration-none my-2"><span
+                        class="head-color fw-bold mt-3 main-color-hover"> Qatar Museums at University of Doha for
+                        Science & Techonlogy Career Fair</span> </a>
+                    <a href="W" class="text-decoration-none my-2"><span
+                        class="head-color fw-bold mt-3 main-color-hover"> Qatar Museums at University of Doha for
+                        Science & Techonlogy Career Fair</span> </a>
 
 
 
-</div>
+                  </div>
                   <div class="text-end mt-3 card-footer">
                     <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
                   </div>
-                  </div>
-                  </div>
-              </section>
-            </div>
-            <div class="col-lg-4"> 
-              <section class="collection-section mt-4 mt-lg-0 ">
-                <div class="card section-card card-color h-100">
-                  <div class="container-fluid   ">
-                    <h2 class="fw-bold tittle head-color">The Collection </h2>
-                    <div id="collectionCarousel" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <a href="#" class="carousel-item active position-relative">
-                          <img src="https://i.pinimg.com/736x/c1/bf/5e/c1bf5e3bfc560a4fcfe7faa1de1aa478.jpg" class="d-block w-100" alt="Collection 1">
-                          <div class="overlay-hover">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="text-white fw-bold mb-1">The Cultural Experience: Visiting the Museum of Islamic Art</h6>
-                        
-                              <small class="text-white"><i class="bi bi-eye main-color"></i> 2330</small>
-                            </div>
-                          </div>
-                        </a>
-                    
-                        <a href="#" class="carousel-item position-relative">
-                          <img src="https://i.pinimg.com/736x/d9/39/fb/d939fb8f6a385b1e20adbefd5c2eb6db.jpg" class="d-block w-100" alt="Collection 2">
-                          <div class="overlay-hover ">
-                            <div class="d-flex justify-content-betweenalign-items-center">
-                              <h6 class="text-white fw-bold mb-1">The Cultural Experience: Visiting the Museum of Islamic Art</h6>
-                        
-                              <small class="text-white"><i class="bi bi-eye main-color"></i> 2330</small>
-                            </div>
-                          
-                          </div>
-                        </a>
-                      </div>
-                    
-                      <!-- Controls -->
-                      <button class="carousel-control-prev" type="button" data-bs-target="#collectionCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#collectionCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
-                    </div>
-                    <div class="text-end mt-3 card-footer">
-                      <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
-                    </div>
-                    </div>
-                    </div>
-                </section>
+                </div>
               </div>
-            
-              <div class="col-lg-4">
-                <section class="inspire-section  mt-4 mt-lg-0  h-100">
-                  <div class="card section-card card-color h-100">
+            </section>
+          </div>
+          <div class="col-lg-4">
+            <section class="collection-section mt-4 mt-lg-0 ">
+              <div class="card section-card card-color h-100">
+                <div class="container-fluid   ">
+                  <h2 class="fw-bold tittle head-color">The Collection </h2>
+                  <div id="collectionCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <a href="#" class="carousel-item active position-relative">
+                        <img src="https://i.pinimg.com/736x/c1/bf/5e/c1bf5e3bfc560a4fcfe7faa1de1aa478.jpg"
+                          class="d-block w-100" alt="Collection 1">
+                        <div class="overlay-hover">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="text-white fw-bold mb-1">The Cultural Experience: Visiting the Museum of Islamic
+                              Art</h6>
+
+                            <small class="text-white"><i class="bi bi-eye main-color"></i> 2330</small>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="#" class="carousel-item position-relative">
+                        <img src="https://i.pinimg.com/736x/d9/39/fb/d939fb8f6a385b1e20adbefd5c2eb6db.jpg"
+                          class="d-block w-100" alt="Collection 2">
+                        <div class="overlay-hover ">
+                          <div class="d-flex justify-content-betweenalign-items-center">
+                            <h6 class="text-white fw-bold mb-1">The Cultural Experience: Visiting the Museum of Islamic
+                              Art</h6>
+
+                            <small class="text-white"><i class="bi bi-eye main-color"></i> 2330</small>
+                          </div>
+
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#collectionCarousel"
+                      aria-label="collectionCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#collectionCarousel"
+                      aria-label="collectionCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="text-end mt-3 card-footer">
+                    <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="col-lg-4">
+            <section class="inspire-section  mt-4 mt-lg-0  h-100">
+              <div class="card section-card card-color h-100">
                 <div class="container-fluid">
                   <h2 class="fw-bold tittle head-color">Inspire & Reflect </h2>
-        
-           <div id="quoteCarousel" class="carousel slide my-4" data-bs-ride="carousel">
-             <div class="carousel-inner">
-           
-               <div class="carousel-item active">
-                 <blockquote class="fst-italic text-color">
-                   “One needs to know something about what the world is like before trying to explain what one imagines it to be like.”
-                   - Lewis Binford<br>
-                   “Archaeology is not only the handmaid of history, it is also the conservator of art.”
-                 </blockquote>
-                 <p class="fw-bold text-end head-color">Edward Bulwer Lytton</p>
-               </div>
-           
-               <div class="carousel-item">
-                 <blockquote class="fst-italic text-color">
-                   “The past is not dead. It’s not even past.”
-                 </blockquote>
-                 <p class="fw-bold text-end head-color">William Faulkner</p>
-               </div>
-           
-               <div class="carousel-item">
-                 <blockquote class="fst-italic text-color">
-                   “Museums are managers of consciousness. They give us an interpretation of history, of how to view the world and locate ourselves in it.”
-                 </blockquote>
-                 <p class="fw-bold text-end head-color">Toby Clark</p>
-               </div>
-           
-             </div>
-           
-             <!-- Controls -->
-             <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon"></span>
-               <span class="visually-hidden">Previous</span>
-             </button>
-             <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next">
-               <span class="carousel-control-next-icon"></span>
-               <span class="visually-hidden">Next</span>
-             </button>
-           </div>
-             
+
+                  <div id="quoteCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                      <div class="carousel-item active">
+                        <blockquote class="fst-italic text-color">
+                          “One needs to know something about what the world is like before trying to explain what one
+                          imagines it to be like.”
+                          - Lewis Binford<br>
+                          “Archaeology is not only the handmaid of history, it is also the conservator of art.”
+                        </blockquote>
+                        <p class="fw-bold text-end head-color">Edward Bulwer Lytton</p>
+                      </div>
+
+                      <div class="carousel-item">
+                        <blockquote class="fst-italic text-color">
+                          “The past is not dead. It’s not even past.”
+                        </blockquote>
+                        <p class="fw-bold text-end head-color">William Faulkner</p>
+                      </div>
+
+                      <div class="carousel-item">
+                        <blockquote class="fst-italic text-color">
+                          “Museums are managers of consciousness. They give us an interpretation of history, of how to
+                          view the world and locate ourselves in it.”
+                        </blockquote>
+                        <p class="fw-bold text-end head-color">Toby Clark</p>
+                      </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel"
+                      aria-label="quoteCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel"
+                      aria-label="quoteCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
                   <h2 class="fw-bold tittle head-color">Social Media </h2>
                   <i class="bi bi-twitter-x"></i>
-                    <div class="d-flex justify-content-start gap-3 fs-4">
-                      <a href="#" class="text-color"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-color"><svg style="margin-top: -5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
-                        </svg></a>
-                      <a href="#" class="text-color"><i class="bi bi-youtube"></i></a>
-                      <a href="#" class="text-color"><i class="bi bi-linkedin"></i></a>
-                    </div>              
-                  
-             
+                  <div class="d-flex justify-content-start gap-3 fs-4">
+                    <a href="#" aria-label="instagram" class="text-color"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="x" class="text-color"><svg style="margin-top: -5px;"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path
+                          d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z">
+                        </path>
+                      </svg></a>
+                    <a href="#" aria-label="youtube" class="text-color"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="linkedin" class="text-color"><i class="bi bi-linkedin"></i></a>
+                  </div>
+
+
                 </div>
-                      </div>
-                  </section>
-           
-        
+              </div>
+            </section>
+
+
           </div>
-        
-        
-        </div>  </div></div>
-  </main>
-<section class="setting-section">
-   <!-- Fixed Settings Button -->
-   <div class="theme-toggle-btn ">
-    <button class="btn bg-main bg-main-hover text-white  " id="themeBtn">
-      <span class="icon-Setting mx-1 icon-md "></span>
-      
-    </button>
-    <div class="dropdown-panel g-3" id="themeDropdown">
-      <div class="py-3 px-4 panel-container">
-        <div class="d-flex justify-content-between">
-          <h4 class="head-color"> Setting</h4>
-          <!-- close btn -->
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-3">
-            <i class="bi bi-x-lg"></i>
-          </button>
+
+
         </div>
-    
-        <hr>
-      
+      </div>
+    </div>
+  </main>
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
           <div class="theme py-2">
-            <h6 class="head-color">
+            <h3 class="head-color">
               Theme
-            </h6>
+            </h3>
             <!-- Theme Toggle Options -->
             <div class="theme-options d-flex gap-1 mt-2">
               <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
@@ -804,34 +840,36 @@
           </div>
           <hr>
           <div class="colors py-2">
-            <h6 class="head-color">
+            <h3 class="head-color">
               Colors
-            </h6>
+            </h3>
             <div class="color-palette d-flex gap-2">
               <div class="color-circle bg-pink" data-color="--pink"></div>
               <div class="color-circle bg-orange" data-color="--orange"></div>
               <div class="color-circle bg-blue" data-color="--blue"></div>
             </div>
           </div>
-    
 
 
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="teams-section">
-  <div class="teams-btn ">
-    <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com" class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
-     
-      <i class="bi bi-microsoft-teams icon-md"></i>
-      Contact Us
-    </a>
-</section>
+  </section>
+  <section class="teams-section">
+    <div class="teams-btn ">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+  </section>
 
   <footer class="mt-4 container-fluid">
     <span>
-      © <a class=" text-decoration-none main-color" href="https://qm.org.qa/en/">Qatar Museums </a>   <span id="currentYear"></span>
+      © <a class=" text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums </a> <span
+        id="currentYear"></span>
     </span>
 
     <span class="">
@@ -847,7 +885,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="asset/js/canvas.js"></script>
+  <!-- <script src="asset/js/canvas.js"></script> -->
 
 
 
@@ -1072,7 +1110,7 @@
       renderWeek2(currentDate2);
     });
   </script>
-  <script>
+  <!-- <script>
     const canvas = document.querySelector('.canvas');
 const body = document.body;
 
@@ -1085,9 +1123,16 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
-  </script>
+  </script> -->
 
   <script>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Tab") {
+        document.querySelector('.skip-link').style.top = "10px"; // عرض الرابط عند التفاعل مع Tab
+      }
+    });
+
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
+
 </html>

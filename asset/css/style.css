@@ -80,6 +80,18 @@ hr {
     /* border-top: var(--bs-border-width) solid; */
     border-color: var(--selection-border);
 }
+#themeBtn{
+    position: fixed;
+
+        top: 20%;
+        left: 0;
+        z-index: 999;
+        cursor: pointer;
+        display: flex
+        ;
+            justify-content: center;
+            padding: 10px;
+}
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -98,39 +110,52 @@ hr {
     color: var(--text-color);
 }
 
+.setting-section{
+    .dropdown-panel {
+        position: fixed;
+        bottom: 72px;
+        left: 0;
+        z-index: 1055; /* Higher than Bootstrap carousel (which uses 1050) */
+    width: 100%;
+        transition: transform 0.3s ease-in-out;
+    
+      }
+      .dropdown-panel .panel-container{
+     
+    
+        border-radius: 5px;
+        padding: 10px;
+     
+      }
+   
+      .dropdown-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 320px;
+        background-color: var(--card-color);
+        z-index: 1055;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown-panel.show {
+        transform: translateX(0);
+    }
+      .color-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        /* border: 2px solid #fff; */
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+      }
+}
 
-  .dropdown-panel {
-    position: fixed;
-    bottom: 72px;
-    left: 0;
-    z-index: 1055; /* Higher than Bootstrap carousel (which uses 1050) */
-width: 100%;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-  }
-  .dropdown-panel .panel-container{
-    border-top: 1px solid var(--border-color);
-    background-color: var(--card-color);
-    border-radius: 5px;
-    padding: 10px;
-    width: 97%;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-  }
-  .dropdown-panel .panel-container .theme{
 
-    border-right: 1px solid var(--border-color);
-
-  }
-  
-  .color-circle {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    /* border: 2px solid #fff; */
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-  }
 
   .bg-pink { background-color: var(--pink); }
   .bg-orange { background-color: var(--orange); }

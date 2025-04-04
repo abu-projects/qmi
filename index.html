@@ -19,13 +19,14 @@
 
 
   <link rel="stylesheet" href="asset/css/responsive.css">
+ 
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
 </head>
 
 <body>
-  <section class="canvas">
-    <a id="startbtn" class="btn bg-main bg-main-hover text-white ">
+  <!-- <section class="canvas">
+    <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
       <i class="bi bi-balloon-fill"></i>
 
         Start
@@ -41,7 +42,7 @@
               </span>
           </h1>
         <button id="closeButton"><i class="bi bi-x-circle"></i></button>
-  </section>
+  </section> -->
 
   <!-- Header with Navigation -->
   <header class="py-2 border-bottom ">
@@ -766,50 +767,62 @@
         
         </div>  </div></div>
   </main>
-
-
-  <footer class="mt-4">
-    <!-- Fixed Settings Button -->
-    <div class="theme-toggle-btn ">
-      <button class="btn btn-main rounded-1 " id="themeBtn">
-        <span class="icon-Setting mx-1 "></span>
-        Settings
-      </button>
-      <div class="dropdown-panel d-none" id="themeDropdown">
-        <div class="py-3 px-4 panel-container">
-          <div class="d-flex justify-content-start align-items-center mb-3">
-            <div class="theme px-4">
-              <h4 class="head-color">
-                Theme
-              </h4>
-              <!-- Theme Toggle Options -->
-              <div class="theme-options d-flex gap-1 mt-2">
-                <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
-                  <i class="bi bi-sun"></i>
-                  <span>Light</span>
-                </div>
-                <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
-                  <i class="bi bi-moon"></i>
-                  <span>Dark</span>
-                </div>
+<section class="setting-section">
+   <!-- Fixed Settings Button -->
+   <div class="theme-toggle-btn ">
+    <button class="btn bg-main bg-main-hover text-white  " id="themeBtn">
+      <span class="icon-Setting mx-1 icon-md "></span>
+      
+    </button>
+    <div class="dropdown-panel g-3" id="themeDropdown">
+      <div class="py-3 px-4 panel-container">
+        <div class="d-flex justify-content-between">
+          <h4 class="head-color"> Setting</h4>
+          <!-- close btn -->
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-3">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+    
+        <hr>
+      
+          <div class="theme py-2">
+            <h6 class="head-color">
+              Theme
+            </h6>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
               </div>
-            </div>
-            <div class="colors px-4">
-              <h4 class="head-color">
-                Colors
-              </h4>
-              <div class="color-palette d-flex gap-2">
-                <div class="color-circle bg-pink" data-color="--pink"></div>
-                <div class="color-circle bg-orange" data-color="--orange"></div>
-                <div class="color-circle bg-blue" data-color="--blue"></div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
               </div>
             </div>
           </div>
+          <hr>
+          <div class="colors py-2">
+            <h6 class="head-color">
+              Colors
+            </h6>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+    
 
 
-        </div>
       </div>
     </div>
+  </div>
+</section>
+
+  <footer class="mt-4">
+ 
     <span class="">
       <a href="#" class="text-decoration-none mx-4 text-white">
         Disclaimer </a>
@@ -900,14 +913,21 @@
 
       themeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        themeDropdown.classList.remove('d-none');
+        themeDropdown.classList.toggle('show');
       });
 
       document.addEventListener('click', (e) => {
         if (!themeDropdown.contains(e.target) && !themeBtn.contains(e.target)) {
-          themeDropdown.classList.add('d-none');
+          themeDropdown.classList.remove('show');
         }
       });
+
+      const themeCloseBtn = document.querySelector('#themeDropdown .btn-outline-secondary');
+      if (themeCloseBtn) {
+        themeCloseBtn.addEventListener('click', () => {
+          themeDropdown.classList.remove('show');
+        });
+      }
     });
   </script>
   <!-- menu -->

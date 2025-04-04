@@ -93,6 +93,10 @@ border-top: 1px solid var(--border-color);
     padding: 0 1rem;
 
   }
+  .responsive-menu ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
 
   #qmCarousel  .carousel-inner .carousel-item {
     min-width: 280px;

@@ -328,11 +328,12 @@ width: 100%;
         background-color: var(--pink);
         z-index: 1040;
         cursor: pointer;
-        color: var(--white);
+        color: var(--white)!important;
+        display: flex;
     }
     
     #startbtn:hover {
-        background-color: var(--yellow);
+        background-color: var(--bg-color);
     }
     h1{
         position: fixed;
@@ -679,4 +680,8 @@ a:hover img{
         height: 175px; /* Adjust as needed */
 
       }
+ }
+
+ .dropdown-menu{
+    border-color: var(--border-color);
  }

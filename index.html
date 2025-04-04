@@ -117,7 +117,7 @@
         <div class="d-flex align-items-center wrap-checker ">
           <!-- Search Form -->
           <form class="d-flex me-3 position-relative">
-            <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control " type="search" placeholder="" aria-label="Search">
             <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" type="submit">
               <i class="icon-Search icon-white"></i>
             </button>
@@ -185,7 +185,7 @@
             <!-- Text Overlay -->
             <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box">
               <h3 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h3>
-              <p class="text-color">
+              <p class="text-color d-none d-md-block">
                 Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China
                 and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director
                 of National Museum of Qatar, on behalf of
@@ -820,9 +820,20 @@
     </div>
   </div>
 </section>
+<section class="teams-section">
+  <div class="teams-btn ">
+    <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com" class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+     
+      <i class="bi bi-microsoft-teams icon-md"></i>
+      Contact Us
+    </a>
+</section>
 
-  <footer class="mt-4">
- 
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class=" text-decoration-none main-color" href="https://qm.org.qa/en/">Qatar Museums </a>   <span id="currentYear"></span>
+    </span>
+
     <span class="">
       <a href="#" class="text-decoration-none mx-4 text-white">
         Disclaimer </a>
@@ -1076,4 +1087,7 @@ const observer = new MutationObserver(() => {
 observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
   </script>
 
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
 </html>

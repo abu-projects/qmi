@@ -81,7 +81,7 @@ border-top: 1px solid var(--border-color);
     padding: 1rem;
     left: 0;
     right: 0;
-    bottom: 1rem;
+    bottom: 6rem;
     text-align: left;
     border-top-left-radius: 0%;
   
@@ -103,6 +103,10 @@ border-top: 1px solid var(--border-color);
     flex: 0 0 auto;
     margin-right: 1rem;
   }
+  #qmCarousel .carousel-caption.slider-over {
+    bottom: 3rem;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -115,6 +119,6 @@ border-top: 1px solid var(--border-color);
     object-fit: cover;
   }
   
-
+ 
 }
 

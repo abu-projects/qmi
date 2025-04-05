@@ -1012,11 +1012,12 @@ a.carousel-item.active.position-relative {
   input[type="date"].no-native-calendar::-moz-calendar-picker-indicator {
     opacity: 0;
   }
-  .news-wrapper.view-list .news-item .card{
+.news-wrapper.view-list .news-item .card{
     display: flex;
     flex-direction: row;
     gap: 1rem;
-  }
+    align-items: flex-start;
+}
 
   .news-wrapper.view-grid .news-item  .card{
     display: flex;
@@ -1030,11 +1031,13 @@ a.carousel-item.active.position-relative {
   .news-wrapper.view-list .news-item {
     margin-bottom: 10px;
   }
-  .news-wrapper.view-list .news-item .card img {
+.news-wrapper.view-list .news-item .card img {
     width: 180px;
     height: 140px;
     object-fit: cover;
-  }
+    flex-shrink: 0;
+    align-self: flex-start;
+}
 
   /* Responsive grid layout for news items */
   .news-wrapper.view-grid {

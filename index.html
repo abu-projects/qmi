@@ -27,7 +27,7 @@
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <!-- <section class="canvas">
+  <section class="canvas">
     <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
       <i class="bi bi-balloon-fill"></i>
 
@@ -43,8 +43,8 @@
           
               </span>
           </h1>
-        <button id="closeButton"><i class="bi bi-x-circle"></i></button>
-  </section> -->
+        <button id="closeButton" aria-label="closeButton"><i class="bi bi-x-circle"></i></button>
+  </section>
 
   <!-- Header with Navigation -->
   <header class="py-2 border-bottom ">
@@ -187,7 +187,7 @@
 
             <!-- Text Overlay -->
             <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box">
-              <h3 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h3>
+              <h2 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h2>
               <p class="text-color d-none d-md-block">
                 Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China
                 and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director
@@ -885,7 +885,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- <script src="asset/js/canvas.js"></script> -->
+  <script src="asset/js/canvas.js"></script>
 
 
 
@@ -1110,8 +1110,8 @@
       renderWeek2(currentDate2);
     });
   </script>
-  <!-- <script>
-    const canvas = document.querySelector('.canvas');
+  <script>
+    // const canvas = document.querySelector('.canvas');
 const body = document.body;
 
 const observer = new MutationObserver(() => {
@@ -1123,7 +1123,7 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
-  </script> -->
+  </script>
 
   <script>
     document.addEventListener('keydown', function (e) {

@@ -254,28 +254,28 @@
        <div class="news-hero-secondary custom-vertical-carousel">
         <div class="vertical-carousel-inner">
           <div class="vertical-carousel-item active">
-            <a href="#" class="news-hero-item news-overlay d-block">
+            <div  class="news-hero-item news-overlay d-block">
               <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="Headline 1">
               <div class="news-hero-caption">
-                <h2>Headline 1</h2>
+                <a href="#" class="text-decoration-none text-white main-color-hover">  <h2>Headline 1</h2></a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="vertical-carousel-item">
-            <a href="#" class="news-hero-item news-overlay d-block">
+            <div class="news-hero-item news-overlay d-block">
               <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Headline 2">
               <div class="news-hero-caption">
-                <h2>Headline 2</h2>
+                <a href="#"  class="text-decoration-none text-white">  <h2>Headline 2</h2></a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="vertical-carousel-item">
-            <a href="#" class="news-hero-item news-overlay d-block">
+            <div class="news-hero-item news-overlay d-block">
               <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Headline 3">
               <div class="news-hero-caption">
-                <h2>Headline 3</h2>
+          <a href="#"  class="text-decoration-none text-white">  <h2>Headline 3</h2></a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       
@@ -1143,15 +1143,33 @@
     const items = document.querySelectorAll('.vertical-carousel-item');
     const dots = document.querySelectorAll('.vertical-carousel-dots button');
 
+    let currentSlide = 0;
+ 
+    function goToSlide(index) {
+      if (index < 0) index = items.length - 1;
+      if (index >= items.length) index = 0;
+      currentSlide = index;
+ 
+      dots.forEach(d => d.classList.remove('active'));
+      dots[index].classList.add('active');
+ 
+      const translateY = -index * 100;
+      inner.style.transform = `translateY(${translateY}%)`;
+    }
+ 
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
-
-        const translateY = -index * 100;
-        inner.style.transform = `translateY(${translateY}%)`;
+        goToSlide(index);
       });
     });
+ 
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        goToSlide(currentSlide + 1);
+      });
+    });
+ 
+    goToSlide(0);
   });
 </script>
 

@@ -23,6 +23,7 @@
 
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
+
 </head>
 
 <body>
@@ -249,23 +250,44 @@
                             </div>
                         </a>
                         
-                        <!-- Secondary news items -->
-                         
-                        <div class="news-hero-secondary ">
-                          <!-- Top Right News -->
-                          <a href="#" class="news-hero-item news-overlay">
-                            <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
-                            <div class="news-hero-caption">
-                              <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
-                            </div>
-                          </a>
-                
-                
-                        
-                        </div>
+       <!-- Secondary news items as vertical slider -->
+       <div class="news-hero-secondary custom-vertical-carousel">
+        <div class="vertical-carousel-inner">
+          <div class="vertical-carousel-item active">
+            <a href="#" class="news-hero-item news-overlay d-block">
+              <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="Headline 1">
+              <div class="news-hero-caption">
+                <h2>Headline 1</h2>
+              </div>
+            </a>
+          </div>
+          <div class="vertical-carousel-item">
+            <a href="#" class="news-hero-item news-overlay d-block">
+              <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Headline 2">
+              <div class="news-hero-caption">
+                <h2>Headline 2</h2>
+              </div>
+            </a>
+          </div>
+          <div class="vertical-carousel-item">
+            <a href="#" class="news-hero-item news-overlay d-block">
+              <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Headline 3">
+              <div class="news-hero-caption">
+                <h2>Headline 3</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+      
+        <!-- Dot navigation -->
+        <div class="vertical-carousel-dots">
+          <button data-slide="0" class="active"></button>
+          <button data-slide="1"></button>
+          <button data-slide="2"></button>
+        </div>
+      </div>
                     </div>
                     
-                    <!-- Rest of news content would go here -->
                 </section>
 
                   <!-- View All -->
@@ -1115,5 +1137,22 @@
 
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const inner = document.querySelector('.vertical-carousel-inner');
+    const items = document.querySelectorAll('.vertical-carousel-item');
+    const dots = document.querySelectorAll('.vertical-carousel-dots button');
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+
+        const translateY = -index * 100;
+        inner.style.transform = `translateY(${translateY}%)`;
+      });
+    });
+  });
+</script>
 
 </html>

@@ -118,7 +118,9 @@ border-top: 1px solid var(--border-color);
     height: 50vh;
     object-fit: cover;
   }
-  
+  .view-btns{
+    display: none !important;
+  }
  
 }
 

@@ -13,6 +13,7 @@
     --card-color: white;
     --selection-border: #333;
     --wb-color: #333;
+    --bw-color: #fff;
     /* --bs-btn-active-bg: var(--main-color); */
     --bs-border-color: var(--border-color);
     --bs-nav-tabs-link-active-border-color: var(--border-color);
@@ -22,7 +23,9 @@
 .head-color {
     color: var(--black);
 }
-
+.card{
+    border-color: var(--border-color) !important;
+}
 .card-color {
     background-color: var(--card-color);
 }
@@ -31,9 +34,11 @@
     color: var(--main-color);
 }
 .footer-text{
-    color: #ff1973;
+    color: var(--main-color);
 }
-
+.border-color {
+    border-color: var(--border-color) !important;
+}
 .dark-theme {
     --bg-color: #1B1C1E;
     --text-color: #71737F;
@@ -42,7 +47,7 @@
     --card-color: #292A2C;
     --selection-border: var(--white);
     --wb-color: #fff;
-
+    --bw-color: #333;
     .head-color {
         color: var(--white);
         --card-color: white
@@ -67,6 +72,22 @@
 
 }
 
+.btn-outline-secondary.selected{
+    background-color: var(--wb-color) !important;
+    color: var(--bw-color) !important;
+    border-color: var(--bw-color) !important; 
+}
+.btn-outline-dark{
+    color: var(--wb-color) !important;
+    border-color: var(--wb-color) !important;
+    background-color: transparent !important;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: var(--wb-color) !important;
+        color: var(--bw-color) !important;
+        border-color: var(--bw-color) !important;
+    }
+}
 .bg-main {
     background-color: var(--main-color) !important;
 }
@@ -841,4 +862,281 @@ a.carousel-item.active.position-relative {
 
 .skip-link:focus {
     top: 10px;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+    background: var(--main-color) !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    border-color: var(--main-color) !important;
+}
+.flatpickr-day.today {
+    border-color: var(--main-color) !important;
+}
+.input-group-text{
+    background-color: transparent !important;
+}
+.news-page{
+   
+  /* News Hero Section Styles */
+  
+  nav[aria-label="Page navigation"] {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .news-hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 20px;
+
+  }
+  
+  .news-hero-main {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 8px;
+  }
+  .news-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to bottom, transparent 0%, transparent 39%, rgba(0, 0, 0, .95) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#db000000',GradientType=0);
+    z-index: 1;
+}
+.news-overlay img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .15);
+    z-index: 1;
+    opacity: 1;
+}
+.news-overlay:hover img{
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+} 
+  .news-hero-secondary {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  
+  .news-hero-item {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 8px;
+  }
+  
+  .news-hero-main img, .news-hero-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .news-hero-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); */
+      color: white;
+      padding: 20px;
+  z-index: 2;
+  }
+  
+  .news-hero-caption h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+  }
+  
+  .news-hero-main .news-hero-caption h2 {
+      font-size: 1.3rem;
+  }
+  
+  .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .news-hero {
+          grid-template-columns: 1fr;
+      }
+      
+      .news-hero-main, .news-hero-item {
+          height: 300px;
+      }
+  }
+  /* Remove native calendar icon in input[type="date"] for webkit browsers */
+  input[type="date"].no-native-calendar::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  
+  /* Fully hide default date icon */
+  input[type="date"].no-native-calendar {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  
+  input[type="date"].no-native-calendar::-webkit-inner-spin-button,
+  input[type="date"].no-native-calendar::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  
+  input[type="date"].no-native-calendar::-moz-calendar-picker-indicator {
+    opacity: 0;
+  }
+  .news-wrapper.view-list .news-item .card{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .news-wrapper.view-grid .news-item  .card{
+    display: flex;
+    flex-direction: column;
+  }  .news-wrapper.view-grid .news-item  .card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .news-wrapper.view-list .news-item {
+    margin-bottom: 10px;
+  }
+  .news-wrapper.view-list .news-item .card img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  /* Responsive grid layout for news items */
+  .news-wrapper.view-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+  }
+
+  .news-wrapper.view-grid .news-item {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .news-item span{
+    color: var(--text-color);
+  }
+
+  @media (min-width: 768px) {
+    .news-wrapper.view-grid .news-item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .news-wrapper.view-grid .news-item {
+      width: 33.3333%;
+    }
+  }
+  .news-wrapper .news-item h5 {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--head-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .news-wrapper .news-item p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--text-color);
+  }
+
+  /* Custom pagination styling */
+  .pagination .page-link {
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    border-radius: 5px !important;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+  }
+  .pagination .page-item {
+   margin: 0 5px;
+  }
+  .pagination .page-link:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+    border-color: var(--main-color);
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--white);
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Sorting Button Custom Style */
+  .dropdown-toggle {
+    background-color: var(--bw-color) !important;
+    color: var(--main-color) !important;
+    border: none !important;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-toggle:focus,
+  .dropdown-toggle:hover {
+    background-color: var(--main-color) !important;
+    color: var(--white) !important;
+  }
+
+  .dropdown-menu .dropdown-item {
+    font-weight: bold;
+    padding: 10px 16px;
+    color: var(--text-color);
+  }
+
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    background-color: var(--main-color);
+    color: var(--white);
+  }
 }

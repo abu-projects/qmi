@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Intranet </title>
+  <meta name="description" content="QM Intranet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+
+
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+
+  <!--  Birthday canvas CSS -->
+  <link rel="stylesheet" href="asset/css/canvas.css">
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- <section class="canvas">
+    <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
+      <i class="bi bi-balloon-fill"></i>
+
+        Start
+    </a>
+        <canvas id="birthday"></canvas>
+      
+        <h1>Happy Birthday   <br>
+          <span class="text-center d-block">   
+            <span class="main-color">Elisa</span>
+            <i class="bi bi-balloon-heart-fill main-color"></i>
+        
+          
+              </span>
+          </h1>
+        <button id="closeButton"><i class="bi bi-x-circle"></i></button>
+  </section> -->
+
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom ">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="/" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About QM</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                    <li><a class="dropdown-item" href="#">Departments</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                    <li><a class="dropdown-item" href="#">IT Services</a></li>
+                    <li><a class="dropdown-item" href="#">Finance</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+       
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker ">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control " type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <!-- Notifications Dropdown -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-Notification btn-main-link icon-md "></i>
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Setting icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Ticket icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">The Art of Color and Form:</strong><br />
+                  <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+
+              <div class="text-end">
+                <a href="#" class="fw-bold  text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link   d-flex">
+              عربي
+              <span class="icon-lang icon-md mx-1"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<main id ="main-content" class="news-page">
+
+  <div class="container-fluid">
+    <section class="card card-color p-3 mt-3">
+      <div class="news-hero ">
+          <!-- Main featured news item -->
+          <a href="#" class="news-hero-main news-overlay">
+              <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+              <div class="news-hero-caption">
+                  <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
+                  <div class="news-meta d-flex justify-content-between">
+                   <span><i class="icon-Calendar main-color"></i> 12.12.2024</span>
+                   <span><i class="icon-Show main-color"></i> 230</span>
+                  </div>
+              </div>
+          </a>
+          
+          <!-- Secondary news items -->
+          <div class="news-hero-secondary ">
+            <!-- Top Right News -->
+            <a href="#" class="news-hero-item news-overlay">
+              <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+              <div class="news-hero-caption">
+                <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
+              </div>
+            </a>
+  
+            <!-- Bottom Two News Items -->
+            <div class="row g-3">
+              <a href="#" class="col-12 col-md-6">
+                <div class="news-hero-item news-overlay">
+                  <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Gazan Students in Tech Workshop">
+                  <div class="news-hero-caption">
+                    <h2>Gazan Students in Tech Workshop</h2>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="col-12 col-md-6 ">
+                <div class="news-hero-item news-overlay">
+                  <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Robotics Exhibition Ceremony">
+                  <div class="news-hero-caption">
+                    <h2>Robotics Exhibition Ceremony</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+      </div>
+      
+      <!-- Rest of news content would go here -->
+  </section>
+<section class="bread-cramp mt-3">
+<div class="card card-color">
+  <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+    <h2 class="fw-bold m-0 head-color">QM in the News</h2>
+    <div class="d-flex align-items-center gap-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item">
+            <a href="#" class="btn-main-link fw-bold">Home</a>
+          </li>
+          <li class="breadcrumb-item  text-color fw-semibold" aria-current="page">QM in the News</li>
+        </ol>
+      </nav>
+      <a href="#" class="btn btn-outline-dark d-flex ">
+        <i class="bi bi-arrow-left"></i>Back
+      </a>
+    </div>
+  </div>
+</div>
+  </section>
+  <div class="row">
+    <div class="col-lg-4">
+      <section class="card fliter-card card-color mt-3 p-3 ">
+        <div class="card-body">
+          <h4 class="fw-bold head-color mb-3">Filters &amp; Search</h4>
+          <hr>
+          <form>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="button" aria-label="Search">
+                <i class="icon-Search "></i>
+              </button>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" aria-label="From Date" placeholder="From">
+              <span class="input-group-text ">
+                <i class="icon-Calendar text-color"></i>
+              </span>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" aria-label="To Date" placeholder="To">
+              <span class="input-group-text ">
+                <i class="icon-Calendar text-color "></i>
+              </span>
+            </div>
+            <button type="submit" class="btn  btn bg-main bg-main-hover text-white text-white fw-bold w-100 mb-2">Apply Filter</button>
+            <button type="reset" class="btn btn-outline-dark fw-bold w-100">Reset</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <div class="col-lg-8">
+      <section class="new-list card card-color p-3 mt-3 p-3" >
+  <div class="d-flex justify-content-between align-items-center ">
+    <h4 class="fw-bold head-color"><strong >Total Result:</strong> 3000</h4>
+    <div class="d-flex align-items-center gap-2 flex-wrap view-btns">
+      <span class="text-color">View</span>
+      <button class="btn btn-outline-secondary btn-sm" id="listViewBtn" data-view="list">
+        <i class="bi bi-list"></i>
+      </button>
+      <button class="btn btn-outline-secondary btn-sm" id="gridViewBtn" data-view="grid">
+        <i class="bi bi-grid-3x3-gap"></i>
+      </button>
+      <div class="dropdown ms-2">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Sort by: New Date
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+          <li><a class="dropdown-item" href="#">Newest First</a></li>
+          <li><a class="dropdown-item" href="#">Oldest First</a></li>
+          <li><a class="dropdown-item" href="#">Most Viewed</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="news-wrapper view-list g-3">
+    <!-- Example repeated card -->
+    <div class="news-item ">
+      <div class="card card-color p-2 h-100 card-color">
+        <img src="https://i.pinimg.com/736x/d1/3c/c2/d13cc204417cca190795a789364fcd91.jpg" class="img-fluid rounded" alt="News Image">
+        <div class="p-2 flex-grow-1">
+          <h5 class="fw-bold">AI Digital Centre Unveils Gazan Students Robotics &Technology Project </h5>
+          <p class="small">Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum o.</p>
+          <div class="d-flex justify-content-between align-items-center border-top">
+            <div class="text-end mt-2">
+              <a href="#" class="btn-main-link  fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+            
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <span class="mx-3"><i class="icon-Calendar main-color "></i> 12.12.2024</span>
+              <span><i class="icon-Show  main-color"></i> 230</span>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+    </div>
+    <!-- Repeat cards -->
+    <div class="news-item ">
+      <div class="card card-color p-2 h-100 card-color">
+        <img src="https://i.pinimg.com/736x/d1/3c/c2/d13cc204417cca190795a789364fcd91.jpg" class="img-fluid rounded" alt="News Image">
+        <div class="p-2 flex-grow-1">
+          <h5 class="fw-bold">AI Digital Centre Unveils Gazan Students Robotics &Technology Project </h5>
+          <p class="small">Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum o.</p>
+          <div class="d-flex justify-content-between align-items-center border-top">
+            <div class="text-end mt-2">
+              <a href="#" class="btn-main-link  fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+            
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <span class="mx-3"><i class="icon-Calendar main-color "></i> 12.12.2024</span>
+              <span><i class="icon-Show  main-color"></i> 230</span>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+    </div>
+      <!-- Repeat cards -->
+      <div class="news-item ">
+        <div class="card card-color p-2 h-100 card-color">
+          <img src="https://i.pinimg.com/736x/2d/90/73/2d9073f3f89fe455cf3dad7ae7f578f4.jpg" class="img-fluid rounded" alt="News Image">
+          <div class="p-2 flex-grow-1">
+            <h5 class="fw-bold">AI Digital Centre Unveils Gazan Students Robotics &Technology Project </h5>
+            <p class="small">Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum o.</p>
+            <div class="d-flex justify-content-between align-items-center border-top">
+              <div class="text-end mt-2">
+                <a href="#" class="btn-main-link  fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+              
+              </div>
+              <div class="d-flex align-items-center mt-2">
+                <span class="mx-3"><i class="icon-Calendar main-color "></i> 12.12.2024</span>
+                <span><i class="icon-Show  main-color"></i> 230</span>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        
+      </div>
+        <!-- Repeat cards -->
+    <div class="news-item ">
+      <div class="card card-color p-2 h-100 card-color">
+        <img src="https://i.pinimg.com/736x/d1/3c/c2/d13cc204417cca190795a789364fcd91.jpg" class="img-fluid rounded" alt="News Image">
+        <div class="p-2 flex-grow-1">
+          <h5 class="fw-bold">AI Digital Centre Unveils Gazan Students Robotics &Technology Project </h5>
+          <p class="small">Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum o.</p>
+          <div class="d-flex justify-content-between align-items-center border-top">
+            <div class="text-end mt-2">
+              <a href="#" class="btn-main-link  fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+            
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <span class="mx-3"><i class="icon-Calendar main-color "></i> 12.12.2024</span>
+              <span><i class="icon-Show  main-color"></i> 230</span>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+  <nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center flex-wrap gap-1">
+      <li class="page-item">
+        <a class="page-link rounded-pill px-3" href="#" aria-label="Previous">
+          <i class="bi bi-arrow-left"></i> Previous
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link bg-main border-0 text-white  px-3">1</span>
+      </li>
+      <li class="page-item"><a class="page-link  px-3" href="#">2</a></li>
+      <li class="page-item"><a class="page-link  px-3" href="#">3</a></li>
+      <li class="page-item"><a class="page-link  px-3" href="#">4</a></li>
+      <li class="page-item"><a class="page-link  px-3" href="#">5</a></li>
+      <li class="page-item disabled"><span class="page-link  px-3">...55</span></li>
+      <li class="page-item">
+        <a class="page-link  px-3" href="#" aria-label="Next">
+          Next <i class="bi bi-arrow-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+    </div>
+  </div>
+  </div>
+
+
+</main>
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="teams-section">
+    <div class="teams-btn ">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+  </section>
+
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class=" text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums </a> <span
+        id="currentYear"></span>
+    </span>
+
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">
+        Disclaimer </a>
+    </span>
+
+  </footer>
+
+
+
+  <!-- Bootstrap JS and dependencies -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- <script src="asset/js/canvas.js"></script> -->
+
+
+
+  <!-- color changer -->
+  <script>
+    const colorCircles = document.querySelectorAll('.color-circle');
+
+    function updateSelectedColor(element) {
+      // Remove 'selected' from all
+      colorCircles.forEach(c => c.classList.remove('selected'));
+      element.classList.add('selected');
+
+      // Get color value and apply it
+      const selectedColor = getComputedStyle(document.documentElement)
+        .getPropertyValue(element.dataset.color);
+      document.documentElement.style.setProperty('--main-color', selectedColor);
+
+      // Save color key to localStorage
+      localStorage.setItem('selectedColorKey', element.dataset.color);
+    }
+
+    // Apply saved color on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedColorKey = localStorage.getItem('selectedColorKey');
+      if (savedColorKey) {
+        const savedColorElement = [...colorCircles].find(c => c.dataset.color === savedColorKey);
+        if (savedColorElement) updateSelectedColor(savedColorElement);
+      } else {
+        const defaultColor = document.querySelector('.color-circle.bg-pink');
+        if (defaultColor) updateSelectedColor(defaultColor);
+      }
+    });
+
+    colorCircles.forEach(circle => {
+      circle.addEventListener('click', () => updateSelectedColor(circle));
+    });
+  </script>
+  <!-- Theme changer -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const lightOption = document.getElementById('lightOption');
+      const darkOption = document.getElementById('darkOption');
+
+      function activateLightTheme() {
+        document.documentElement.classList.remove('dark-theme');
+        lightOption.classList.add('selected');
+        darkOption.classList.remove('selected');
+        localStorage.setItem('theme', 'light');
+      }
+
+      function activateDarkTheme() {
+        document.documentElement.classList.add('dark-theme');
+        darkOption.classList.add('selected');
+        lightOption.classList.remove('selected');
+        localStorage.setItem('theme', 'dark');
+      }
+
+      lightOption.addEventListener('click', activateLightTheme);
+      darkOption.addEventListener('click', activateDarkTheme);
+
+      // Apply saved theme on load
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        activateDarkTheme();
+      } else {
+        activateLightTheme();
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const themeBtn = document.getElementById('themeBtn');
+      const themeDropdown = document.getElementById('themeDropdown');
+
+      themeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeDropdown.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!themeDropdown.contains(e.target) && !themeBtn.contains(e.target)) {
+          themeDropdown.classList.remove('show');
+        }
+      });
+
+      const themeCloseBtn = document.querySelector('#themeDropdown .btn-outline-secondary');
+      if (themeCloseBtn) {
+        themeCloseBtn.addEventListener('click', () => {
+          themeDropdown.classList.remove('show');
+        });
+      }
+    });
+  </script>
+  <!-- menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('menuToggle');
+      const menu = document.getElementById('mainMenu');
+
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      const closeBtn = document.getElementById('closeMenuBtn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      }
+
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+          menu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- whats on  events -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const weekContainer = document.getElementById('weekDaysContainer');
+      const monthLabel = document.getElementById('calendarMonthLabel');
+      const prevBtn = document.getElementById('prevWeekBtn');
+      const nextBtn = document.getElementById('nextWeekBtn');
+
+      let currentDate = new Date();
+
+      function getStartOfWeek(date) {
+        const day = date.getDay();
+        return new Date(date.setDate(date.getDate() - day));
+      }
+
+      function renderWeek(date) {
+        const start = getStartOfWeek(new Date(date));
+        const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        weekContainer.innerHTML = '';
+
+        monthLabel.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+        for (let i = 0; i < 7; i++) {
+          const day = new Date(start);
+          day.setDate(start.getDate() + i);
+
+          const dayBlock = document.createElement('div');
+          dayBlock.className = 'cursor-pointer';
+          const isToday = new Date().toDateString() === day.toDateString();
+
+          dayBlock.innerHTML = `
+        <div class="fw-bold small">${dayNames[i]}</div>
+        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
+          ${day.getDate()}
+        </div>
+      `;
+          weekContainer.appendChild(dayBlock);
+        }
+      }
+
+      prevBtn.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() - 7);
+        renderWeek(currentDate);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() + 7);
+        renderWeek(currentDate);
+      });
+
+      renderWeek(currentDate);
+    });
+  </script>
+  <!--  pre regester events -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const weekContainer2 = document.getElementById('weekDaysContainer2');
+      const monthLabel2 = document.getElementById('calendarMonthLabel2');
+      const prevBtn2 = document.getElementById('prevWeekBtn2');
+      const nextBtn2 = document.getElementById('nextWeekBtn2');
+
+      let currentDate2 = new Date();
+
+      function getStartOfWeek(date) {
+        const day = date.getDay();
+        return new Date(date.setDate(date.getDate() - day));
+      }
+
+      function renderWeek2(date) {
+        const start = getStartOfWeek(new Date(date));
+        const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        weekContainer2.innerHTML = '';
+
+        monthLabel2.textContent = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+        for (let i = 0; i < 7; i++) {
+          const day = new Date(start);
+          day.setDate(start.getDate() + i);
+
+          const dayBlock = document.createElement('div');
+          dayBlock.className = 'cursor-pointer';
+          const isToday = new Date().toDateString() === day.toDateString();
+
+          dayBlock.innerHTML = `
+        <div class="fw-bold small">${dayNames[i]}</div>
+        <div class="fw-semibold px-2 py-1 rounded ${isToday ? 'bg-main text-white' : ''}">
+          ${day.getDate()}
+        </div>
+      `;
+          weekContainer2.appendChild(dayBlock);
+        }
+      }
+
+      prevBtn2.addEventListener('click', () => {
+        currentDate2.setDate(currentDate2.getDate() - 7);
+        renderWeek2(currentDate2);
+      });
+
+      nextBtn2.addEventListener('click', () => {
+        currentDate2.setDate(currentDate2.getDate() + 7);
+        renderWeek2(currentDate2);
+      });
+
+      renderWeek2(currentDate2);
+    });
+  </script>
+  <!-- <script>
+    const canvas = document.querySelector('.canvas');
+const body = document.body;
+
+const observer = new MutationObserver(() => {
+  if (getComputedStyle(canvas).display === 'block') {
+    body.classList.add('canvas-visible');
+  } else {
+    body.classList.remove('canvas-visible');
+  }
+});
+
+observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
+  </script> -->
+
+  <script>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Tab") {
+        document.querySelector('.skip-link').style.top = "10px"; // عرض الرابط عند التفاعل مع Tab
+      }
+    });
+    
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+<!-- flat picker -->
+  <script>
+    const fromInput = document.querySelector("input[aria-label='From Date']");
+    const toInput = document.querySelector("input[aria-label='To Date']");
+    
+    const fromPicker = flatpickr(fromInput, {
+      dateFormat: "m/d/Y",
+      allowInput: true
+    });
+    
+    const toPicker = flatpickr(toInput, {
+      dateFormat: "m/d/Y",
+      allowInput: true
+    });
+    
+    document.querySelector("input[aria-label='From Date'] + .input-group-text")?.addEventListener('click', () => {
+      fromPicker.open();
+    });
+    
+    document.querySelector("input[aria-label='To Date'] + .input-group-text")?.addEventListener('click', () => {
+      toPicker.open();
+    });
+  </script>
+
+
+  <script>
+  const newsWrapper = document.querySelector('.news-wrapper');
+  const listBtn = document.getElementById('listViewBtn');
+  const gridBtn = document.getElementById('gridViewBtn');
+
+  listBtn.addEventListener('click', () => {
+    newsWrapper.classList.remove('view-grid');
+    newsWrapper.classList.add('view-list');
+    listBtn.classList.add('selected');
+    gridBtn.classList.remove('selected');
+  });
+
+  gridBtn.addEventListener('click', () => {
+    newsWrapper.classList.remove('view-list');
+    newsWrapper.classList.add('view-grid');
+    gridBtn.classList.add('selected');
+    listBtn.classList.remove('selected');
+  });
+
+    // Automatically switch to grid view for screens 576px or smaller
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth <= 576) {
+        newsWrapper.classList.remove('view-list');
+        newsWrapper.classList.add('view-grid');
+        gridBtn.classList.add('selected');
+        listBtn.classList.remove('selected');
+      }
+    });
+  </script>

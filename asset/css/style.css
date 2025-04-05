@@ -1177,3 +1177,123 @@ a.carousel-item.active.position-relative {
 /* =======
     end news
  ======== */
+
+/* =======
+    4 News Section (Index Page)
+  ======== */
+.f4-news {
+  /* Reuse news-page styles */
+}
+
+.f4-news nav[aria-label="Page navigation"] {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.f4-news .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.f4-news .news-hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.f4-news .news-hero-main {
+  position: relative;
+  height: 249px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.f4-news .news-overlay:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, transparent 39%, rgba(0, 0, 0, .95) 100%);
+  z-index: 1;
+}
+
+.f4-news .news-overlay:hover img {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+.f4-news .news-hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    height: 249px;
+  }
+  
+.f4-news .news-hero-secondary {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    max-height: 100%;
+    height: 100%;
+}
+
+  
+
+
+.f4-news .news-hero-item {
+  position: relative;
+  height: 249px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.f4-news .news-hero-main img,
+.f4-news .news-hero-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.f4-news .news-hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+}
+
+.f4-news .news-hero-caption h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.f4-news .news-hero-main .news-hero-caption h2 {
+  font-size: 1.3rem;
+}
+
+.f4-news .news-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .f4-news .news-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .f4-news .news-hero-main,
+  .f4-news .news-hero-item {
+    height: 300px;
+  }
+}

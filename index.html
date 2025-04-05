@@ -27,7 +27,7 @@
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <section class="canvas">
+  <!-- <section class="canvas">
     <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
       <i class="bi bi-balloon-fill"></i>
 
@@ -44,7 +44,7 @@
               </span>
           </h1>
         <button id="closeButton" aria-label="closeButton"><i class="bi bi-x-circle"></i></button>
-  </section>
+  </section> -->
 
   <!-- Header with Navigation -->
   <header class="py-2 border-bottom ">
@@ -52,7 +52,7 @@
       <div class="d-flex align-items-center justify-content-between flex-wrap">
         <!-- Logo -->
         <div class="logo-container d-flex align-items-center">
-          <a href="/" class="d-flex align-items-center text-decoration-none">
+          <a href="#" class="d-flex align-items-center text-decoration-none">
             <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
             <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
           </a>
@@ -230,66 +230,63 @@
       <div class="container-fluid">
         <div class="row d-md-flex align-items-stretch">
           <div class="col-lg-9">
-            <section class="news-section 4-news">
+            <section class="news-section 4-news news-page">
               <div class="card section-card card-color">
                 <div class="container-fluid  ">
-                  <h2 class="fw-bold tittle head-color">QM in the News</h2>
+                  <h2 class="fw-bold tittle head-color ">QM in the News</h2>
 
-                  <div class="row g-3 ">
-                    <!-- Main News -->
-                    <div class="col-lg-8">
-                      <div class="position-relative h-100 main-news">
-                        <img src="https://i.pinimg.com/1200x/be/40/78/be407845470a467815cf07ac73b86e6b.jpg"
-                          alt="Main News" class="img-fluid ">
-                        <div class="overlay-text">
-                          <h3 class="news-title ">AI Digital Centre Unveils Gazan Students Robotics & Technology Project
-                          </h3>
-                          <div class="category-label main-color">Digital</div>
+                  <section class="card card-color p-3 mt-3">
+                    <div class="news-hero ">
+                        <!-- Main featured news item -->
+                        <a href="#" class="news-hero-main news-overlay">
+                            <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+                            <div class="news-hero-caption">
+                                <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
+                                <div class="news-meta d-flex justify-content-between">
+                                 <span><i class="icon-Calendar main-color"></i> 12.12.2024</span>
+                                 <span><i class="icon-Show main-color"></i> 230</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- Secondary news items -->
+                        <div class="news-hero-secondary ">
+                          <!-- Top Right News -->
+                          <a href="#" class="news-hero-item news-overlay">
+                            <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+                            <div class="news-hero-caption">
+                              <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
+                            </div>
+                          </a>
+                
+                          <!-- Bottom Two News Items -->
+                          <div class="row g-3">
+                            <a href="#" class="col-12 col-md-6">
+                              <div class="news-hero-item news-overlay">
+                                <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Gazan Students in Tech Workshop">
+                                <div class="news-hero-caption">
+                                  <h2>Gazan Students in Tech Workshop</h2>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="col-12 col-md-6 ">
+                              <div class="news-hero-item news-overlay">
+                                <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Robotics Exhibition Ceremony">
+                                <div class="news-hero-caption">
+                                  <h2>Robotics Exhibition Ceremony</h2>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
                         </div>
-                      </div>
                     </div>
-
-                    <!-- Side News -->
-                    <div class="col-lg-4 d-flex flex-column justify-content-between">
-                      <div class="mb-2 side-news 4-news">
-                        <div class="row g-2">
-                          <div class="col-4">
-                            <img src="asset/imgs/news/Mask Group 104.jpg" class="img-fluid" alt="News Thumbnail 1">
-                          </div>
-                          <div class="col-8">
-                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
-                              &Technology Project</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mb-2 side-news ">
-                        <div class="row g-2">
-                          <div class="col-4">
-                            <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 1">
-                          </div>
-                          <div class="col-8">
-                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
-                              &Technology Project</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class=" side-news">
-                        <div class="row g-2">
-                          <div class="col-4">
-                            <img src="asset/imgs/news/Mask Group 103.jpg" class="img-fluid" alt="News Thumbnail 2">
-                          </div>
-                          <div class="col-8">
-                            <p class="news-title head-color">AI Digital Centre Unveils Gazan Students Robotics
-                              &Technology Project</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    
+                    <!-- Rest of news content would go here -->
+                </section>
 
                   <!-- View All -->
                   <div class="text-end mt-3 card-footer">
-                    <a href="#" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
+                    <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All &rarr;</a>
                   </div>
                 </div>
               </div>
@@ -885,7 +882,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="asset/js/canvas.js"></script>
+  <!-- <script src="asset/js/canvas.js"></script> -->
 
 
 
@@ -1109,21 +1106,21 @@
 
       renderWeek2(currentDate2);
     });
-  </script>
-  <script>
-    // const canvas = document.querySelector('.canvas');
-const body = document.body;
+//   </script>
+//   <script>
+//     // const canvas = document.querySelector('.canvas');
+// const body = document.body;
 
-const observer = new MutationObserver(() => {
-  if (getComputedStyle(canvas).display === 'block') {
-    body.classList.add('canvas-visible');
-  } else {
-    body.classList.remove('canvas-visible');
-  }
-});
+// const observer = new MutationObserver(() => {
+//   if (getComputedStyle(canvas).display === 'block') {
+//     body.classList.add('canvas-visible');
+//   } else {
+//     body.classList.remove('canvas-visible');
+//   }
+// });
 
-observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
-  </script>
+// observer.observe(canvas, { attributes: true, attributeFilter: ['style'] });
+//   </script>
 
   <script>
     document.addEventListener('keydown', function (e) {

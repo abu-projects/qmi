@@ -1380,18 +1380,47 @@ a.carousel-item.active.position-relative {
     }
 
     .vertical-carousel-item {
+        position: absolute;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .vertical-carousel-item {
         flex: 0 0 100%;
         height: 100%;
     }
 
-    .vertical-carousel-dots {
+    .vertical-carousel-arrows {
         position: absolute;
         right: 10px;
-        top: 65%;
+        top: 50%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
         gap: 8px;
+        z-index: 3;
+    }
+
+    .vertical-carousel-arrows button {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .vertical-carousel-arrows button:hover {
+        background: var(--main-color);
+        color: white;
+    }
+
+    .vertical-carousel-arrows i {
+        font-size: 16px;
         z-index: 2;
     }
 

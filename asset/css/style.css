@@ -19,7 +19,9 @@
     --bs-nav-tabs-link-active-border-color: var(--border-color);
 
 }
-
+header{
+    background-color: var(--card-color);
+}
 .head-color {
     color: var(--black);
 }
@@ -1438,4 +1440,36 @@ a.carousel-item.active.position-relative {
         opacity: 1;
     }
 
+}
+.news-article figure img {
+  height: 300px; /* existing height remains */
+  width: 100%;
+  object-fit: cover;
+}
+
+.recent-news img {
+  height: 100px; /* adjust as desired specifically for recent-news */
+  width: 100px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .news-article figure img {
+    height: 150px; /* Slightly smaller for tablets */
+  }
+
+  .recent-news img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-article figure img {
+    height: 120px; /* Even smaller for mobile screens */
+  }
+
+  .recent-news img {
+    height: 100px;
+  }
 }

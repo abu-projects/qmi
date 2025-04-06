@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Intranet </title>
+  <meta name="description" content="QM Intranet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+
+
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+
+  <!--  Birthday canvas CSS -->
+  <link rel="stylesheet" href="asset/css/canvas.css">
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- <section class="canvas">
+    <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
+      <i class="bi bi-balloon-fill"></i>
+
+        Start
+    </a>
+        <canvas id="birthday"></canvas>
+      
+        <h1>Happy Birthday   <br>
+          <span class="text-center d-block">   
+            <span class="main-color">Elisa</span>
+            <i class="bi bi-balloon-heart-fill main-color"></i>
+        
+          
+              </span>
+          </h1>
+        <button id="closeButton"><i class="bi bi-x-circle"></i></button>
+  </section> -->
+
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom ">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About QM</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                    <li><a class="dropdown-item" href="#">Departments</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                    <li><a class="dropdown-item" href="#">IT Services</a></li>
+                    <li><a class="dropdown-item" href="#">Finance</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+       
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker ">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control " type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <!-- Notifications Dropdown -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-Notification btn-main-link icon-md "></i>
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Setting icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Ticket icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">The Art of Color and Form:</strong><br />
+                  <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+
+              <div class="text-end">
+                <a href="#" class="fw-bold  text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link   d-flex">
+              عربي
+              <span class="icon-lang icon-md mx-1"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<main id="main-content" class="news-details">
+  <div class="container-fluid">
+    <section class="bread-cramp mt-3 mb-3">
+      <div class="card card-color">
+        <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+              <li class="breadcrumb-item">
+                <a href="#" class="btn-main-link fw-bold">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#" class="btn-main-link fw-bold">QM in the News</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">News Details</li>
+            </ol>
+          </nav>
+          <div class="d-flex align-items-center gap-3">
+        
+            <a href="index.html" class="btn btn-outline-dark d-flex ">
+              <i class="bi bi-arrow-left"></i>Back
+            </a>
+          </div>
+        </div>
+      </div>
+        </section>
+ 
+
+    <div class="row">
+      <div class="col-lg-8">
+        <article class="news-article card card-color section-card p-4 rounded-3 shadow-sm">
+          <header class="mb-4">
+            <h1 class="head-color">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h1>
+            <hr>
+            <div class="meta d-flex align-items-center gap-3 text-color">
+           
+              <span><i class="icon-Calendar main-color"></i> 12.12.2024</span>
+   
+              <span><i class="icon-Show main-color"></i> 230</span>
+              <div class="dropdown ms-auto">
+                <a class="text-decoration-none text-color d-flex align-items-center" href="#" id="shareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-share main-color me-1"></i> Share
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="shareDropdown">
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                      <i class="bi bi-send main-color"></i> Send
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                      <i class="bi bi-clipboard main-color"></i> Copy Link
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                      <i class="bi bi-share-fill main-color"></i> Share to Engage
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          
+          <figure class="mb-4">
+            <img src="https://i.pinimg.com/736x/2b/1a/c6/2b1ac6235382a885e171ac04ec931a87.jpg" alt="Students working on robotics project" class="img-fluid rounded">
+          </figure>
+          
+          <div class="article-content text-color">
+            <p>Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum of Qatar, on behalf of Qatar Museums. From partners' side MoUs were signed by Mr. Han Zhanming, Director of Capital Museums of China and Mrs. Dulanjav Munkhtsetseg, Director of the National Museum of Mongolia respectively.</p>
+            
+            <p>The MoUs outlined the collaboration between Qatar Museum and each of the museums on numerous initiatives, including exhibitions, public programmes, workshops, and lectures to foster education, increase access to knowledge, and facilitate research. Qatar Museums will also exchange museum best practices for the benefit of education, professional development, and mutual cooperation with both museums.</p>
+            
+            <p>For more information about Qatar Museums, please visit www.qm.org.qa</p>
+          </div>
+        </article>
+      </div>
+      
+      <div class="col-lg-4">
+        <aside class=" p-4 rounded-3 shadow-sm section-card card card-color">
+          <h2 class="head-color h5 mb-4 fw-bold tittle head-color ">Recent news</h2>
+          <div class="recent-news">
+            <a href="#" class="text-decoration-none mb-3 d-flex align-items-start gap-3">
+              <img src="https://i.pinimg.com/736x/4a/35/ec/4a35ec21f88ba6d826bbfe30c581b8f2.jpg" alt="News thumbnail" class="rounded" width="80">
+              <div>
+                <h3 class="h6 head-color">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h3>
+                <small class="text-color">12.12.2024</small>
+              </div>
+            </a>
+            <a href="#" class="text-decoration-none mb-3 d-flex align-items-start gap-3">
+              <img src="https://i.pinimg.com/736x/45/9e/28/459e28deebd58746d90cec0ac893a2d9.jpg" alt="News thumbnail" class="rounded" width="80">
+              <div>
+                <h3 class="h6 head-color">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h3>
+                <small class="text-color">12.12.2024</small>
+              </div>
+            </a>
+            <a href="#" class="text-decoration-none mb-3 d-flex align-items-start gap-3">
+              <img src="https://i.pinimg.com/736x/2b/1a/c6/2b1ac6235382a885e171ac04ec931a87.jpg" alt="News thumbnail" class="rounded" width="80">
+              <div>
+                <h3 class="h6 head-color">AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h3>
+                <small class="text-color">12.12.2024</small>
+              </div>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="teams-section">
+    <div class="teams-btn ">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+  </section>
+
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class=" text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums </a> <span
+        id="currentYear"></span>
+    </span>
+
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">
+        Disclaimer </a>
+    </span>
+
+  </footer>
+
+
+
+  <!-- Bootstrap JS and dependencies -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="asset/js/vertical-carousel.js"></script>
+  <script src="asset/js/main.js"></script>
+</body>
+</html>
+
+

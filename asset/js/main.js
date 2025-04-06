@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme Toggle Functionality
+  // ===============================================
+  // Theme Toggle Section
+  // Controls the theme settings panel toggle button and dropdown
+  // Located in the fixed settings button on the page
+  // ===============================================
   const themeBtn = document.getElementById('themeBtn');
   const themeDropdown = document.getElementById('themeDropdown');
 
@@ -23,7 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Menu Toggle Functionality
+  // ===============================================
+  // Mobile Menu Toggle Section
+  // Controls the responsive navigation menu for mobile devices
+  // Located in the header section when viewport width is small
+  // ===============================================
   const toggleBtn = document.getElementById('menuToggle');
   const menu = document.getElementById('mainMenu');
 
@@ -46,7 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Color Changer Functionality
+  // ===============================================
+  // Theme Color Customization Section
+  // Manages the color palette selection in theme settings
+  // Persists selected color using localStorage
+  // ===============================================
   const colorCircles = document.querySelectorAll('.color-circle');
 
   function updateSelectedColor(element) {
@@ -74,7 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     circle.addEventListener('click', () => updateSelectedColor(circle));
   });
 
-  // Theme Light/Dark Mode
+  // ===============================================
+  // Light/Dark Theme Toggle Section
+  // Manages the light/dark mode theme switching
+  // Persists theme preference using localStorage
+  // ===============================================
   const lightOption = document.getElementById('lightOption');
   const darkOption = document.getElementById('darkOption');
 
@@ -105,7 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // News View Toggle Functionality
+  // ===============================================
+  // News View Toggle Section
+  // Controls grid/list view switching for news items
+  // Includes responsive behavior for mobile devices
+  // ===============================================
   const gridBtn = document.getElementById('gridViewBtn');
   const listBtn = document.getElementById('listViewBtn');
   const newsWrapper = document.querySelector('.news-wrapper');
@@ -136,7 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Calendar Week Navigation Functionality
+  // ===============================================
+  // Calendar Week Navigation Section
+  // Manages the weekly calendar view and navigation
+  // Highlights current day and displays month/year
+  // ===============================================
   const weekContainer = document.getElementById('weekDaysContainer');
   const monthLabel = document.getElementById('calendarMonthLabel');
   const prevBtn = document.getElementById('prevWeekBtn');
@@ -188,7 +212,11 @@ document.addEventListener('DOMContentLoaded', () => {
     renderWeek(currentDate);
   }
 
-  // Pre-register Events Calendar
+  // ===============================================
+  // Pre-register Events Calendar Section
+  // Secondary calendar instance for event registration
+  // Shares functionality with main calendar
+  // ===============================================
   const weekContainer2 = document.getElementById('weekDaysContainer2');
   const monthLabel2 = document.getElementById('calendarMonthLabel2');
   const prevBtn2 = document.getElementById('prevWeekBtn2');
@@ -235,7 +263,11 @@ document.addEventListener('DOMContentLoaded', () => {
     renderWeek2(currentDate2);
   }
 
-  // Vertical Carousel
+  // ===============================================
+  // Vertical Carousel Section
+  // Manages vertical sliding carousel with dot navigation
+  // Includes arrow controls and circular navigation
+  // ===============================================
   const inner = document.querySelector('.vertical-carousel-inner');
   const items = document.querySelectorAll('.vertical-carousel-item');
   const dots = document.querySelectorAll('.vertical-carousel-dots button');
@@ -283,28 +315,45 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(0);
   }
 
-  // Accessibility
+  // ===============================================
+  // Accessibility Features Section
+  // Implements keyboard navigation and accessibility
+  // Shows skip link on tab key press
+  // ===============================================
   document.addEventListener('keydown', function (e) {
     if (e.key === "Tab") {
       document.querySelector('.skip-link').style.top = "10px";
     }
   });
 
-  // Copyright Year
+  // ===============================================
+  // Copyright Year Section
+  // Automatically updates the copyright year
+  // ===============================================
   const yearElement = document.getElementById("currentYear");
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  // Initialize Flatpickr for date inputs
-  const dateInputs = document.querySelectorAll('input[type="date"]');
-  dateInputs.forEach(input => {
-    flatpickr(input, {
-      dateFormat: 'Y-m-d',
-      altInput: true,
-      altFormat: 'F j, Y',
-      disableMobile: true,
-      static: true
-    });
+  // ===============================================
+  // Date Input Initialization Section
+  // Configures Flatpickr date picker for date inputs
+  // Enables calendar icon trigger functionality
+  // ===============================================
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get all date input groups
+      const dateInputs = document.querySelectorAll('.input-group input[aria-label*="Date"]');
+      
+      dateInputs.forEach(input => {
+          const config = {
+              dateFormat: 'Y-m-d',
+              allowInput: true,
+              clickOpens: true,
+              wrap: true
+          };
+          
+          // Initialize Flatpickr on the parent input-group to allow calendar icon to trigger the picker
+          flatpickr(input.closest('.input-group'), config);
+      });
   });
 });

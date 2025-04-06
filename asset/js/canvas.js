@@ -234,3 +234,18 @@ document.ontouchstart = evt => birthday.onClick(evt)
   };
   
   
+// Add canvas observer code
+const canvasElement = document.querySelector('.canvas');
+const bodyElement = document.body;
+
+const observer = new MutationObserver(() => {
+  if (getComputedStyle(canvasElement).display === 'block') {
+    bodyElement.classList.add('canvas-visible');
+  } else {
+    bodyElement.classList.remove('canvas-visible');
+  }
+});
+
+observer.observe(canvasElement, { attributes: true, attributeFilter: ['style'] });
+  
+  

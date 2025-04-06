@@ -9,6 +9,7 @@
     --bg-color: #F7F7F7;
     --text-color: #333;
     --border-color: var(--gray);
+    --light-border:#f1f1f1;
     --head-color: var(--black);
     --card-color: white;
     --selection-border: #333;
@@ -638,6 +639,7 @@ footer {
 
 .dropdown-item:hover {
     background-color: var(--main-color);
+    color: var(--white);
 }
 
 .dropdown-menu {
@@ -1472,4 +1474,36 @@ a.carousel-item.active.position-relative {
   .recent-news img {
     height: 100px;
   }
+}
+.dropdown-item:hover i{
+    color: var(--dark-color) !important;
+}
+.dropdown-item{
+    border: var(--light-border) solid 1px !important;
+    padding: 10px;
+}
+.mt--40{
+    margin-top:-40px;
+}
+.page-wallpaper {
+    position: relative;
+}
+
+.page-wallpaper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.page-wallpaper img {
+    position: relative;
+    z-index: 0;
+}
+.bread-cramp{
+    z-index: 2;
+    position: relative;
 }

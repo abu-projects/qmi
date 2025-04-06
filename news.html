@@ -186,7 +186,7 @@
       <div class="news-hero ">
           <!-- Main featured news item -->
           <a href="#" class="news-hero-main news-overlay">
-              <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+              <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics">
               <div class="news-hero-caption">
                   <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
                   <div class="news-meta d-flex justify-content-between">
@@ -200,7 +200,7 @@
           <div class="news-hero-secondary ">
             <!-- Top Right News -->
             <a href="#" class="news-hero-item news-overlay">
-              <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics & Technology Project">
+              <img src="https://i.pinimg.com/736x/27/d9/b4/27d9b4f2fe1f7f2651070f3cd9ce97b1.jpg" alt="AI Digital Centre Unveils Gazan Students Robotics">
               <div class="news-hero-caption">
                 <h2>AI Digital Centre Unveils Gazan Students Robotics & Technology Project</h2>
               </div>
@@ -210,7 +210,7 @@
             <div class="row g-3">
               <a href="#" class="col-12 col-md-6">
                 <div class="news-hero-item news-overlay">
-                  <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Gazan Students in Tech Workshop">
+                  <img src="https://i.pinimg.com/736x/39/aa/f7/39aaf791e2d0e8a8948db5a1f72e2927.jpg" alt="Gazan Students">
                   <div class="news-hero-caption">
                     <h2>Gazan Students in Tech Workshop</h2>
                   </div>
@@ -218,7 +218,7 @@
               </a>
               <a href="#" class="col-12 col-md-6 ">
                 <div class="news-hero-item news-overlay">
-                  <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Robotics Exhibition Ceremony">
+                  <img src="https://i.pinimg.com/736x/8d/77/a4/8d77a40abbec0695c3b384a0109ceb31.jpg" alt="Robotics Exhibition">
                   <div class="news-hero-caption">
                     <h2>Robotics Exhibition Ceremony</h2>
                   </div>
@@ -254,7 +254,7 @@
     <div class="col-lg-4">
       <section class="card fliter-card card-color mt-3 p-3 ">
         <div class="card-body">
-          <h4 class="fw-bold head-color mb-3">Filters &amp; Search</h4>
+          <h3 class="fw-bold head-color mb-3">Filters &amp; Search</h3>
           <hr>
           <form>
             <div class="input-group mb-3">
@@ -287,10 +287,10 @@
     <h4 class="fw-bold head-color"><strong >Total Result:</strong> 3000</h4>
     <div class="d-flex align-items-center gap-2 flex-wrap view-btns">
       <span class="text-color">View</span>
-      <button class="btn btn-outline-secondary btn-sm" id="listViewBtn" data-view="list">
+      <button class="btn btn-outline-secondary btn-sm" id="listViewBtn" aria-label="listView" data-view="list">
         <i class="bi bi-list"></i>
       </button>
-      <button class="btn btn-outline-secondary btn-sm" id="gridViewBtn" data-view="grid">
+      <button class="btn btn-outline-secondary btn-sm" id="gridViewBtn" aria-label="gridView" data-view="grid">
         <i class="bi bi-grid-3x3-gap"></i>
       </button>
       <div class="dropdown ms-2">
@@ -668,15 +668,15 @@
         }
       }
 
-      prevBtn.addEventListener('click', () => {
-        currentDate.setDate(currentDate.getDate() - 7);
-        renderWeek(currentDate);
-      });
+      // prevBtn.addEventListener('click', () => {
+      //   currentDate.setDate(currentDate.getDate() - 7);
+      //   renderWeek(currentDate);
+      // });
 
-      nextBtn.addEventListener('click', () => {
-        currentDate.setDate(currentDate.getDate() + 7);
-        renderWeek(currentDate);
-      });
+      // nextBtn.addEventListener('click', () => {
+      //   currentDate.setDate(currentDate.getDate() + 7);
+      //   renderWeek(currentDate);
+      // });
 
       renderWeek(currentDate);
     });

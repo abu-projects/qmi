@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="asset/css/responsive.css">
   <!-- Flat pickers CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Calendar Custom CSS -->
+  <link rel="stylesheet" href="asset/css/calendar.css">
 </head>
 
 <body>
@@ -185,7 +187,7 @@
           <aside class="card card-color p-4 rounded-3 shadow-sm">
             <h2 class="head-color h5 mb-4">Calendar</h2>
             <div class="calendar-wrapper">
-              <!-- Calendar will be inserted here via JavaScript -->
+              <div id="calendar" class="flatpickr-calendar-custom"></div>
             </div>
             
             <div class="filters mt-4">
@@ -202,23 +204,19 @@
               
               <div class="mb-3">
                 <label class="form-label">Event Categories</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="publicHoliday">
-                  <label class="form-check-label" for="publicHoliday">
-                    Public Holiday
-                  </label>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-sm btn-outline-secondary">Public Holiday</button>
+                  <button class="btn btn-sm btn-outline-secondary">Staff Workshop</button>
+                  <button class="btn btn-sm btn-outline-secondary">Staff Event</button>
+                  <button class="btn btn-sm btn-outline-secondary">More</button>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="staffWorkshop">
-                  <label class="form-check-label" for="staffWorkshop">
-                    Staff Workshop
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="staffEvent">
-                  <label class="form-check-label" for="staffEvent">
-                    Staff Event
-                  </label>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Event Type</label>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-sm btn-outline-secondary">Without register</button>
+                  <button class="btn btn-sm btn-outline-secondary">Register required</button>
                 </div>
               </div>
 
@@ -266,7 +264,57 @@
 
   <!-- Settings Section -->
   <section class="setting-section">
-    <!-- Same settings content as home page -->
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Teams Contact Button -->
@@ -295,5 +343,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="asset/js/main.js"></script>
-</body>
-</html>
+  <script>
+    // Initialize calendar
+    flatpickr("#calendar", {
+      inline: true,
+      mode: "single",
+      dateFormat: "Y-m-d",
+      onChange: function(selectedDates, dateStr, instance) {
+        // Handle date selection
+        console.log('Selected date:', dateStr);
+      }
+    });
+
+    // Initialize date picker for input fields
+    flatpickr("input[type='text']", {
+      dateFormat: "Y-m-d",
+      allowInput: true,
+      altFormat: "F j, Y",
+      altInput: true,
+      appendTo: document.body
+    });
+  </script>
+  </body>
+  </html>

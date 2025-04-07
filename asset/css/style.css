@@ -1507,3 +1507,14 @@ a.carousel-item.active.position-relative {
     z-index: 2;
     position: relative;
 }
+
+/* Events Page Styles */
+.events-page {
+  .filters {
+    .btn-outline-secondary {
+      border-radius: 20px;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+}

@@ -1406,9 +1406,9 @@ a.carousel-item.active.position-relative {
     }
 
     .vertical-carousel-arrows button {
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--white);
         border: none;
-        border-radius: 50%;
+        border-radius: 5px;
         width: 32px;
         height: 32px;
         display: flex;
@@ -1422,10 +1422,14 @@ a.carousel-item.active.position-relative {
         background: var(--main-color);
         color: white;
     }
-
+    .vertical-carousel-arrows button:hover i {
+     
+        color: white;
+    }
     .vertical-carousel-arrows i {
         font-size: 16px;
         z-index: 2;
+        color: var(--main-color);
     }
 
     .vertical-carousel-dots button {
@@ -1512,9 +1516,24 @@ a.carousel-item.active.position-relative {
 .events-page {
   .filters {
     .btn-outline-secondary {
-      border-radius: 20px;
+
       padding: 0.375rem 0.75rem;
       font-size: 0.875rem;
     }
   }
 }
+.border-left-pink {
+    border-left: 6px solid var(--pink) !important;
+}
+.border-left-blue {
+    border-left: 6px solid var(--blue) !important;
+}
+.border-left-orange {
+    border-left: 6px solid var(--orange) !important;
+}
+.flatpickr-calendar{
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;}

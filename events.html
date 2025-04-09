@@ -21,6 +21,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Calendar Custom CSS -->
   <link rel="stylesheet" href="asset/css/calendar.css">
+  <style>
+    .btn.selected {
+      border-color: #000;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -205,23 +212,34 @@
                 </select>
               </div>
               
-              <div class="mb-3">
-                <label class="form-label">Event Categories</label>
-                <div class="d-flex flex-wrap gap-2">
-                  <button class="btn btn-sm btn-outline-dark border-left-pink">Public Holiday</button>
-                  <button class="btn btn-sm btn-outline-dark border-left-blue">Staff Workshop</button>
-                  <button class="btn btn-sm btn-outline-dark border-left-orange">Staff Event</button>
-                  <button class="btn btn-sm btn-outline-dark">More</button>
-                </div>
-              </div>
+<div class="mb-3">
+  <label class="form-label">Event Categories</label>
+<div class="d-flex flex-wrap gap-2">
+    <button class="btn btn-sm btn-outline-dark selected">All</button>
+    <button class="btn btn-sm btn-outline-dark border-left-pink">Public Holiday</button>
+    <button class="btn btn-sm btn-outline-dark border-left-blue">Staff Workshop</button>
+    <button class="btn btn-sm btn-outline-dark border-left-orange">Staff Event</button>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        More
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Community Event</a></li>
+        <li><a class="dropdown-item" href="#">Special Exhibition</a></li>
+        <li><a class="dropdown-item" href="#">Outreach Program</a></li>
+      </ul>
+    </div>
+</div>
+</div>
 
-              <div class="mb-3">
-                <label class="form-label">Event Type</label>
-                <div class="d-flex flex-wrap gap-2">
-                  <button class="btn btn-sm  btn-outline-dark">Without register</button>
-                  <button class="btn btn-sm btn-outline-dark">Register required</button>
-                </div>
-              </div>
+<div class="mb-3">
+  <label class="form-label">Event Type</label>
+<div class="d-flex flex-wrap gap-2">
+    <button class="btn btn-sm btn-outline-dark selected">All</button>
+    <button class="btn btn-sm  btn-outline-dark">Without register</button>
+    <button class="btn btn-sm btn-outline-dark">Register required</button>
+</div>
+</div>
 
               <button class="btn bg-main text-white w-100 mb-2">Apply Filter</button>
               <button class="btn btn-outline-dark w-100">Reset</button>
@@ -366,6 +384,47 @@
       altInput: true,
       appendTo: document.body
     });
+
+    // Fix for applying 'selected' class correctly
+    
+    // Function to initialize button group logic
+    function setupButtonGroup(labelText) {
+  const label = Array.from(document.querySelectorAll('.filters label')).find(el => el.textContent.includes(labelText));
+  if (!label) return;
+  
+  const wrapper = label.closest('.mb-3');
+  const buttons = wrapper.querySelectorAll('.btn:not(.dropdown-toggle)');
+  const dropdownItems = wrapper.querySelectorAll('.dropdown-menu .dropdown-item');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      wrapper.querySelectorAll('.btn').forEach(btn => btn.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+  });
+  
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      wrapper.querySelectorAll('.btn').forEach(btn => btn.classList.remove('selected'));
+  
+      let selectedBtn = wrapper.querySelector('.dropdown .selected');
+      if (selectedBtn) selectedBtn.classList.remove('selected');
+  
+      const dropdownToggle = this.closest('.dropdown').querySelector('.dropdown-toggle');
+      dropdownToggle.classList.add('selected');
+      dropdownToggle.textContent = this.textContent;
+    });
+  });
+  
+  // Select first button by default
+  if (buttons.length > 0) {
+    buttons[0].classList.add('selected');
+  }
+}
+    
+    setupButtonGroup('Event Categories');
+    setupButtonGroup('Event Type');
   </script>
   </body>
   </html>

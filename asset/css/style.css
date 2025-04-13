@@ -121,7 +121,7 @@ h3 {
 
 .btn-outline-dark {
     color: var(--wb-color) !important;
-    border-color: var(--wb-color) !important;
+    border-color: var(--text-color) !important;
     background-color: transparent !important;
     transition: all 0.3s ease;
 
@@ -1544,8 +1544,9 @@ a.carousel-item.active.position-relative {
 .border-left-orange.selected {
     border-left: 6px solid var(--orange) !important;
 }
-.border-left-pink.selcted {
+.border-left-pink.selcted.btn-outline-dark.selected {
     border-left: 6px solid var(--pink) !important;
+    border-color: var(--pink) !important;
 }
 
 .flatpickr-calendar{
@@ -1557,3 +1558,25 @@ justify-content: center;}
 .flatpickr-calendar.inline{
     background-color: var(--card-color) !important;
 }
+.flatpickr-current-month {
+
+    color: var(--text-color)!important ; }
+
+    .flatpickr-months .flatpickr-prev-month svg, .flatpickr-months .flatpickr-next-month svg {
+
+        fill:var(--text-color) !important;
+    }
+    span.flatpickr-weekday , .flatpickr-day {
+    
+        color: var(--text-color)!important ;}
+        .form-select {
+         
+            color: var(--text-color) !important;
+            background-color: var(--card-color);
+            padding-right: 2.5rem;
+        }
+
+       .date-box{
+        width: 80px;
+        height: 80px;
+       }

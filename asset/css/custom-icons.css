@@ -1,0 +1,27 @@
+/* Custom Icon Colors */
+.bi-custom-blue::before { color: #007bff; }
+.bi-custom-green::before { color: #28a745; }
+.bi-custom-red::before { color: #dc3545; }
+.bi-custom-yellow::before { color: #ffc107; }
+.bi-custom-purple::before { color: #6f42c1; }
+.bi-custom-orange::before { color: #fd7e14; }
+.bi-custom-teal::before { color: #20c997; }
+.bi-custom-pink::before { color: #e83e8c; }
+
+/* Custom Icon Sizes */
+.bi-sm::before { font-size: 0.875rem; }
+.bi-lg::before { font-size: 1.25rem; }
+.bi-xl::before { font-size: 1.5rem; }
+.bi-2x::before { font-size: 2rem; }
+.bi-3x::before { font-size: 3rem; }
+
+/* Example of using CSS variables for dynamic colors */
+:root {
+  --icon-primary: #007bff;
+  --icon-secondary: #6c757d;
+  --icon-custom: #ff5733;
+}
+
+.bi-dynamic-primary::before { color: var(--icon-primary); }
+.bi-dynamic-secondary::before { color: var(--icon-secondary); }
+.bi-dynamic-custom::before { color: var(--icon-custom); }

@@ -1580,3 +1580,8 @@ justify-content: center;}
         width: 80px;
         height: 80px;
        }
+       .breadcrumb-item+.breadcrumb-item::before {
+     
+        color: var(--border-color);
+
+    }

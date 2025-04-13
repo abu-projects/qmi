@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Intranet - Event Details</title>
+  <meta name="description" content="QM Intranet Event Details">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+  <!-- style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom ">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="#" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+  
+        <!-- Main Navigation -->
+  
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+  
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About QM</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Team Directory</a></li>
+                    <li><a class="dropdown-item" href="#">Departments</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">HR Portal</a></li>
+                    <li><a class="dropdown-item" href="#">IT Services</a></li>
+                    <li><a class="dropdown-item" href="#">Finance</a></li>
+                  </ul>
+                </li>
+  
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker ">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control " type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+  
+          <!-- Notifications -->
+          <!-- Notifications Dropdown -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-Notification btn-main-link icon-md "></i>
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Setting icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="icon-Ticket icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">The Art of Color and Form:</strong><br />
+                  <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+  
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link   d-flex">
+              عربي
+              <span class="icon-lang icon-md mx-1"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="event-details-page">
+    <div class="page-wallpaper">
+      <div class="overlay"></div>
+      <img src="asset/imgs/page-bg.jpg" alt="page Wallpaper" class="img-fluid"> 
+    </div>
+    <div class="container-fluid">
+      <!-- Breadcrumb Section -->
+      <section class="bread-cramp mb-3 mt--40">
+        <div class="card card-color">
+          <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+            <h1 class="fw-bold m-0 head-color">Event Details</h1>
+            <div class="d-flex align-items-center gap-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="btn-main-link fw-bold">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="events.html" class="btn-main-link fw-bold">What's On</a>
+                  </li>
+                  <li class="breadcrumb-item text-color fw-semibold" aria-current="page">Event Details</li>
+                </ol>
+              </nav>
+              <a href="events.html" class="btn btn-outline-dark d-flex">
+                <i class="bi bi-arrow-left"></i>Back
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Details Content -->
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card card-color p-4 rounded-3 shadow-sm mb-4">
+            <div class="d-flex flex-wrap gap-4">
+              <!-- Event Date Box -->
+      
+          <div class="event-date text-center">
+            <div class="event-date text-center">
+              <div class="date-box bg-pink p-2 rounded" style="min-width: 80px;">
+                <span class="d-block fs-4 fw-bold head-color">25</span>
+                <span class="d-block head-color">Dec</span>
+              </div>
+            </div>
+            <span class="badge bg-pink mt-2">Public Holiday</span>
+          </div>
+     
+       
+             
+              
+              <!-- Event Details -->
+              <div class="event-info flex-grow-1">
+                <h2 class="h4 head-color mb-3">Qatar Museums Signs MoUs with Capital Museum of China and National Museum of Mongolia</h2>
+                
+                <div class="event-meta mb-4">
+                  <div class="d-flex flex-wrap gap-4 mb-3">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-clock main-color"></i>
+                      <span class="text-color">8:30 PM</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-geo-alt main-color"></i>
+                      <span class="text-color">National Museum of Qatar</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="event-description">
+                  <p class="text-color">Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum of Qatar, on behalf of Qatar Museums, from partners' side MoUs were signed by Mr. Han Zhanming, Director of Capital Museums of China and Mrs. Dulamjav Munkhktogoo, Director of the National Museum of Mongolia respectively.</p>
+                  <p class="text-color">The MoUs outlined the collaboration between Qatar Museum and each of the museums on numerous initiatives, including exhibitions, public programmes, workshops, and lectures to foster education, increase access to knowledge, and facilitate research. Qatar Museums will also exchange museum best practices for the benefit of education, professional development, and mutual cooperation with both museums.</p>
+                </div>
+                <a href="" class="btn btn-main ms-auto"> Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <!-- Location Map -->
+          <div class="card card-color p-4 rounded-3 shadow-sm mb-4 section-card">
+            <h3 class="h5 head-color tittle mb-3">Location</h3>
+            <div class="map-container rounded overflow-hidden" style="height: 300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.2714799777814!2d51.53262661501215!3d25.29571598385352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534b84e8d87%3A0xb13466b4e08f1494!2sNational%20Museum%20of%20Qatar!5e0!3m2!1sen!2s!4v1645518641789!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- Share Section -->
+          <div class="card card-color p-4 rounded-3 shadow-sm section-card">
+            <h3 class="h5 head-color mb-3 tittle">Share Event</h3>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark" onclick="shareEvent('email')">
+                <i class="bi bi-envelope"></i>
+              </button>
+              <button class="btn btn-outline-dark" onclick="shareEvent('teams')">
+                <i class="bi bi-microsoft-teams"></i>
+              </button>
+              <button class="btn btn-outline-dark" onclick="shareEvent('calendar')">
+                <i class="bi bi-calendar-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Settings Section -->
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teams Contact Button -->
+  <section class="teams-section">
+    <div class="teams-btn">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class="text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums</a>
+      <span id="currentYear"></span>
+    </span>
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">Disclaimer</a>
+    </span>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Custom JS -->
+  <script src="asset/js/main.js"></script>
+  <script>
+    function shareEvent(method) {
+      // Implement sharing functionality based on method
+      switch(method) {
+        case 'email':
+          // Email sharing logic
+          break;
+        case 'teams':
+          // Teams sharing logic
+          break;
+        case 'calendar':
+          // Calendar adding logic
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -25,7 +25,7 @@ header{
 }
 .head-color {
     color: var(--black);
-}
+    }
 
 .card {
     border-color: var(--border-color) !important;
@@ -47,7 +47,7 @@ header{
     border-color: var(--border-color) !important;
 }
 
-.dark-theme {
+  .dark-theme {
     --bg-color: #1B1C1E;
     --text-color: #71737F;
     --border-color: #71737F;
@@ -58,7 +58,7 @@ header{
     --bw-color: #333;
 
     .head-color {
-        color: var(--white);
+color: var(--white);
         --card-color: white
     }
 
@@ -187,14 +187,14 @@ hr {
     padding: 10px;
 }
 
-body {
+  body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'din', sans-serif;
-}
+  }
 
 body.canvas-active {
     overflow: hidden;
@@ -202,29 +202,29 @@ body.canvas-active {
 
 main {
     flex-grow: 1;
-}
+  }
 
 .text-color {
     color: var(--text-color);
 }
 
 .setting-section {
-    .dropdown-panel {
-        position: fixed;
-        bottom: 72px;
-        left: 0;
+  .dropdown-panel {
+    position: fixed;
+    bottom: 72px;
+    left: 0;
         z-index: 1055;
         /* Higher than Bootstrap carousel (which uses 1050) */
-        width: 100%;
-        transition: transform 0.3s ease-in-out;
+width: 100%;
+    transition: transform 0.3s ease-in-out;
 
     }
 
     .dropdown-panel .panel-container {
 
 
-        border-radius: 5px;
-        padding: 10px;
+    border-radius: 5px;
+    padding: 10px;
 
     }
 
@@ -245,14 +245,14 @@ main {
 
     .dropdown-panel.show {
         transform: translateX(0);
-    }
-
-    .color-circle {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        cursor: pointer;
-        /* border: 2px solid #fff; */
+  }
+  
+  .color-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* border: 2px solid #fff; */
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     }
 }
@@ -285,13 +285,13 @@ main {
     border-radius: 6px;
     border: 1px solid transparent;
     transition: all 0.2s;
-}
-
-.theme-choice.selected {
+  }
+  
+  .theme-choice.selected {
     border-color: var(--main-color);
     background-color: var(--main-color);
     color: #fff;
-}
+  }
 
 /* ===== */
 
@@ -323,7 +323,7 @@ main {
     cursor: pointer;
     font-size: 1rem;
 
-}
+  }
 
 
 .bg-main:hover {
@@ -443,42 +443,42 @@ main {
 
 /* canvas */
 .canvas {
-    #closeButton {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 8px 16px;
-        background-color: rgba(0, 0, 0, 0.51);
-        color: var(--white);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 1040;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.51);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1040;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-    #closeButton:hover {
-        background-color: var(--pink);
-        transform: scale(1.05);
-    }
+#closeButton:hover {
+    background-color: var(--pink);
+    transform: scale(1.05);
+}
 
-    #closeButton:active {
-        background-color: rgba(0, 0, 0, 0.33);
-        transform: scale(0.95);
-    }
+#closeButton:active {
+    background-color: rgba(0, 0, 0, 0.33);
+    transform: scale(0.95);
+}
 
-    #startbtn {
-        position: fixed;
-        top: 50%;
-        right: 0;
-        background-color: var(--pink);
-        z-index: 1040;
-        cursor: pointer;
+#startbtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: var(--pink);
+    z-index: 1040;
+    cursor: pointer;
         color: var(--white) !important;
         display: flex;
-    }
+}
 
-    #startbtn:hover {
+#startbtn:hover {
         background-color: var(--bg-color);
     }
 
@@ -493,22 +493,22 @@ main {
         z-index: 1050;
         font-size: 4rem;
         font-weight: bold;
-    }
+}
 
-    h1 span.text-center {
-        color: var(--white);
-    }
+h1 span.text-center {
+    color: var(--white);
+}
 
-    canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        z-index: 1038;
-        pointer-events: none;
-        opacity: 0.8;
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1038;
+    pointer-events: none;
+    opacity: 0.8;
     }
 
 }
@@ -516,12 +516,12 @@ main {
 /* ===================== 
  End Canvas Happy Birthday
   ====================== */
-/* ===================== 
+  /* ===================== 
        Header Start
   ====================== */
-.responsive-menu {
+  .responsive-menu {
     display: flex;
-}
+  }
 
 .nav-link {
     color: var(--head-color);
@@ -567,7 +567,7 @@ Home Slider
 }
 
 .dark-theme .slider-over {
-
+  
     background-color: #000000e0;
 }
 
@@ -575,7 +575,7 @@ Home Slider
 .carousel-control-prev {
 
     width: 5%;
-    opacity: .6;
+opacity: .6;
 }
 
 .carousel-control-next-icon,
@@ -588,7 +588,7 @@ Home Slider
 /* ===================== 
 Home Slider
   ====================== */
-/* ===================== 
+  /* ===================== 
            Footer
   ====================== */
 footer {
@@ -598,28 +598,28 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-}
+  }
 
-#darkOption {
+  #darkOption { 
 
-    color: var(--head-color);
-}
+color: var(--head-color);
+      }    
 
 .color-circle.selected {
     border: 3px solid var(--border-color) !important;
-}
+}      
 
 /* ===================== 
         end   Footer
   ====================== */
-.form-control {
-
+  .form-control {
+   
     color: var(--text-color);
     background-color: var(--card-color);
     background-clip: padding-box;
 
     border-color: var(--border-color);
-}
+ }
 
 .form-control::placeholder {
     color: var(--text-color);
@@ -633,11 +633,11 @@ footer {
 }
 
 .dropdown-item {
-
+ 
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
 
     color: var(--text-color);
-
+  
     background-color: var(--card-color);
     ;
 }
@@ -647,8 +647,8 @@ footer {
     color: var(--white);
 }
 
-.dropdown-menu {
-
+    .dropdown-menu {
+    
     --bs-dropdown-bg: var(--card-color);
 }
 

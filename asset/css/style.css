@@ -1715,3 +1715,28 @@ justify-content: center;}
             overflow: auto;
         }
     }
+    /* Custom CSS for multi-level dropdowns */
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    display: none; /* hide initially */
+    position: absolute;
+  }
+  
+  /* Show the submenu when hovering */
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional: Make the right arrow icon for submenus */
+  .dropdown-submenu > a::after {
+    content: "▶";
+    float: right;
+    margin-left: 5px;
+    font-size: 0.6rem;
+  }

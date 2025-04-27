@@ -1078,6 +1078,7 @@ a.carousel-item.active.position-relative {
     @media (max-width: 768px) {
         .news-hero {
             grid-template-columns: 1fr;
+            display: grid;
         }
 
         .news-hero-main,
@@ -1585,17 +1586,40 @@ justify-content: center;}
         color: var(--border-color);
 
     }
-
-    .mega-menu {
-        background-color: var(--card-color);
-        border-radius: 0;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 1200px;
-        margin-top: var(--bs-dropdown-spacer);
+    @media screen and (min-width: 992px) {
+        .mega-menu {
+            position: fixed !important; /* changed from absolute or relative */
+        top: 50px !important; /* or whatever you want (distance from top) */
         left: 50% !important;
         transform: translateX(-50%);
-        margin-top: var(--bs-dropdown-spacer);
+
+    }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1082.98px) {
+        .mega-menu {
+            top: 119px !important; /* or whatever you want (distance from top) */
+        }
+
+    }
+    .has-submenu:has(.show) i{
+        display: block;
+        text-align: center;
+        color: var(--main-color);
+        margin-top: -38px;
+    padding-bottom: 10px;
+    }
+    .has-submenu i{
+        display: none;
+     
+    }
+   
+    .mega-menu {
+    z-index: 1050; /* make sure it stays above everything */
+    width: 70vw; /* or whatever width you want */
+    background-color: var(--card-color);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;;
         h6 {
             font-size: 1rem;
 
@@ -1611,7 +1635,7 @@ justify-content: center;}
             transition: color 0.3s ease;
         }
     }
-    .mega-menu::before {
+    /* .mega-menu::before {
         content: "";
         position: absolute;
         top: -10px;
@@ -1622,7 +1646,7 @@ justify-content: center;}
         border-width: 0 10px 10px 10px;
         border-style: solid;
       color: var(--border-color);
-    }
+    } */
   
     /* Mobile Mega Menu Styling */
     @media (max-width: 991.98px) {
@@ -1715,28 +1739,10 @@ justify-content: center;}
             overflow: auto;
         }
     }
-    /* Custom CSS for multi-level dropdowns */
-.dropdown-submenu {
-    position: relative;
-  }
-  
-  .dropdown-submenu > .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -0.5rem;
-    display: none; /* hide initially */
-    position: absolute;
-  }
-  
-  /* Show the submenu when hovering */
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-  }
-  
-  /* Optional: Make the right arrow icon for submenus */
-  .dropdown-submenu > a::after {
-    content: "▶";
-    float: right;
-    margin-left: 5px;
-    font-size: 0.6rem;
-  }
+    .small-menu{
+        width:25vw ;
+        left: 50% !important;
+transform: translateX(-50%);
+position: absolute  !important;
+    }
+    

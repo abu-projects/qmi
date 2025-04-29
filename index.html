@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
 
   <!-- style CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="asset/css/style.css">
 
 
@@ -23,10 +27,6 @@
 
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
 
 </head>
 
@@ -39,13 +39,13 @@
         Start
     </a>
         <canvas id="birthday"></canvas>
-      
+
         <h1>Happy Birthday   <br>
-          <span class="text-center d-block">   
+          <span class="text-center d-block">
             <span class="main-color">Elisa</span>
             <i class="bi bi-balloon-heart-fill main-color"></i>
-        
-          
+
+
               </span>
           </h1>
         <button id="closeButton" aria-label="closeButton"><i class="bi bi-x-circle"></i></button>
@@ -84,11 +84,11 @@
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Welcome to QM
                   </a>
-                
+
                   <div class="dropdown-menu mega-menu small-menu">
                     <div class="container">
                       <div class="row">
-                 
+
                         <div class="col-md-12">
                           <!-- <h6 class="text-uppercase fw-bold mb-3">Departments</h6> -->
                           <ul class="list-unstyled">
@@ -98,7 +98,7 @@
                             <li><a href="#" class="dropdown-item">Marketing</a></li>
                           </ul>
                         </div>
-                      
+
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@
                     aria-expanded="false">
                     Our Teams
                   </a>
-            
+
                   <div class="dropdown-menu mega-menu">
                     <!-- <i class="bi bi-triangle-fill"></i> -->
                     <div class="container">
@@ -156,7 +156,7 @@
                   <div class="dropdown-menu mega-menu small-menu">
                     <div class="container">
                       <div class="row">
-                 
+
                         <div class="col-md-12">
                           <!-- <h6 class="text-uppercase fw-bold mb-3">Departments</h6> -->
                           <ul class="list-unstyled">
@@ -166,7 +166,7 @@
                             <li><a href="#" class="dropdown-item">Marketing</a></li>
                           </ul>
                         </div>
-                      
+
                       </div>
                     </div>
                   </div>
@@ -191,34 +191,66 @@
           <!-- Notifications Dropdown -->
           <div class="dropdown position-relative me-3 notifi">
             <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
-         
-              <i class="bi bi-megaphone-fill btn-main-link icon-md  animate__animated  animate__shakeX"></i>
+              <!-- Wrapper div for the icon with animation -->
+              <div class="icon-wrapper d-inline-block animate__animated animate__headShake animate__infinite">
+                <i class="bi bi-megaphone-fill btn-main-link icon-md "></i>
+              </div>
 
+              <!-- Badge without animation -->
               <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
                 2
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+
               <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
                 <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
-                  <i class="icon-Setting icon-md text-primary"></i>
+                  <i class="bi bi-person-fill icon-md text-primary"></i>
                 </div>
                 <div>
-                  <strong class="head-color">Happy Birthday</strong><br />
+                  <strong class="head-color">Happy Birthday</strong><br>
+                  <small class="text-color">Your birthday celebration is scheduled for today</small><br>
                   <small class="text-color">03/12/2024</small>
                 </div>
               </a>
               <hr class="my-2">
               <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
                 <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
-                  <i class="icon-Ticket icon-md text-primary"></i>
+                  <i class="bi bi-calendar-check-fill icon-md text-primary"></i>
                 </div>
                 <div>
-                  <strong class="head-color">The Art of Color and Form:</strong><br />
-                  <small class="text-color">Exploring Kelly’s Influence on Fashion Workshop</small><br />
-                  <small class="text-color">03/12/2024</small>
+                  <strong class="head-color">Leave Approval</strong><br>
+                  <small class="text-color">Your leave request has been approved</small><br>
+                  <small class="text-color">02/12/2024</small>
                 </div>
               </a>
+
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-gear-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">System Maintenance</strong><br>
+                  <small class="text-color">Scheduled maintenance on Friday evening</small><br>
+                  <small class="text-color">05/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-tools icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Office Renovations</strong><br>
+                  <small class="text-color">3rd floor will be closed for renovations</small><br>
+                  <small class="text-color">10/12/2024</small>
+                </div>
+              </a>
+
+
+
+
               <hr class="my-2">
 
               <div class="text-end">
@@ -231,7 +263,7 @@
           <div class="lang-toggle">
             <a href="#" class="btn btn-sm btn-main-link   d-flex">
               عربي
-        
+
             </a>
           </div>
         </div>
@@ -311,7 +343,7 @@
                                 </div>
                             </div>
                         </a>
-                        
+
        <!-- Secondary news items as vertical slider -->
        <div class="news-hero-secondary custom-vertical-carousel">
         <div class="vertical-carousel-inner">
@@ -340,7 +372,7 @@
             </div>
           </div>
         </div>
-      
+
         <!-- Arrow navigation -->
         <div class="vertical-carousel-arrows">
           <button class="carousel-arrow-up" data-slide="prev" aria-label="Previous slide">
@@ -352,7 +384,7 @@
         </div>
       </div>
                     </div>
-                    
+
                 </section>
 
                   <!-- View All -->
@@ -950,6 +982,4 @@
   <script src="asset/js/vertical-carousel.js"></script>
   <script src="asset/js/main.js"></script>
   <!-- <script src="asset/js/canvas.js"></script> -->
-   <script></script>
 </html>
-

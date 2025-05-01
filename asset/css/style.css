@@ -1542,6 +1542,127 @@ a.carousel-item.active.position-relative {
     position: relative;
     z-index: 0;
 }
+
+/* Vacancy Details Page Styles */
+.vacancy-details-page {
+    /* Vertical Tabs Styling */
+    .nav-pills .nav-link {
+        color: var(--text-color);
+        border-radius: 0;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: transparent;
+        color: var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        font-weight: 700;
+        position: relative;
+    }
+
+    .nav-pills .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-color);
+    }
+
+    .nav-pills .nav-link:hover:not(.active) {
+        background-color: rgba(0, 0, 0, 0.02);
+        color: var(--main-color);
+    }
+
+    /* Tab Content Styling */
+    .tab-content {
+        padding: 20px 0;
+    }
+
+    /* Tab title styling */
+    #tab-title {
+        font-weight: 700;
+        font-size: 32px;
+        color: var(--main-color);
+    }
+
+    /* Tab content styling */
+    .tab-pane p, .tab-pane li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .tab-pane p {
+        margin-bottom: 15px;
+    }
+
+    /* Apply Button Styling */
+    .btn-main {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .btn-main:hover {
+        background-color: color-mix(in srgb, var(--main-color) 80%, black);
+        border-color: color-mix(in srgb, var(--main-color) 80%, black);
+    }
+
+    /* Card styling */
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    /* Left navigation styling */
+    .col-lg-3 .card-body {
+        padding: 0;
+    }
+
+    .nav-pills {
+        width: 100%;
+    }
+
+    /* Dark Theme Adjustments */
+    .dark-theme & .nav-pills .nav-link {
+        color: var(--text-color);
+    }
+
+    .dark-theme & .nav-pills .nav-link.active {
+        color: var(--main-color);
+    }
+
+    .dark-theme & .nav-pills .nav-link:hover:not(.active) {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .nav-pills {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .nav-pills .nav-link {
+            padding: 10px 15px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+    }
+}
 .bread-cramp{
     z-index: 2;
     position: relative;
@@ -2052,3 +2173,4 @@ position: absolute  !important;
     color: var(--white);
   }
 }
+/* Additional vacancy details page styles can be added here */

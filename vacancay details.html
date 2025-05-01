@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Vacancies - QM Intranet</title>
+  <meta name="description" content="QM Intranet - Internal Vacancies">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/vendor/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/flatpickr.min.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission and Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <div class="dropdown-menu mega-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Museums & Galleries</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">National Museum of Qatar</a></li>
+                            <li><a href="#" class="dropdown-item">Museum of Islamic Art</a></li>
+                            <li><a href="#" class="dropdown-item">Mathaf: Arab Museum</a></li>
+                            <li><a href="#" class="dropdown-item">Fire Station</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3 h">Departments</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Resources</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Team Directory</a></li>
+                            <li><a href="#" class="dropdown-item">Organization Chart</a></li>
+                            <li><a href="#" class="dropdown-item">Contact Information</a></li>
+                            <li><a href="#" class="dropdown-item">New Employee Guide</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control" type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Wrapper div for the icon with animation -->
+              <div class="icon-wrapper d-inline-block animate__animated animate__headShake animate__infinite">
+                <i class="bi bi-megaphone-fill btn-main-link icon-md"></i>
+              </div>
+              <!-- Badge without animation -->
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br>
+                  <small class="text-color">Your birthday celebration is scheduled for today</small><br>
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-calendar-check-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Leave Approval</strong><br>
+                  <small class="text-color">Your leave request has been approved</small><br>
+                  <small class="text-color">02/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link d-flex">
+              عربي
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="vacancy-details-page">
+    <!-- Banner Image -->
+    <div class="page-wallpaper">
+      <div class="overlay"></div>
+      <img src="asset/imgs/page-bg.jpg" alt="page Wallpaper" class="img-fluid">
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="z-index: 2;">
+   
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <!-- Breadcrumb and Back Button -->
+      <section class="bread-cramp mb-3 mt--40">
+        <div class="card card-color">
+          <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+            <h2 class="fw-bold m-0 head-color">Executive Secretary</h2>
+            <div class="d-flex align-items-center gap-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="btn-main-link fw-bold">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="internal-vacancies.html" class="btn-main-link fw-bold">Internal Career Opportunity</a>
+                  </li>
+                  <li class="breadcrumb-item text-color fw-semibold" aria-current="page">Executive Secretary</li>
+                </ol>
+              </nav>
+              <a href="internal-vacancies.html" class="btn btn-outline-dark d-flex align-items-center">
+                <i class="bi bi-arrow-left me-1"></i> Back
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row">
+        <!-- Left Column - Tabs Navigation -->
+        <div class="col-lg-3">
+          <div class="card card-color mb-4">
+            <div class="card-body p-0">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active text-start" id="department-tab" data-bs-toggle="pill" data-bs-target="#department" type="button" role="tab" aria-controls="department" aria-selected="true">Department</button>
+                <button class="nav-link text-start" id="role-purpose-tab" data-bs-toggle="pill" data-bs-target="#role-purpose" type="button" role="tab" aria-controls="role-purpose" aria-selected="false">Role Purpose</button>
+                <button class="nav-link text-start" id="duties-tab" data-bs-toggle="pill" data-bs-target="#duties" type="button" role="tab" aria-controls="duties" aria-selected="false">Duties & Responsibilities</button>
+                <button class="nav-link text-start" id="work-environment-tab" data-bs-toggle="pill" data-bs-target="#work-environment" type="button" role="tab" aria-controls="work-environment" aria-selected="false">Work environment</button>
+                <button class="nav-link text-start" id="qualifications-tab" data-bs-toggle="pill" data-bs-target="#qualifications" type="button" role="tab" aria-controls="qualifications" aria-selected="false">Qualifications/requirements</button>
+                <button class="nav-link text-start" id="competencies-tab" data-bs-toggle="pill" data-bs-target="#competencies" type="button" role="tab" aria-controls="competencies" aria-selected="false">Competencies/skills</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Tab Content -->
+        <div class="col-lg-9">
+          <div class="card card-color mb-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                <h2 class="m-0 main-color" id="tab-title">Department</h2>
+                <div class="d-flex align-items-center">
+                  <div class="me-3 d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-1"></i>
+                    <span class="text-color">12.12.2024</span>
+                  </div>
+                  <div class="dropdown ms-auto">
+                    <a class="text-decoration-none text-color d-flex align-items-center" href="#" id="shareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-share main-color me-1"></i> Share
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="shareDropdown" style="">
+                      <li>
+                        <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                          <i class="bi bi-send main-color"></i> Send
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                          <i class="bi bi-clipboard main-color"></i> Copy Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                          <i class="bi bi-share-fill main-color"></i> Share to Engage
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- Department Tab -->
+                <div class="tab-pane fade show active" id="department" role="tabpanel" aria-labelledby="department-tab">
+                  <p class="text-color mb-3">Department/Department Name</p>
+                  <p class="text-color">Report to/Department Name</p>
+                </div>
+
+                <!-- Role Purpose Tab -->
+                <div class="tab-pane fade" id="role-purpose" role="tabpanel" aria-labelledby="role-purpose-tab">
+                  <p class="text-color">The Executive Secretary is responsible for providing high-level administrative support to the executive team, managing schedules, coordinating meetings, and handling confidential information with discretion.</p>
+                </div>
+
+                <!-- Duties & Responsibilities Tab -->
+                <div class="tab-pane fade" id="duties" role="tabpanel" aria-labelledby="duties-tab">
+                  <ul class="text-color ps-3">
+                    <li class="mb-2">Manage executive's calendar, schedule meetings, and coordinate travel arrangements</li>
+                    <li class="mb-2">Prepare and edit correspondence, presentations, and reports</li>
+                    <li class="mb-2">Handle confidential information with discretion</li>
+                    <li class="mb-2">Coordinate and attend meetings, take minutes, and follow up on action items</li>
+                    <li class="mb-2">Act as a liaison between executives and internal/external stakeholders</li>
+                    <li class="mb-2">Manage office supplies and maintain filing systems</li>
+                  </ul>
+                </div>
+
+                <!-- Work environment Tab -->
+                <div class="tab-pane fade" id="work-environment" role="tabpanel" aria-labelledby="work-environment-tab">
+                  <p class="text-color mb-3">This position is based at our headquarters in Doha, Qatar. The work environment is professional, fast-paced, and collaborative.</p>
+                  <p class="text-color">Working hours are Sunday to Thursday, 8:00 AM to 4:00 PM, with occasional flexibility required for special events or urgent matters.</p>
+                </div>
+
+                <!-- Qualifications/requirements Tab -->
+                <div class="tab-pane fade" id="qualifications" role="tabpanel" aria-labelledby="qualifications-tab">
+                  <ul class="text-color ps-3">
+                    <li class="mb-2">Bachelor's degree in Business Administration or related field</li>
+                    <li class="mb-2">Minimum 3 years of experience as an executive assistant or similar role</li>
+                    <li class="mb-2">Proficiency in Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)</li>
+                    <li class="mb-2">Excellent written and verbal communication skills in English and Arabic</li>
+                    <li class="mb-2">Strong organizational and time management skills</li>
+                  </ul>
+                </div>
+
+                <!-- Competencies/skills Tab -->
+                <div class="tab-pane fade" id="competencies" role="tabpanel" aria-labelledby="competencies-tab">
+                  <ul class="text-color ps-3">
+                    <li class="mb-2">Exceptional attention to detail and accuracy</li>
+                    <li class="mb-2">Ability to maintain confidentiality and exercise discretion</li>
+                    <li class="mb-2">Strong interpersonal skills and professional demeanor</li>
+                    <li class="mb-2">Ability to prioritize tasks and work under pressure</li>
+                    <li class="mb-2">Problem-solving skills and proactive approach</li>
+                    <li class="mb-2">Cultural sensitivity and adaptability</li>
+                  </ul>
+                </div>
+              </div>
+
+      
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card card-color d-flex justify-content-end ">
+                    <!-- Apply Button - Outside of tabs but at the bottom of the right column -->
+                    <div class="text-end m-3">
+                      <button type="button" class="btn btn-main text-white px-4 py-2">Apply</button>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; Qatar Museums 2024. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-white me-3">Privacy Policy</a>
+          <a href="#" class="text-white me-3">Terms of Use</a>
+          <a href="#" class="text-white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Settings Button -->
+  <section class="setting-section">
+    <div class="theme-toggle-btn">
+      <button class="btn bg-main bg-main-hover text-white" aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md"></span>
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color">Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <hr>
+          <div class="mb-3">
+            <h4 class="head-color">Theme</h4>
+            <div class="d-flex gap-2">
+              <div class="theme-choice selected" data-theme="light">Light</div>
+              <div class="theme-choice" data-theme="dark">Dark</div>
+            </div>
+          </div>
+          <hr>
+          <div class="mb-3">
+            <h4 class="head-color">Primary Color</h4>
+            <div class="d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="pink"></div>
+              <div class="color-circle bg-orange" data-color="orange"></div>
+              <div class="color-circle bg-blue" data-color="blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript Libraries -->
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/vendor/dist/flatpickr.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize flatpickr for date inputs
+      flatpickr(".datepicker", {
+        dateFormat: "d.m.Y",
+        allowInput: true
+      });
+
+      // Theme toggle functionality
+      const themeBtn = document.getElementById('themeBtn');
+      const themeDropdown = document.getElementById('themeDropdown');
+
+      themeBtn.addEventListener('click', function() {
+        themeDropdown.classList.toggle('show');
+      });
+
+      // Close theme dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!themeBtn.contains(event.target) && !themeDropdown.contains(event.target)) {
+          themeDropdown.classList.remove('show');
+        }
+      });
+
+      // Theme choices
+      const themeChoices = document.querySelectorAll('.theme-choice');
+      themeChoices.forEach(choice => {
+        choice.addEventListener('click', function() {
+          themeChoices.forEach(c => c.classList.remove('selected'));
+          this.classList.add('selected');
+
+          const theme = this.getAttribute('data-theme');
+          if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+          } else {
+            document.body.classList.remove('dark-theme');
+          }
+        });
+      });
+
+      // Color choices
+      const colorCircles = document.querySelectorAll('.color-circle');
+      colorCircles.forEach(circle => {
+        circle.addEventListener('click', function() {
+          const color = this.getAttribute('data-color');
+          document.documentElement.style.setProperty('--main-color', `var(--${color})`);
+        });
+      });
+
+      // Tab functionality for vacancy details
+      const tabLinks = document.querySelectorAll('.nav-link');
+      const tabContents = document.querySelectorAll('.tab-pane');
+      const tabTitle = document.getElementById('tab-title');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Remove active class from all tabs
+          tabLinks.forEach(tab => tab.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('show', 'active'));
+
+          // Add active class to current tab
+          this.classList.add('active');
+
+          // Update the tab title
+          tabTitle.textContent = this.textContent.trim();
+
+          // Show corresponding content
+          const targetId = this.getAttribute('data-bs-target').substring(1);
+          const targetContent = document.getElementById(targetId);
+          if (targetContent) {
+            targetContent.classList.add('show', 'active');
+          }
+        });
+      });
+
+      // Share button functionality
+      const shareBtn = document.querySelector('.btn-outline-secondary');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', function() {
+          if (navigator.share) {
+            navigator.share({
+              title: 'Executive Secretary - Qatar Museums',
+              text: 'Check out this job opportunity at Qatar Museums',
+              url: window.location.href
+            })
+            .catch(error => console.log('Error sharing:', error));
+          } else {
+            // Fallback for browsers that don't support Web Share API
+            alert('Copy this URL to share: ' + window.location.href);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

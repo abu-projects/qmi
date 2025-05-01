@@ -1775,3 +1775,280 @@ position: absolute  !important;
 .our-people .border , .benefits-section .border{
     border-radius: .375rem;
 }
+.internal-vacancies-page{
+  /* Custom styles for vacancy cards */
+  .vacancy-card {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--card-color);
+  }
+
+  .vacancy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .vacancy-card .card-body {
+    padding: 25px 30px;
+  }
+
+  .vacancy-card .job-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--head-color);
+  }
+
+  .vacancy-card .department {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    color: var(--text-color);
+  }
+
+  .vacancy-card .date-container {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .vacancy-card .date-icon {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .vacancy-card .date {
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  .vacancy-card .border-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background-color: var(--main-color);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  /* Dark mode specific styles */
+  .dark-theme & .vacancy-card {
+    border-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark-theme & .vacancy-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Pagination dark mode fixes */
+  .dark-theme & .page-link {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    border-color: #333;
+  }
+
+  .dark-theme & .page-item.active .page-link {
+    background-color: var(--main-color);
+    color: #fff;
+    border-color: var(--main-color);
+  }
+
+  .dark-theme & .page-item.disabled .page-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #666;
+  }
+
+  /* List/Grid View Styles */
+  .btn-outline-secondary.active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+    border-color: var(--main-color) !important;
+  }
+
+  /* Grid view (default) */
+  .row.g-4.grid-view {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row.g-4.grid-view .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row.g-4.grid-view .col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  /* List view */
+  .row.g-4.list-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row.g-4.list-view .col-md-6,
+  .row.g-4.list-view .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 12px;
+    margin-bottom: 20px;
+  }
+
+  .row.g-4.list-view .vacancy-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .row.g-4.list-view .vacancy-card .border-accent {
+    width: 8px;
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .row.g-4.list-view .vacancy-card .card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+  }
+
+  /* Job info container */
+  .row.g-4.list-view .vacancy-card .job-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row.g-4.list-view .vacancy-card .job-title {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .row.g-4.list-view .vacancy-card .department {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .row.g-4.list-view .vacancy-card .date-container {
+    margin-top: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .row.g-4.grid-view .col-lg-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .row.g-4.grid-view .col-md-6,
+    .row.g-4.grid-view .col-lg-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .row.g-4.list-view .vacancy-card .card-body {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+
+    .row.g-4.list-view .vacancy-card .job-title {
+      margin-bottom: 10px;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .row.g-4.list-view .vacancy-card .department {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .row.g-4.list-view .vacancy-card .date-container {
+      margin-top: 10px;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  /* Page link styling */
+  .page-link {
+    color: var(--text-color);
+  }
+
+  /* Filter Dropdown Styles (for departments and nationality) */
+  .col-lg-3 .dropdown-toggle {
+    background-color: var(--card-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    font-weight: normal;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .col-lg-3 .dropdown-toggle:focus,
+  .col-lg-3 .dropdown-toggle:hover {
+    border-color: var(--main-color) !important;
+    color: var(--main-color) !important;
+    background-color: var(--card-color) !important;
+  }
+
+  /* Sort Dropdown Styles */
+  .view-btns .dropdown-toggle {
+    background-color: var(--bw-color) !important;
+    color: var(--main-color) !important;
+    border: none !important;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-btns .dropdown-toggle:focus,
+  .view-btns .dropdown-toggle:hover {
+    background-color: var(--main-color) !important;
+    color: var(--white) !important;
+  }
+
+  /* Common Dropdown Menu Styles */
+  .dropdown-menu {
+    background-color: var(--card-color);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+  }
+
+  .dropdown-menu .dropdown-item {
+    font-weight: bold;
+    padding: 10px 16px;
+    color: var(--text-color);
+  }
+
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    background-color: var(--main-color);
+    color: var(--white);
+  }
+}

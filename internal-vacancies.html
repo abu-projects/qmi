@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Vacancies - QM Intranet</title>
+  <meta name="description" content="QM Intranet - Internal Vacancies">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/vendor/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/flatpickr.min.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission and Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <div class="dropdown-menu mega-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Museums & Galleries</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">National Museum of Qatar</a></li>
+                            <li><a href="#" class="dropdown-item">Museum of Islamic Art</a></li>
+                            <li><a href="#" class="dropdown-item">Mathaf: Arab Museum</a></li>
+                            <li><a href="#" class="dropdown-item">Fire Station</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3 h">Departments</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Resources</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Team Directory</a></li>
+                            <li><a href="#" class="dropdown-item">Organization Chart</a></li>
+                            <li><a href="#" class="dropdown-item">Contact Information</a></li>
+                            <li><a href="#" class="dropdown-item">New Employee Guide</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control" type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Wrapper div for the icon with animation -->
+              <div class="icon-wrapper d-inline-block animate__animated animate__headShake animate__infinite">
+                <i class="bi bi-megaphone-fill btn-main-link icon-md"></i>
+              </div>
+              <!-- Badge without animation -->
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br>
+                  <small class="text-color">Your birthday celebration is scheduled for today</small><br>
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-calendar-check-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Leave Approval</strong><br>
+                  <small class="text-color">Your leave request has been approved</small><br>
+                  <small class="text-color">02/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link d-flex">
+              عربي
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="internal-vacancies-page">
+    <!-- Banner Image -->
+    <div class="page-wallpaper">
+      <div class="overlay"></div>
+      <img src="asset/imgs/page-bg.jpg" alt="page Wallpaper" class="img-fluid">
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="z-index: 2;">
+        <div class="container-fluid">
+      
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid ">
+      <!-- Breadcrumb and Back Button -->
+      <section class="bread-cramp mb-3 mt--40">
+        <div class="card card-color">
+          <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+            <h2 class="fw-bold m-0 head-color">Internal Vacancies</h2>
+            <div class="d-flex align-items-center gap-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="btn-main-link fw-bold">Home</a>
+                  </li>
+                  <li class="breadcrumb-item text-color fw-semibold" aria-current="page">Internal Career Opportunity</li>
+                </ol>
+              </nav>
+              <a href="index.html" class="btn btn-outline-dark d-flex align-items-center">
+                <i class="bi bi-arrow-left me-1"></i> Back
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row">
+        <!-- Left Column - Filters -->
+        <div class="col-lg-3">
+          <div class="card card-color mb-4">
+            <div class="card-body">
+              <h3 class="fw-bold head-color mb-3">Filters</h3>
+              <hr>
+
+              <!-- Position Search -->
+              <div class="mb-3">
+                <label for="positionSearch" class="form-label">Position</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="positionSearch" placeholder="">
+                  <button class="btn btn-outline-secondary" type="button">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Departments Dropdown -->
+              <div class="mb-3">
+                <label class="form-label head-color ">Departments</label>
+                <div class="dropdown w-100">
+                  <button class="btn btn-outline-secondary border btn-sm dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" id="departmentsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>Select</span>
+                  </button>
+                  <ul class="dropdown-menu w-100" aria-labelledby="departmentsDropdown">
+                    <li><a class="dropdown-item" href="#">Information Management & Decision Support</a></li>
+                    <li><a class="dropdown-item" href="#">Learning and Outreach</a></li>
+                    <li><a class="dropdown-item" href="#">CEO Office</a></li>
+                    <li><a class="dropdown-item" href="#">Human Resources</a></li>
+                    <li><a class="dropdown-item" href="#">Finance</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Nationality Dropdown -->
+              <div class="mb-3">
+                <label class="form-label head-color">Nationality</label>
+                <div class="dropdown w-100">
+                  <button class="btn btn-outline-secondary border btn-sm dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" id="nationalityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>Select</span>
+                  </button>
+                  <ul class="dropdown-menu w-100" aria-labelledby="nationalityDropdown">
+                    <li><a class="dropdown-item" href="#">Qatari</a></li>
+                    <li><a class="dropdown-item" href="#">Non-Qatari</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Publish Date Range -->
+              <div class="mb-3">
+                <label class="form-label">Publish Date</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control datepicker" placeholder="From" aria-label="From Date">
+                  <span class="input-group-text">
+                    <i class="bi bi-calendar"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input type="text" class="form-control datepicker" placeholder="To" aria-label="To Date">
+                  <span class="input-group-text">
+                    <i class="bi bi-calendar"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Filter Buttons -->
+              <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn btn-main text-white fw-bold">Apply Filter</button>
+                <button type="button" class="btn btn-outline-dark fw-bold">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Job Listings -->
+        <div class="col-lg-9">
+          <div class="card card-color mb-4">
+            <div class="card-body">
+              <!-- Title and Sort -->
+              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+                <h4 class="fw-bold head-color"><strong>Total Result:</strong> 8</h4>
+                <div class="d-flex align-items-center gap-2 flex-wrap view-btns">
+                  <span class="text-color">View</span>
+                  <button class="btn btn-outline-secondary btn-sm active" id="listViewBtn" aria-label="listView" data-view="list">
+                    <i class="bi bi-list"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary btn-sm" id="gridViewBtn" aria-label="gridView" data-view="grid">
+                    <i class="bi bi-grid-3x3-gap"></i>
+                  </button>
+                  <div class="dropdown ms-2">
+                    <button class="btn dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sort by: New Date
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                      <li><a class="dropdown-item" href="#">Newest First</a></li>
+                      <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                      <li><a class="dropdown-item" href="#">Most Viewed</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <!-- Job Listings -->
+              <div class="row g-4">
+                <!-- Job Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Tender Administration Office Coordinator</h4>
+                        <p class="department text-color">Under CEO Office</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Museum guide Specialist</h4>
+                        <p class="department text-color">Learning and Outreach</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 7 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Job Card 8 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card vacancy-card h-100">
+                    <div class="border-accent"></div>
+                    <div class="card-body">
+                      <div class="job-info">
+                        <h4 class="job-title head-color">Executive Secretary</h4>
+                        <p class="department text-color">Information Management & Decision Support</p>
+                      </div>
+                      <div class="date-container">
+                        <i class="bi bi-calendar3 date-icon"></i>
+                        <span class="date">12.12.2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <nav aria-label="Page navigation" class="mt-4">
+                <ul class="pagination justify-content-center flex-wrap gap-1">
+                  <li class="page-item">
+                    <a class="page-link  px-3" href="#" aria-label="Previous">
+                      <i class="bi bi-arrow-left"></i> Previous
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page">
+                    <span class="page-link bg-main border-0 text-white px-3">1</span>
+                  </li>
+                  <li class="page-item"><a class="page-link px-3" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link px-3" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link px-3" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link px-3" href="#">5</a></li>
+                  <li class="page-item disabled"><span class="page-link px-3">...55</span></li>
+                  <li class="page-item">
+                    <a class="page-link px-3" href="#" aria-label="Next">
+                      Next <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; Qatar Museums 2024. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-white me-3">Privacy Policy</a>
+          <a href="#" class="text-white me-3">Terms of Use</a>
+          <a href="#" class="text-white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Settings Button -->
+  <section class="setting-section">
+    <div class="theme-toggle-btn">
+      <button class="btn bg-main bg-main-hover text-white" aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md"></span>
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color">Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <hr>
+          <div class="mb-3">
+            <h4 class="head-color">Theme</h4>
+            <div class="d-flex gap-2">
+              <div class="theme-choice selected" data-theme="light">Light</div>
+              <div class="theme-choice" data-theme="dark">Dark</div>
+            </div>
+          </div>
+          <hr>
+          <div class="mb-3">
+            <h4 class="head-color">Primary Color</h4>
+            <div class="d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="pink"></div>
+              <div class="color-circle bg-orange" data-color="orange"></div>
+              <div class="color-circle bg-blue" data-color="blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript Libraries -->
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/vendor/dist/flatpickr.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize flatpickr for date inputs
+      flatpickr(".datepicker", {
+        dateFormat: "d.m.Y",
+        allowInput: true
+      });
+
+      // Theme toggle functionality
+      const themeBtn = document.getElementById('themeBtn');
+      const themeDropdown = document.getElementById('themeDropdown');
+
+      themeBtn.addEventListener('click', function() {
+        themeDropdown.classList.toggle('show');
+      });
+
+      // Close theme dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!themeBtn.contains(event.target) && !themeDropdown.contains(event.target)) {
+          themeDropdown.classList.remove('show');
+        }
+      });
+
+      // Theme choices
+      const themeChoices = document.querySelectorAll('.theme-choice');
+      themeChoices.forEach(choice => {
+        choice.addEventListener('click', function() {
+          themeChoices.forEach(c => c.classList.remove('selected'));
+          this.classList.add('selected');
+
+          const theme = this.getAttribute('data-theme');
+          if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+          } else {
+            document.body.classList.remove('dark-theme');
+          }
+        });
+      });
+
+      // Color choices
+      const colorCircles = document.querySelectorAll('.color-circle');
+      colorCircles.forEach(circle => {
+        circle.addEventListener('click', function() {
+          const color = this.getAttribute('data-color');
+          document.documentElement.style.setProperty('--main-color', `var(--${color})`);
+        });
+      });
+
+      // List/Grid View Toggle
+      const listViewBtn = document.getElementById('listViewBtn');
+      const gridViewBtn = document.getElementById('gridViewBtn');
+      const jobsContainer = document.querySelector('.row.g-4');
+
+      if (listViewBtn && gridViewBtn && jobsContainer) {
+        listViewBtn.addEventListener('click', function() {
+          jobsContainer.classList.remove('grid-view');
+          jobsContainer.classList.add('list-view');
+          listViewBtn.classList.add('active');
+          gridViewBtn.classList.remove('active');
+        });
+
+        gridViewBtn.addEventListener('click', function() {
+          jobsContainer.classList.remove('list-view');
+          jobsContainer.classList.add('grid-view');
+          gridViewBtn.classList.add('active');
+          listViewBtn.classList.remove('active');
+        });
+
+        // Set default view
+        listViewBtn.click();
+      }
+    });
+  </script>
+</body>
+
+</html>

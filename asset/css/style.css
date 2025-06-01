@@ -2799,3 +2799,10 @@ position: absolute  !important;
 }
 
 /* Additional marketplace page styles can be added here */
+.upload-btn , .upload-icon , #addMoreImages{
+
+  color: var(--head-color) !important;
+}
+.dark-theme .modal-header button{
+  filter: invert(1) brightness(2) contrast(1);
+}

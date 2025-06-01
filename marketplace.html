@@ -287,12 +287,12 @@
                   <label class="form-label fw-semibold">Type</label>
                   <div class="row g-2">
                     <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="typeNew" value="new" checked>
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeNew">New</label>
+                      <input class="btn-check" type="radio" name="itemType" id="modalTypeNew" value="new" checked>
+                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="modalTypeNew">New</label>
                     </div>
                     <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="typeUsed" value="used">
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeUsed">Used</label>
+                      <input class="btn-check" type="radio" name="itemType" id="modalTypeUsed" value="used">
+                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="modalTypeUsed">Used</label>
                     </div>
                   </div>
                 </div>
@@ -347,7 +347,7 @@
               <!-- Sort and Sell Button -->
               <div class="d-flex align-items-center gap-3 flex-wrap">
                 <div class="d-flex align-items-center">
-               
+
                   <div class="dropdown ms-2">
                     <button class="btn dropdown-toggle head-color"ype="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                       Sort by: New Date
@@ -362,10 +362,207 @@
                   </div>
                 </div>
 
-                <button class="btn btn-main text-white px-4 py-2">
+                <button type="button" class="btn btn-main text-white px-4 py-2 " data-bs-toggle="modal" data-bs-target="#sellItemModal">
                     <i class="bi bi-plus-circle me-2"></i>
                 Sell Your Item
                   </button>
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="sellItemModal" tabindex="-1" aria-labelledby="sellItemModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content card-color">
+                  <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold head-color" id="sellItemModalLabel">Sell your Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-4 py-3">
+                    <form id="sellItemForm">
+                      <!-- Item Title -->
+                      <div class="mb-3">
+                        <label for="itemTitle" class="form-label fw-semibold text-color">Item Title <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="itemTitle" rows="3" placeholder="Enter item title..." required></textarea>
+                      </div>
+
+                      <!-- Description -->
+                      <div class="mb-3">
+                        <label for="itemDescription" class="form-label fw-semibold text-color">Description <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="itemDescription" rows="4" placeholder="Enter item description..." required></textarea>
+                      </div>
+
+                      <!-- Category and Price Row -->
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="itemCategory" class="form-label fw-semibold text-color">Category <span class="text-danger">*</span></label>
+                          <select class="form-select" id="itemCategory" required>
+                            <option value="">Select category...</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="books">Books</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="sports">Sports & Recreation</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="home">Home & Garden</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="itemPrice" class="form-label fw-semibold text-color">Price <span class="text-danger">*</span></label>
+                          <div class="input-group">
+                            <input type="number" class="form-control" id="itemPrice" placeholder="0.00" min="0" step="0.01" required>
+                            <span class="input-group-text">QAR</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        
+             
+                        <div class="col-md-6">
+                              <label class="form-label fw-semibold">Type</label>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <input class="btn-check" type="radio" name="itemType" id="typeNew" value="new" checked>
+                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeNew">New</label>
+                    </div>
+                    <div class="col-6">
+                      <input class="btn-check" type="radio" name="itemType" id="typeUsed" value="used">
+                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeUsed">Used</label>
+                    </div>
+                  </div>
+                    
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label fw-semibold text-color">Status <span class="text-danger">*</span></label>
+                          <div class="row g-2">
+                            <div class="col-6">
+                              <input class="btn-check" type="radio" name="itemStatus" id="statusActive" value="active" checked>
+                              <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="statusActive">Active</label>
+                            </div>
+                            <div class="col-6">
+                              <input class="btn-check" type="radio" name="itemStatus" id="statusSold" value="sold">
+                              <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="statusSold">Sold</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Upload Item Images -->
+                      <div class="mb-4">
+                        <label class="form-label fw-semibold text-color">Upload Item Images <span class="text-danger">*</span></label>
+                        <div class="upload-area border border-2 border-dashed rounded p-4 text-center">
+                          <div id="uploadPlaceholder">
+                            <div class="upload-icon mb-3">
+                              <i class="bi bi-cloud-upload text-main" style="font-size: 2rem;"></i>
+                            </div>
+                            <p class="mb-2 text-color">
+                              <span class="fw-semibold text-main">Upload files</span>
+                            </p>
+                            <input type="file" class="form-control d-none" id="itemImages" multiple accept="image/*" required>
+                            <label for="itemImages" class="btn btn-outline-main btn-sm upload-btn">
+                              <i class="bi bi-plus-circle me-1"></i>
+                              Upload files
+                            </label>
+                          </div>
+                          <div id="uploadedImagesContainer" class="row g-2 mt-2" style="display: none;">
+                            <!-- Uploaded images will be displayed here -->
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <small class="text-color">You can upload multiple images (JPG, PNG, GIF)</small>
+                          <button type="button" id="addMoreImages" class="btn btn-sm btn-outline-main" style="display: none;">
+                            <i class="bi bi-plus-circle me-1"></i>Add more
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                          const itemImagesInput = document.getElementById('itemImages');
+                          const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+                          const uploadedImagesContainer = document.getElementById('uploadedImagesContainer');
+                          const addMoreImagesBtn = document.getElementById('addMoreImages');
+                          
+                          // Handle file selection
+                          itemImagesInput.addEventListener('change', function(e) {
+                            if (this.files.length > 0) {
+                              // Hide placeholder, show container and add more button
+                              uploadPlaceholder.style.display = 'none';
+                              uploadedImagesContainer.style.display = 'flex';
+                              addMoreImagesBtn.style.display = 'block';
+                              
+                              // Display selected images
+                              displaySelectedImages(this.files);
+                            }
+                          });
+                          
+                          // Add more images button
+                          addMoreImagesBtn.addEventListener('click', function() {
+                            itemImagesInput.click();
+                          });
+                          
+                          // Function to display selected images
+                          function displaySelectedImages(files) {
+                            for (let i = 0; i < files.length; i++) {
+                              const file = files[i];
+                              
+                              // Create image preview element
+                              const imageCol = document.createElement('div');
+                              imageCol.className = 'col-4 col-md-3 mb-2';
+                              imageCol.dataset.filename = file.name;
+                              
+                              const imagePreview = document.createElement('div');
+                              imagePreview.className = 'position-relative';
+                              
+                              // Create image element
+                              const img = document.createElement('img');
+                              img.className = 'img-thumbnail w-100';
+                              img.style.height = '80px';
+                              img.style.objectFit = 'cover';
+                              
+                              // Create delete button
+                              const deleteBtn = document.createElement('button');
+                              deleteBtn.className = 'btn btn-sm btn-danger position-absolute top-0 end-0';
+                              deleteBtn.innerHTML = '<i class="bi bi-x"></i>';
+                              deleteBtn.style.padding = '0.1rem 0.3rem';
+                              deleteBtn.style.fontSize = '0.7rem';
+                              
+                              // Delete functionality
+                              deleteBtn.addEventListener('click', function() {
+                                imageCol.remove();
+                                
+                                // If no images left, show placeholder again
+                                if (uploadedImagesContainer.children.length === 0) {
+                                  uploadPlaceholder.style.display = 'block';
+                                  uploadedImagesContainer.style.display = 'none';
+                                  addMoreImagesBtn.style.display = 'none';
+                                }
+                              });
+                              
+                              // Read and display the image
+                              const reader = new FileReader();
+                              reader.onload = function(e) {
+                                img.src = e.target.result;
+                              };
+                              reader.readAsDataURL(file);
+                              
+                              // Append elements
+                              imagePreview.appendChild(img);
+                              imagePreview.appendChild(deleteBtn);
+                              imageCol.appendChild(imagePreview);
+                              uploadedImagesContainer.appendChild(imageCol);
+                            }
+                          }
+                        });
+                      </script>
+                    </form>
+                  </div>
+                  <div class="modal-footer border-0 pt-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="sellItemForm" class="btn btn-main text-white px-4">Save</button>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -611,6 +808,7 @@
       <a href="#" class="text-decoration-none mx-4 text-white">Disclaimer</a>
     </span>
   </footer>
+
 
   <!-- Bootstrap JS -->
   <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>

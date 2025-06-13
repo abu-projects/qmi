@@ -232,7 +232,7 @@ main {
   }
 
 .text-color {
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 
 .setting-section {
@@ -955,6 +955,7 @@ a.carousel-item.active.position-relative {
     min-width: 44px;
     min-height: 44px;
     cursor: pointer;
+        line-height: 3;
 }
 
 
@@ -2805,4 +2806,25 @@ position: absolute  !important;
 }
 .dark-theme .modal-header button{
   filter: invert(1) brightness(2) contrast(1);
+}
+.news-letter-item{
+  transition:all .5s ease;
+}
+.news-letter-item:hover{
+    padding-top: 10px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+.news-letter-list{
+  min-height: 170px;
+}
+.faq-section  .accordion-button::after{
+content: none !important;
+}
+.faq-section  .accordion-item{
+  background-color: transparent !important;
+}
+.instagram-section .insta-img{
+    height: 184px;
+    width: 100%;
+    object-fit: cover;
 }

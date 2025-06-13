@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department - QM Intranet</title>
+  <meta name="description" content="QM Intranet Department">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/vendor/font/bootstrap-icons.css">
+  <!-- Bootstrap Icons CDN Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/flatpickr.min.css">
+</head>
+
+<body class="marketplace-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with Navigation -->
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Welcome to QM
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission and Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+                  <div class="dropdown-menu mega-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Museums & Galleries</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">National Museum of Qatar</a></li>
+                            <li><a href="#" class="dropdown-item">Museum of Islamic Art</a></li>
+                            <li><a href="#" class="dropdown-item">Mathaf: Arab Museum</a></li>
+                            <li><a href="#" class="dropdown-item">Fire Station</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3 h">Departments</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Resources</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Team Directory</a></li>
+                            <li><a href="#" class="dropdown-item">Organization Chart</a></li>
+                            <li><a href="#" class="dropdown-item">Contact Information</a></li>
+                            <li><a href="#" class="dropdown-item">New Employee Guide</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control" type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Wrapper div for the icon with animation -->
+              <div class="icon-wrapper d-inline-block animate__animated animate__headShake animate__infinite">
+                <i class="bi bi-megaphone-fill btn-main-link icon-md"></i>
+              </div>
+              <!-- Badge without animation -->
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br>
+                  <small class="text-color">Your birthday celebration is scheduled for today</small><br>
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-calendar-check-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Leave Approval</strong><br>
+                  <small class="text-color">Your leave request has been approved</small><br>
+                  <small class="text-color">02/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link d-flex">
+              عربي
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="marketplace-page">
+    <!-- Banner Image -->
+  <section>
+      <!-- Carousel Wrapper -->
+      <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="asset/imgs/silder banner.jpg" class="d-block w-100 object-fit-cover" alt="Slide 1" />
+
+            <!-- Text Overlay -->
+            <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box">
+              <h2 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h2>
+              <p class="text-color d-none d-md-block">
+                Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China
+                and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director
+                of National Museum of Qatar, on behalf of
+              </p>
+              <a href="#" class="btn btn-link text-decoration-none fw-bold btn-main-link">
+                Discover More →
+              </a>
+            </div>
+          </div>
+
+          <!-- Add More Slides Here... -->
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" aria-label="prev" data-bs-target="#qmCarousel"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" aria-label="next" data-bs-target="#qmCarousel"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Added Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#qmCarousel" aria-label="0" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="1" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="2" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+    </main>
+      <!-- Breadcrumb and Back Button -->
+      <section class="bread-cramp mb-3 mt--40">
+        <div class="card card-color">
+          <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+            <h2 class="fw-bold m-0 head-color">Department name</h2>
+            <div class="d-flex align-items-center gap-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="btn-main-link fw-bold">Home</a>
+                  </li>
+                  <li class="breadcrumb-item text-color fw-semibold" aria-current="page">Department</li>
+                </ol>
+              </nav>
+              <a href="index.html" class="btn btn-outline-dark d-flex align-items-center">
+                <i class="bi bi-arrow-left me-1"></i> Back
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+       <div class="my-4 ">
+      <div class="container-fluid">
+        <div class="row d-md-flex ">
+          <div class="col-lg-9">
+            <section class="word-section ">
+              <div class="card section-card card-color p-3 px-3 bg-remover" >
+                <div class="container-fluid  ">
+                  <h2 class="fw-bold tittle head-color ">Word from CEO</h2>
+
+                <p class="text-color mt-3">
+                  Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National Museum of Qatar, on behalf of Qatar Museums, from partners’ side MoUs were signed by Mr. Han Zhanming, Director of Capital Museums of China and Mrs. Dulamjav Munhktogoo, Director of the National Museum of Mongolia respectively.
+ Animating everything that Qatar Museums does is an authentic connection to Qatar and its heritage, a steadfast commitment to inclusivity and accessibility, and a belief in creating value through.
+
+                </p>
+              
+                  <div class="d-flex justify-content-between ">
+                    <div class="d-flex sign">
+                      <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520middle%2520eastern%2520man%2520in%2520business%2520attire%252C%2520neutral%2520expression%252C%2520high%2520quality%2520portrait%2520with%2520soft%2520lighting%252C%2520clean%2520background&amp;width=100&amp;height=100&amp;seq=2&amp;orientation=squarish" 
+                      alt="CEO" class="seo-img rounded-circle" width="50" height="50">
+                      <div class="ms-2">
+                           <small class="text-primary fw-bold">Director of National Museum of Qatar</small>
+                        <h5 class="mb-0 head-color">Sheikh Abdulaziz Al Thani</h5>
+                     
+                    </div>
+                 
+                  </div>
+                     <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">Read More →</a>
+                </div>
+              </div>
+            </section>
+
+       <section>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-color pt-2 px-4 section-card bg-remover mt-3 head-of-section bg-remover">
+              <h2 class="fw-bold head-color mb-4 tittle">Emplolyees </h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card card-color p-4 section-card ">
+
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                      <img src="https://i.pinimg.com/736x/97/d6/c2/97d6c2c092618160e00298bb92f7e8f4.jpg" alt="Director Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    </div>
+                    <h3 class="text-center head-color font-weight-bold">Dr. John Doe</h3>
+                    <p class="text-color text-center "> job tittle</p>
+
+                    <div class="text-center">
+                      <a href="#" class="btn text-color"> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26.291" height="25.249" viewBox="0 0 26.291 25.249">
+                            <g id="Message_1" data-name="Message 1" transform="translate(0 0)">
+                              <path id="Stroke_1" data-name="Stroke 1" d="M7.366,6.1c-1.484,0-3.279-.909-5.335-2.7A26.173,26.173,0,0,1-.524.828.96.96,0,1,1,.944-.409C2.44,1.365,5.508,4.18,7.366,4.18S12.261,1.368,13.74-.4A.96.96,0,0,1,15.215.824,25.818,25.818,0,0,1,12.682,3.4C10.64,5.189,8.852,6.1,7.366,6.1Z" transform="translate(5.794 8.641)" fill="var(--main-color)" />
+                              <path id="Stroke_3" data-name="Stroke 3" d="M12.4-.75c5.007,0,8.148.869,10.184,2.818s2.962,4.985,2.962,9.807-.913,7.845-2.962,9.806S17.4,24.5,12.4,24.5,4.248,23.63,2.212,21.681-.75,16.7-.75,11.875.163,4.029,2.212,2.068,7.388-.75,12.4-.75Zm0,23.33c8.6,0,11.226-2.5,11.226-10.705S21,1.169,12.4,1.169,1.169,3.671,1.169,11.875,3.792,22.58,12.4,22.58Z" transform="translate(0.75 0.75)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Send Mail</a>
+                      <a href="#" class="btn  text-color "> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="27.09" height="27.09" viewBox="0 0 27.09 27.09">
+                            <g id="chatt_2" data-name="chatt 2" transform="translate(0.75 0.75)">
+                              <path id="Path_77853" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-0.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-2" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-5.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-3" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-10.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77854" data-name="Path 77854" d="M14.8,28.34a13.408,13.408,0,0,1-6.031-1.414,1.354,1.354,0,0,0-.941-.118l-2.848.762a2.4,2.4,0,0,1-2.541-.865,2.392,2.392,0,0,1-.414-2.09l.762-2.848a1.343,1.343,0,0,0-.118-.941A13.548,13.548,0,0,1,14.8,1.25a13.545,13.545,0,0,1,9.578,23.123A13.456,13.456,0,0,1,14.8,28.34ZM8.126,25.27a2.951,2.951,0,0,1,1.306.314A12.048,12.048,0,0,0,26.84,14.8,12.045,12.045,0,0,0,6.278,6.278a12.055,12.055,0,0,0-2.271,13.88,2.839,2.839,0,0,1,.224,2L3.469,25a.892.892,0,0,0,.155.789.917.917,0,0,0,.72.362.944.944,0,0,0,.244-.033l2.848-.762A2.673,2.673,0,0,1,8.126,25.27Z" transform="translate(-2 -2)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Start Chat</a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="card card-color p-4 section-card ">
+
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                      <img src="https://i.pinimg.com/736x/97/d6/c2/97d6c2c092618160e00298bb92f7e8f4.jpg" alt="Director Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    </div>
+                    <h3 class="text-center head-color font-weight-bold">Dr. John Doe</h3>
+                    <p class="text-color text-center "> job tittle</p>
+
+                    <div class="text-center">
+                      <a href="#" class="btn text-color"> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26.291" height="25.249" viewBox="0 0 26.291 25.249">
+                            <g id="Message_1" data-name="Message 1" transform="translate(0 0)">
+                              <path id="Stroke_1" data-name="Stroke 1" d="M7.366,6.1c-1.484,0-3.279-.909-5.335-2.7A26.173,26.173,0,0,1-.524.828.96.96,0,1,1,.944-.409C2.44,1.365,5.508,4.18,7.366,4.18S12.261,1.368,13.74-.4A.96.96,0,0,1,15.215.824,25.818,25.818,0,0,1,12.682,3.4C10.64,5.189,8.852,6.1,7.366,6.1Z" transform="translate(5.794 8.641)" fill="var(--main-color)" />
+                              <path id="Stroke_3" data-name="Stroke 3" d="M12.4-.75c5.007,0,8.148.869,10.184,2.818s2.962,4.985,2.962,9.807-.913,7.845-2.962,9.806S17.4,24.5,12.4,24.5,4.248,23.63,2.212,21.681-.75,16.7-.75,11.875.163,4.029,2.212,2.068,7.388-.75,12.4-.75Zm0,23.33c8.6,0,11.226-2.5,11.226-10.705S21,1.169,12.4,1.169,1.169,3.671,1.169,11.875,3.792,22.58,12.4,22.58Z" transform="translate(0.75 0.75)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Send Mail</a>
+                      <a href="#" class="btn  text-color "> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="27.09" height="27.09" viewBox="0 0 27.09 27.09">
+                            <g id="chatt_2" data-name="chatt 2" transform="translate(0.75 0.75)">
+                              <path id="Path_77853" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-0.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-2" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-5.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-3" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-10.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77854" data-name="Path 77854" d="M14.8,28.34a13.408,13.408,0,0,1-6.031-1.414,1.354,1.354,0,0,0-.941-.118l-2.848.762a2.4,2.4,0,0,1-2.541-.865,2.392,2.392,0,0,1-.414-2.09l.762-2.848a1.343,1.343,0,0,0-.118-.941A13.548,13.548,0,0,1,14.8,1.25a13.545,13.545,0,0,1,9.578,23.123A13.456,13.456,0,0,1,14.8,28.34ZM8.126,25.27a2.951,2.951,0,0,1,1.306.314A12.048,12.048,0,0,0,26.84,14.8,12.045,12.045,0,0,0,6.278,6.278a12.055,12.055,0,0,0-2.271,13.88,2.839,2.839,0,0,1,.224,2L3.469,25a.892.892,0,0,0,.155.789.917.917,0,0,0,.72.362.944.944,0,0,0,.244-.033l2.848-.762A2.673,2.673,0,0,1,8.126,25.27Z" transform="translate(-2 -2)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Start Chat</a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="card card-color p-4 section-card ">
+
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                      <img src="https://i.pinimg.com/736x/97/d6/c2/97d6c2c092618160e00298bb92f7e8f4.jpg" alt="Director Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    </div>
+                    <h3 class="text-center head-color font-weight-bold">Dr. John Doe</h3>
+                    <p class="text-color text-center "> job tittle</p>
+
+                    <div class="text-center">
+                      <a href="#" class="btn text-color"> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26.291" height="25.249" viewBox="0 0 26.291 25.249">
+                            <g id="Message_1" data-name="Message 1" transform="translate(0 0)">
+                              <path id="Stroke_1" data-name="Stroke 1" d="M7.366,6.1c-1.484,0-3.279-.909-5.335-2.7A26.173,26.173,0,0,1-.524.828.96.96,0,1,1,.944-.409C2.44,1.365,5.508,4.18,7.366,4.18S12.261,1.368,13.74-.4A.96.96,0,0,1,15.215.824,25.818,25.818,0,0,1,12.682,3.4C10.64,5.189,8.852,6.1,7.366,6.1Z" transform="translate(5.794 8.641)" fill="var(--main-color)" />
+                              <path id="Stroke_3" data-name="Stroke 3" d="M12.4-.75c5.007,0,8.148.869,10.184,2.818s2.962,4.985,2.962,9.807-.913,7.845-2.962,9.806S17.4,24.5,12.4,24.5,4.248,23.63,2.212,21.681-.75,16.7-.75,11.875.163,4.029,2.212,2.068,7.388-.75,12.4-.75Zm0,23.33c8.6,0,11.226-2.5,11.226-10.705S21,1.169,12.4,1.169,1.169,3.671,1.169,11.875,3.792,22.58,12.4,22.58Z" transform="translate(0.75 0.75)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Send Mail</a>
+                      <a href="#" class="btn  text-color "> <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="27.09" height="27.09" viewBox="0 0 27.09 27.09">
+                            <g id="chatt_2" data-name="chatt 2" transform="translate(0.75 0.75)">
+                              <path id="Path_77853" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-0.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-2" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-5.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77853-3" data-name="Path 77853" d="M18.236,13h-.012a1,1,0,0,1,0-2h.012a1,1,0,0,1,0,2Z" transform="translate(-10.323 0.795)" fill="var(--main-color)" />
+                              <path id="Path_77854" data-name="Path 77854" d="M14.8,28.34a13.408,13.408,0,0,1-6.031-1.414,1.354,1.354,0,0,0-.941-.118l-2.848.762a2.4,2.4,0,0,1-2.541-.865,2.392,2.392,0,0,1-.414-2.09l.762-2.848a1.343,1.343,0,0,0-.118-.941A13.548,13.548,0,0,1,14.8,1.25a13.545,13.545,0,0,1,9.578,23.123A13.456,13.456,0,0,1,14.8,28.34ZM8.126,25.27a2.951,2.951,0,0,1,1.306.314A12.048,12.048,0,0,0,26.84,14.8,12.045,12.045,0,0,0,6.278,6.278a12.055,12.055,0,0,0-2.271,13.88,2.839,2.839,0,0,1,.224,2L3.469,25a.892.892,0,0,0,.155.789.917.917,0,0,0,.72.362.944.944,0,0,0,.244-.033l2.848-.762A2.673,2.673,0,0,1,8.126,25.27Z" transform="translate(-2 -2)" fill="var(--main-color)" />
+                            </g>
+                          </svg>
+                      </span>Start Chat</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="text-end mt-3 card-footer">
+                <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+              </div>
+            </div>
+          </div>
+      </section>
+      <div class="row">
+  <div class="col-md-6">
+    <section>
+
+      <div class="card card-color pt-2 px-4 section-card bg-remover my-3 admin-section bg-remover">
+        <h2 class="fw-bold head-color mb-4 tittle">Administration Management </h2>
+
+        <p class="text-color">
+          Qatar Museums has recently signed two memorandums of understanding (MoU) with the Capital Museum of China and
+          with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director of National
+          Museum of Qatar, on behalf of Qatar Museums, from partners’ side MoUs were signed by Mr. Han Zhanming,
+          Director of Capital Museums of China and Mrs. Dulamjav Munhktogoo, Director of the National Museum of Mongolia
+          respectively.
+          Animating everything that Qatar Museums does is an authentic connection to Qatar and its heritage, a steadfast
+          commitment to inclusivity and accessibility, and a belief in creating value through culture.
+        </p>
+        <div class="text-end mt-3 card-footer">
+          <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="col-md-6">
+    <section>
+
+      <div class="card card-color pt-2 px-4 section-card bg-remover my-3 admin-section bg-remover">
+        <h2 class="fw-bold head-color mb-4 tittle">Articles </h2>
+
+        <div class="articel-list">
+          <a href="#" class="article-item d-flex my-2 text-decoration-none">
+            <div class="mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25"
+                viewBox="0 0 25 25">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectangle_6580" data-name="Rectangle 6580" width="25" height="25" fill="#fff" />
+                  </clipPath>
+                </defs>
+                <g id="article-svgrepo-com" clip-path="url(#clip-path)">
+                  <path id="Path_78321" data-name="Path 78321"
+                    d="M5.682,19.73V1.784A.767.767,0,0,1,6.463,1H23.632a.769.769,0,0,1,.78.784v20.29a2.29,2.29,0,0,1-2.341,2.337H3.341S1,24.416,1,21.294V9.588A.767.767,0,0,1,1.78,8.8H3.341m7.024-3.122h3.9M10.365,8.8H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73"
+                    transform="translate(-0.22 -0.22)" fill="none" stroke="var(--head-color)" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+
+            </div>
+
+            <h5 class="text-color">Qatar Museums Signs MoU with Capital Museum of China</h5>
+
+          </a>
+       
+          <div class="text-end mt-3 card-footer">
+            <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+          </div>
+
+    </section>
+
+  </div>
+</div>
+      
+  <section>
+    
+            <div class="card card-color pt-2 px-4 section-card mt-3 instagram-section  bg-remover">
+              <h2 class="fw-bold head-color mb-4 tittle">Instagram Posts </h2>
+             
+            
+             
+         <div class="instagram-feed ">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between insta-head my-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 75 75">
+  <g id="Group_55612" data-name="Group 55612" transform="translate(-4476 -4909)">
+    <g id="Rectangle_6716" data-name="Rectangle 6716" transform="translate(4476 4909)" fill="#fff" stroke="#d1d1d1" stroke-width="1">
+      <rect width="75" height="75" rx="37.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="74" height="74" rx="37" fill="none"/>
+    </g>
+    <g id="Group_55611" data-name="Group 55611" transform="translate(2645 721.066)">
+      <path id="Path_1" data-name="Path 1" d="M466.329,66.677,462.952,63.3l-3.464,3.464a10.224,10.224,0,0,1-4.188,7.17l7.674,7.674,9.143-9.143-4.232-4.232-1.535.833v-2.39Z" transform="translate(1399.861 4159.58)" fill="#ed3c8a"/>
+      <path id="Path_2" data-name="Path 2" d="M538.5,41.686v9.845h18.331V33.2H544.552l4.758,2.587Z" transform="translate(1334.904 4183.08)" fill="#ffc200"/>
+      <path id="Path_3" data-name="Path 3" d="M506.9,3.6V21.755l16.62-9.078Z" transform="translate(1359.575 4206.189)" fill="#faff1e"/>
+      <path id="Path_4" data-name="Path 4" d="M396.316,31.5a9.516,9.516,0,1,0,9.516,9.516A9.536,9.536,0,0,0,396.316,31.5Z" transform="translate(1453.341 4184.407)" fill="#79aafa"/>
+      <path id="Path_5" data-name="Path 5" d="M423.594,6.578,411.534,0V16.445l-3.289-3.289-3.311,3.311v-.044a9.867,9.867,0,1,0-9.867,9.867,9.719,9.719,0,0,0,5.131-1.447l8.025,8.025L418.09,23l-4.429-4.429,4.451-2.434V26.312h19.734V6.578ZM395.067,25.589a9.165,9.165,0,1,1,9.165-9.165A9.175,9.175,0,0,1,395.067,25.589Zm22.058-2.565-8.88,8.88-7.433-7.433a9.812,9.812,0,0,0,4.078-6.951l3.355-3.355,3.289,3.289v2.28l1.491-.811Zm-4.89-4.473V1.162l15.919,8.7Zm24.909,7.06H418.814V15.765l10.81-5.9L424.866,7.28h12.279Z" transform="translate(1454.59 4209)"/>
+    </g>
+  </g>
+</svg>
+        <div class="ms-2"> 
+          <div class="fw-bold head-color">Qatar Museum</div>
+          <div class="text-color" style="font-size:13px;">68 posts</div>
+        </div>
+      </div>
+      <a href="#" class="btn bg-main bg-main-hover d-flex align-items-center text-white" >
+        <i class="icon-instagram me-2"></i>Follow us
+      </a>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card card-color">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between insta-head my-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 75 75">
+  <g id="Group_55612" data-name="Group 55612" transform="translate(-4476 -4909)">
+    <g id="Rectangle_6716" data-name="Rectangle 6716" transform="translate(4476 4909)" fill="#fff" stroke="#d1d1d1" stroke-width="1">
+      <rect width="75" height="75" rx="37.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="74" height="74" rx="37" fill="none"/>
+    </g>
+    <g id="Group_55611" data-name="Group 55611" transform="translate(2645 721.066)">
+      <path id="Path_1" data-name="Path 1" d="M466.329,66.677,462.952,63.3l-3.464,3.464a10.224,10.224,0,0,1-4.188,7.17l7.674,7.674,9.143-9.143-4.232-4.232-1.535.833v-2.39Z" transform="translate(1399.861 4159.58)" fill="#ed3c8a"/>
+      <path id="Path_2" data-name="Path 2" d="M538.5,41.686v9.845h18.331V33.2H544.552l4.758,2.587Z" transform="translate(1334.904 4183.08)" fill="#ffc200"/>
+      <path id="Path_3" data-name="Path 3" d="M506.9,3.6V21.755l16.62-9.078Z" transform="translate(1359.575 4206.189)" fill="#faff1e"/>
+      <path id="Path_4" data-name="Path 4" d="M396.316,31.5a9.516,9.516,0,1,0,9.516,9.516A9.536,9.536,0,0,0,396.316,31.5Z" transform="translate(1453.341 4184.407)" fill="#79aafa"/>
+      <path id="Path_5" data-name="Path 5" d="M423.594,6.578,411.534,0V16.445l-3.289-3.289-3.311,3.311v-.044a9.867,9.867,0,1,0-9.867,9.867,9.719,9.719,0,0,0,5.131-1.447l8.025,8.025L418.09,23l-4.429-4.429,4.451-2.434V26.312h19.734V6.578ZM395.067,25.589a9.165,9.165,0,1,1,9.165-9.165A9.175,9.175,0,0,1,395.067,25.589Zm22.058-2.565-8.88,8.88-7.433-7.433a9.812,9.812,0,0,0,4.078-6.951l3.355-3.355,3.289,3.289v2.28l1.491-.811Zm-4.89-4.473V1.162l15.919,8.7Zm24.909,7.06H418.814V15.765l10.81-5.9L424.866,7.28h12.279Z" transform="translate(1454.59 4209)"/>
+    </g>
+  </g>
+</svg>
+        <div class="ms-2"> 
+          <div class="fw-bold head-color">Qatar Museum</div>
+          <small class="text-color" >22.02.2025</small>
+        </div>
+      </div>
+        <i class="icon-instagram me-2 icon-md head-color"></i> 
+     
+    </div>
+        
+            <img src="https://i.pinimg.com/1200x/5f/5b/91/5f5b91e861afaefe535642a3dc17456e.jpg" class="img-fluid mb-2  insta-img" alt="Instagram Post 1">
+            <p class="text-color small">Provides administrative support to the CEO by organising internal and external</p>
+          </div>
+        </div>
+      </div>
+  <div class="col-md-4">
+        <div class="card card-color">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between insta-head my-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 75 75">
+  <g id="Group_55612" data-name="Group 55612" transform="translate(-4476 -4909)">
+    <g id="Rectangle_6716" data-name="Rectangle 6716" transform="translate(4476 4909)" fill="#fff" stroke="#d1d1d1" stroke-width="1">
+      <rect width="75" height="75" rx="37.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="74" height="74" rx="37" fill="none"/>
+    </g>
+    <g id="Group_55611" data-name="Group 55611" transform="translate(2645 721.066)">
+      <path id="Path_1" data-name="Path 1" d="M466.329,66.677,462.952,63.3l-3.464,3.464a10.224,10.224,0,0,1-4.188,7.17l7.674,7.674,9.143-9.143-4.232-4.232-1.535.833v-2.39Z" transform="translate(1399.861 4159.58)" fill="#ed3c8a"/>
+      <path id="Path_2" data-name="Path 2" d="M538.5,41.686v9.845h18.331V33.2H544.552l4.758,2.587Z" transform="translate(1334.904 4183.08)" fill="#ffc200"/>
+      <path id="Path_3" data-name="Path 3" d="M506.9,3.6V21.755l16.62-9.078Z" transform="translate(1359.575 4206.189)" fill="#faff1e"/>
+      <path id="Path_4" data-name="Path 4" d="M396.316,31.5a9.516,9.516,0,1,0,9.516,9.516A9.536,9.536,0,0,0,396.316,31.5Z" transform="translate(1453.341 4184.407)" fill="#79aafa"/>
+      <path id="Path_5" data-name="Path 5" d="M423.594,6.578,411.534,0V16.445l-3.289-3.289-3.311,3.311v-.044a9.867,9.867,0,1,0-9.867,9.867,9.719,9.719,0,0,0,5.131-1.447l8.025,8.025L418.09,23l-4.429-4.429,4.451-2.434V26.312h19.734V6.578ZM395.067,25.589a9.165,9.165,0,1,1,9.165-9.165A9.175,9.175,0,0,1,395.067,25.589Zm22.058-2.565-8.88,8.88-7.433-7.433a9.812,9.812,0,0,0,4.078-6.951l3.355-3.355,3.289,3.289v2.28l1.491-.811Zm-4.89-4.473V1.162l15.919,8.7Zm24.909,7.06H418.814V15.765l10.81-5.9L424.866,7.28h12.279Z" transform="translate(1454.59 4209)"/>
+    </g>
+  </g>
+</svg>
+        <div class="ms-2"> 
+          <div class="fw-bold head-color">Qatar Museum</div>
+          <small class="text-color" >22.02.2025</small>
+        </div>
+      </div>
+        <i class="icon-instagram me-2 icon-md head-color"></i> 
+     
+    </div>
+        
+            <img src="https://i.pinimg.com/1200x/50/6d/94/506d949e54fba58b5be63a6f00b673c5.jpg" class="img-fluid mb-2 insta-img" alt="Instagram Post 4">
+            <p class="text-color small">Provides administrative support to the CEO by organising internal and external</p>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4">
+        <div class="card card-color">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between insta-head my-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 75 75">
+  <g id="Group_55612" data-name="Group 55612" transform="translate(-4476 -4909)">
+    <g id="Rectangle_6716" data-name="Rectangle 6716" transform="translate(4476 4909)" fill="#fff" stroke="#d1d1d1" stroke-width="1">
+      <rect width="75" height="75" rx="37.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="74" height="74" rx="37" fill="none"/>
+    </g>
+    <g id="Group_55611" data-name="Group 55611" transform="translate(2645 721.066)">
+      <path id="Path_1" data-name="Path 1" d="M466.329,66.677,462.952,63.3l-3.464,3.464a10.224,10.224,0,0,1-4.188,7.17l7.674,7.674,9.143-9.143-4.232-4.232-1.535.833v-2.39Z" transform="translate(1399.861 4159.58)" fill="#ed3c8a"/>
+      <path id="Path_2" data-name="Path 2" d="M538.5,41.686v9.845h18.331V33.2H544.552l4.758,2.587Z" transform="translate(1334.904 4183.08)" fill="#ffc200"/>
+      <path id="Path_3" data-name="Path 3" d="M506.9,3.6V21.755l16.62-9.078Z" transform="translate(1359.575 4206.189)" fill="#faff1e"/>
+      <path id="Path_4" data-name="Path 4" d="M396.316,31.5a9.516,9.516,0,1,0,9.516,9.516A9.536,9.536,0,0,0,396.316,31.5Z" transform="translate(1453.341 4184.407)" fill="#79aafa"/>
+      <path id="Path_5" data-name="Path 5" d="M423.594,6.578,411.534,0V16.445l-3.289-3.289-3.311,3.311v-.044a9.867,9.867,0,1,0-9.867,9.867,9.719,9.719,0,0,0,5.131-1.447l8.025,8.025L418.09,23l-4.429-4.429,4.451-2.434V26.312h19.734V6.578ZM395.067,25.589a9.165,9.165,0,1,1,9.165-9.165A9.175,9.175,0,0,1,395.067,25.589Zm22.058-2.565-8.88,8.88-7.433-7.433a9.812,9.812,0,0,0,4.078-6.951l3.355-3.355,3.289,3.289v2.28l1.491-.811Zm-4.89-4.473V1.162l15.919,8.7Zm24.909,7.06H418.814V15.765l10.81-5.9L424.866,7.28h12.279Z" transform="translate(1454.59 4209)"/>
+    </g>
+  </g>
+</svg>
+        <div class="ms-2"> 
+          <div class="fw-bold head-color">Qatar Museum</div>
+          <small class="text-color" >22.02.2025</small>
+        </div>
+      </div>
+        <i class="icon-instagram me-2 icon-md head-color"></i> 
+     
+    </div>
+        
+            <img src="https://i.pinimg.com/736x/09/be/ee/09beee6ff44e8ba9207052fa310ed5b6.jpg" class="img-fluid mb-2 insta-img" alt="Instagram Post 3">
+            <p class="text-color small">Provides administrative support to the CEO by organising internal and external</p>
+          </div>
+        </div>
+      </div>
+  
+
+  
+    </div>
+  </div>
+</div>
+ <div class="text-end mt-3 card-footer">
+                <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+              </div>
+      </section>
+
+
+
+ </div>
+
+          <div class="col-lg-3 mt-4 mt-lg-0">
+            <section class="events-section  ">
+              <div class="card section-card card-color px-3 pt-2 h-100 bg-remover">
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-bold" aria-label="whatson-tab" id="whatson-tab" data-bs-toggle="tab" data-bs-target="#whatson" type="button" role="tab" aria-controls="whatson" aria-selected="true">
+                      WHAT’S ON
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" aria-label="preregister-tab" id="preregister-tab" data-bs-toggle="tab" data-bs-target="#preregister" type="button" role="tab" aria-controls="preregister" aria-selected="false" tabindex="-1">
+                      Pre-Register Events
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="eventTabsContent">
+
+                  <!-- WHAT’S ON Tab -->
+                  <div class="tab-pane fade show active" id="whatson" role="tabpanel" aria-labelledby="whatson-tab">
+
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3 class="fw-bold mb-1 head-color" id="calendarMonthLabel">June 2025</h3>
+                        <div class="d-flex ">
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" aria-label="prevWeekBtn" id="prevWeekBtn">
+                            <i class="bi bi-chevron-left"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-primary px-2 py-1" aria-label="nextWeekBtn" id="nextWeekBtn">
+                            <i class="bi bi-chevron-right"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer"><div class="cursor-pointer">
+          <div class="fw-bold small">SUN</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            8
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">MON</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            9
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">TUE</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            10
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">WED</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            11
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">THU</div>
+          <div class="fw-semibold px-2 py-1 rounded bg-main text-white">
+            12
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">FRI</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            13
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">SAT</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            14
+          </div>
+        </div></div>
+                    </div>
+
+                    <div style="height: 182px; overflow-y: auto; " class="flex-grow-1">
+                      <!-- Event Card -->
+
+                      <div class="text-center flex-grow-1">
+                        <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer">
+                          <!-- JS will inject weekdays here -->
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-orange text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">26</div>
+                        </div>
+                        <div>
+                          <h3 class="fw-bold mb-1 head-color">Interactive Art Night</h3>
+                          <small class="text-color">Sat, Feb 15, 7:00 PM</small>
+                        </div>
+                      </div>
+                      <div class="d-flex mb-3 align-items-start">
+                        <div class="bg-blue text-white text-center rounded p-2 me-3" style="width: 60px;">
+                          <div class="small">Dec</div>
+                          <div class="fw-bold">27</div>
+                        </div>
+                        <div>
+                          <h3 class="fw-bold mb-1 head-color">Cultural Storytelling</h3>
+                          <small class="text-color">Sun, Feb 16, 6:30 PM</small>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="events.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+
+                  <!-- Pre-Register Events Tab -->
+                  <div class="tab-pane fade" id="preregister" role="tabpanel" aria-labelledby="preregister-tab">
+
+
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h3 class="fw-bold mb-1 head-color" id="calendarMonthLabel2">June 2025</h3>
+                      <div class="d-flex ">
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1 mx-2" aria-label="prevWeekBtn2" id="prevWeekBtn2">
+                          <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary px-2 py-1" aria-label="nextWeekBtn2" id="nextWeekBtn2">
+                          <i class="bi bi-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="text-center flex-grow-1">
+                      <div class="d-flex justify-content-between text-center text-color mb-2" id="weekDaysContainer2"><div class="cursor-pointer">
+          <div class="fw-bold small">SUN</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            8
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">MON</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            9
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">TUE</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            10
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">WED</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            11
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">THU</div>
+          <div class="fw-semibold px-2 py-1 rounded bg-main text-white">
+            12
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">FRI</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            13
+          </div>
+        </div><div class="cursor-pointer">
+          <div class="fw-bold small">SAT</div>
+          <div class="fw-semibold px-2 py-1 rounded ">
+            14
+          </div>
+        </div></div>
+                    </div>
+                    <div style="height: 182px; overflow-y: auto;">
+                      <div class="d-flex no-data justify-content-center">
+                        <img src="asset/imgs/Empty File V5-3.svg" alt="">
+                      </div>
+                      <div class="text-color text-center py-2">No Pre-Register Events at the moment.</div>
+
+                    </div>
+                    <div class="card-footer text-end">
+                      <a href="events.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="newsletter-section ">
+              <div class="card section-card card-color pt-2 mt-3 bg-remover" >
+                <div class="container-fluid  ">
+                  <h2 class="fw-bold tittle head-color ">Newsletter</h2>
+
+              <div class=" news-letter-list  ">
+
+                             <div class="news-letter-item py-2">
+                  <a href="#" class="text-decoration-none text-color"> 
+                 
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6580" data-name="Rectangle 6580" width="25" height="25" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="article-svgrepo-com" clip-path="url(#clip-path)">
+    <path id="Path_78321" data-name="Path 78321" d="M5.682,19.73V1.784A.767.767,0,0,1,6.463,1H23.632a.769.769,0,0,1,.78.784v20.29a2.29,2.29,0,0,1-2.341,2.337H3.341S1,24.416,1,21.294V9.588A.767.767,0,0,1,1.78,8.8H3.341m7.024-3.122h3.9M10.365,8.8H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73" transform="translate(-0.22 -0.22)" fill="none" stroke="var(--head-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
+         
+ 
+                    <span>Newsletter - JUL. 2022 ISSUE  </span></a>
+                </div>
+                                <div class="news-letter-item py-2">
+                  <a href="#" class="text-decoration-none text-color"> 
+                 
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6580" data-name="Rectangle 6580" width="25" height="25" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="article-svgrepo-com" clip-path="url(#clip-path)">
+    <path id="Path_78321" data-name="Path 78321" d="M5.682,19.73V1.784A.767.767,0,0,1,6.463,1H23.632a.769.769,0,0,1,.78.784v20.29a2.29,2.29,0,0,1-2.341,2.337H3.341S1,24.416,1,21.294V9.588A.767.767,0,0,1,1.78,8.8H3.341m7.024-3.122h3.9M10.365,8.8H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73" transform="translate(-0.22 -0.22)" fill="none" stroke="var(--head-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
+         
+ 
+                    <span>Newsletter - JUL. 2022 ISSUE  </span></a>
+                </div>
+                                <div class="news-letter-item py-2 ">
+                  <a href="#" class="text-decoration-none text-color "> 
+                 
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6580" data-name="Rectangle 6580" width="25" height="25" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="article-svgrepo-com" clip-path="url(#clip-path)">
+    <path id="Path_78321" data-name="Path 78321" d="M5.682,19.73V1.784A.767.767,0,0,1,6.463,1H23.632a.769.769,0,0,1,.78.784v20.29a2.29,2.29,0,0,1-2.341,2.337H3.341S1,24.416,1,21.294V9.588A.767.767,0,0,1,1.78,8.8H3.341m7.024-3.122h3.9M10.365,8.8H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73m-9.365,3.122H19.73" transform="translate(-0.22 -0.22)" fill="none" stroke="var(--head-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
+         
+ 
+                    <span>Newsletter - JUL. 2022 ISSUE  </span></a>
+                </div>
+             
+              </div>
+              <div class="text-end mt-3 card-footer">
+                    <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                  </div>
+              
+              
+              </div>
+            </div></section>
+               <section class="privacy-section ">
+              <div class="card section-card card-color pt-2 mt-3 bg-remover" >
+                <div class="container-fluid  ">
+                  <h2 class="fw-bold tittle head-color ">​Policies and procedures​</h2>
+
+        <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  
+              <div class="text-end mt-3 card-footer">
+                    <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                  </div>
+              
+              
+              </div>
+            </div></section>
+
+     <section class="faq-section ">
+              <div class="card section-card card-color pt-2 mt-3 bg-remover" >
+                <div class="container-fluid  ">
+                  <h2 class="fw-bold tittle head-color ">FAQ    </h2>
+  <!-- Accordion for Exhibitions Department -->
+      <div class="accordion my-4" id="exhibitionsAccordion">
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header card-color" id="headingOne">
+            <button class="accordion-button fw-bold collapsed bg-transparent shadow-none head-color px-0 py-3 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <span class="flex-grow-1 text-start">What is the Exhibitions Department team made of?</span>
+              <i class="bi bi-chevron-down ms-2 text-color"></i>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#exhibitionsAccordion">
+            <div class="accordion-body text-color px-0 pb-3">
+              Provides administrative support to the CEO by organising internal and external meetings, monitoring and responding to correspondence, and ensuring responses are received from governmental and non-governmental institutions in a timely manner. Reserves, safeguards and makes available historical correspondence.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header card-color " id="headingTwo">
+            <button class="accordion-button fw-bold collapsed bg-transparent shadow-none head-color px-0 py-3 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span class="flex-grow-1 text-start">How does the department collaborate with external partners?</span>
+              <i class="bi bi-chevron-down ms-2 text-color"></i>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#exhibitionsAccordion">
+            <div class="accordion-body text-color px-0 pb-3">
+              The department works closely with local and international institutions, museums, and cultural entities to plan, curate, and manage collaborative exhibitions and programs.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-0 border-bottom">
+          <h2 class="accordion-header card-color" id="headingThree">
+            <button class="accordion-button fw-bold collapsed bg-transparent shadow-none head-color px-0 py-3 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span class="flex-grow-1 text-start">What are the department's key responsibilities?</span>
+              <i class="bi bi-chevron-down ms-2 text-color"></i>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#exhibitionsAccordion">
+            <div class="accordion-body text-color px-0 pb-3">
+              Key responsibilities include exhibition planning, logistical coordination, team oversight, budgeting, stakeholder engagement, and maintaining curatorial standards.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+              <div class="text-end mt-3 card-footer">
+                    <a href="news.html" class="text-decoration-none fw-bold  btn-main-link">View All →</a>
+                  </div>
+              
+              
+              </div>
+            </div></section>
+
+          </div>
+
+
+        
+      </div>
+      </div>
+
+
+    </secdiion>
+
+    </div>
+  </main>
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <hr>
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of .theme-toggle-btn -->
+  </section>
+  </div> <!-- End of .setting-section -->
+  <!-- Teams Contact Button -->
+  <section class="teams-section">
+    <div class="teams-btn">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class="text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums</a>
+      <span id="currentYear"></span>
+    </span>
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">Disclaimer</a>
+    </span>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Flatpickr JS -->
+  <script src="asset/vendor/dist/flatpickr.min.js"></script>
+  <!-- Main JS -->
+  <script src="asset/js/main.js"></script>
+
+  <!-- Marketplace specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize flatpickr for date inputs
+      flatpickr(".datepicker", {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        placeholder: "Select date..."
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Wishlist functionality
+      const wishlistButtons = document.querySelectorAll('.product-actions .btn');
+      wishlistButtons.forEach(button => {
+        if (button.querySelector('.bi-heart')) {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('bi-heart')) {
+              icon.classList.remove('bi-heart');
+              icon.classList.add('bi-heart-fill', 'text-danger');
+            } else {
+              icon.classList.remove('bi-heart-fill', 'text-danger');
+              icon.classList.add('bi-heart');
+            }
+          });
+        }
+      });
+
+      // Filter functionality
+      const applyFilterBtn = document.querySelector('.btn-main');
+      const resetFilterBtn = document.querySelector('.btn-outline-secondary');
+
+      if (applyFilterBtn) {
+        applyFilterBtn.addEventListener('click', function() {
+          // Add filter logic here
+          console.log('Applying filters...');
+        });
+      }
+
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', function() {
+          // Reset all form inputs
+          const form = this.closest('.card-body');
+          const inputs = form.querySelectorAll('input, select');
+          inputs.forEach(input => {
+            if (input.type === 'radio') {
+              input.checked = input.value === 'new';
+            } else {
+              input.value = '';
+            }
+          });
+        });
+      }
+
+      // Sort functionality
+      const sortSelect = document.querySelector('select[style*="width: auto"]');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+          console.log('Sorting by:', this.value);
+          // Add sorting logic here
+        });
+      }
+
+      // Image Modal functionality
+      const imageModal = document.getElementById('imageModal');
+      const productSlider = document.getElementById('productSlider1');
+      const modalSlider = document.getElementById('modalSlider');
+
+      if (imageModal && productSlider && modalSlider) {
+        // Handle modal opening when clicking on images
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+        modalTriggers.forEach(trigger => {
+          trigger.addEventListener('click', function() {
+            // Get current active slide from product slider
+            const activeSlide = productSlider.querySelector('.carousel-item.active');
+            const activeIndex = Array.from(productSlider.querySelectorAll('.carousel-item')).indexOf(activeSlide);
+
+            // Set the same slide as active in modal
+            const modalSlides = modalSlider.querySelectorAll('.carousel-item');
+            const modalIndicators = modalSlider.querySelectorAll('.carousel-indicators button');
+
+            // Remove active class from all modal slides and indicators
+            modalSlides.forEach(slide => slide.classList.remove('active'));
+            modalIndicators.forEach(indicator => indicator.classList.remove('active'));
+
+            // Add active class to corresponding slide and indicator
+            if (modalSlides[activeIndex]) {
+              modalSlides[activeIndex].classList.add('active');
+            }
+            if (modalIndicators[activeIndex]) {
+              modalIndicators[activeIndex].classList.add('active');
+            }
+          });
+        });
+      }
+    });
+  </script>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 position-absolute top-0 end-0 z-3">
+          <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close">
+         <i class="bi bi-x-lg icon-md text-white"></i>
+          </button>
+        </div>
+        <div class="modal-body p-0">
+          <!-- Modal Image Slider -->
+          <div id="modalSlider" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="asset/imgs/Marketplace product.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Main">
+              </div>
+              <div class="carousel-item">
+                <img src="asset/imgs/silder banner.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Lens">
+              </div>
+              <div class="carousel-item">
+                <img src="asset/imgs/page-bg.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Accessories">
+              </div>
+            </div>
+
+            <!-- Modal Slider Controls -->
+            <button class="carousel-control-prev modal-control" type="button" data-bs-target="#modalSlider" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next modal-control" type="button" data-bs-target="#modalSlider" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Modal Slide Indicators -->
+            <div class="carousel-indicators modal-indicators">
+              <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

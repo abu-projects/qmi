@@ -2828,3 +2828,17 @@ content: none !important;
     width: 100%;
     object-fit: cover;
 }
+@media (max-width: 991.98px) {
+  .dropdown-menu.small-menu {
+    position: static !important;
+
+
+  
+  }
+
+ .dropdown-menu.small-menu.show{
+  display: contents !important;
+ }
+  .dropdown-menu.mega-menu li {
+     border-bottom:unset !important;}
+}

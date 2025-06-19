@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anniversary Fireworks</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+
+    /* full-screen semi-transparent overlay */
+    #fireworks-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    /* the actual canvas */
+    #fireworks-canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+    /* control buttons container */
+    .fw-controls {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      display: flex;
+      gap: .5rem;
+    }
+    #anniv-message {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 2rem;
+      z-index: 10000;
+    }
+
+    /* ==== */
+ h1 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff;
+          font-family: "Source Sans Pro";
+          font-size: 5em;
+          font-weight: 900;
+          -webkit-user-select: none;
+          user-select: none;
+          z-index: 1040;
+              text-align: center;
+        }
+        #close-fireworks {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 16px;
+            background-color: #00000083;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1040;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        #close-fireworks:hover {
+            background-color: var(--main-color);
+            transform: scale(1.05);
+        }
+        #closeButton:active {
+            background-color: #00000054;
+            transform: scale(0.95);
+        }
+        #show-fireworks{
+          position: fixed;
+          top: 60%;
+          right :0;
+          background-color: var(--main-color);
+          z-index: 1040;
+          cursor: pointer;
+color: white;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+        }
+ #show-fireworks:hover{
+          background-color: var(--card-color, #f8f9fa);
+          color: var(--head-color);
+        }
+    /* ==== */
+  </style>
+</head>
+<body>
+
+  <!-- Your normal page content -->
+  <div class="container py-5">
+  </div>
+
+  <!-- hidden “Start” trigger if you ever want to re-show the overlay -->
+
+<a id="show-fireworks" class="btn">
+  <i class="bi bi-balloon-fill"></i>
+    <br>
+      Celebrate Work Anniversary 
+</a>
+  <!-- fireworks overlay -->
+  <div id="fireworks-overlay">
+
+    <canvas id="fireworks-canvas"></canvas>
+    <div class="fw-controls">
+    </div>
+
+    <!-- ===== -->
+
+ 
+    <h1>Happy Work Anniversary! <br>
+    <span class="text-center d-block" style="color: #ee3c8a;"> Elisa <i class="bi bi-balloon-fill"></i></span>
+    </h1>
+    <button id="close-fireworks"><i class="bi bi-x-circle"></i></button>
+    <!-- ==== -->
+  </div>
+
+  <!-- canvas-confetti lib (lightweight) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    // grab elements
+    const overlay = document.getElementById('fireworks-overlay');
+    const canvas  = document.getElementById('fireworks-canvas');
+    const showBtn = document.getElementById('show-fireworks');
+    const closeBtn = document.getElementById('close-fireworks');
+
+    // ensure Start button is hidden when overlay is active
+    function toggleShowBtn(hide) {
+      showBtn.style.display = hide ? 'none' : 'block';
+    }
+
+    function disableBodyScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+    function enableBodyScroll() {
+      document.body.style.overflow = '';
+    }
+
+    // resize canvas to fill screen
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // create a confetti instance bound to our canvas
+    const myConfetti = confetti.create(canvas, { resize: true });
+
+    let fwInterval;
+    function launchFireworks() {
+      // clear any existing interval
+      clearInterval(fwInterval);
+      // continuously fire bursts until stopped
+      fwInterval = setInterval(() => {
+        myConfetti({
+          particleCount: 50,
+          spread: 200,
+          startVelocity: 30,
+          origin: { x: Math.random(), y: Math.random() * 0.6 }
+        });
+      }, 400);
+    }
+
+    // auto-start on page load
+    window.addEventListener('load', () => {
+      toggleShowBtn(true);
+      launchFireworks();
+      disableBodyScroll();
+    });
+
+    // close overlay
+    closeBtn.addEventListener('click', () => {
+      toggleShowBtn(false);
+      clearInterval(fwInterval);
+      enableBodyScroll();
+      overlay.style.display = 'none';
+    });
+
+    // if you want to re-show it after closing
+    showBtn.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+      launchFireworks();
+      toggleShowBtn(true);
+      disableBodyScroll();
+    });
+  </script>
+</body>
+</html>

@@ -958,10 +958,10 @@
     <div class="teams-btn ">
       <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
         class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
-
         <i class="bi bi-microsoft-teams icon-md"></i>
         Contact Us
       </a>
+    </div>
   </section>
 
   <footer class="mt-4 container-fluid">
@@ -980,10 +980,40 @@
 
 
   <!-- Bootstrap JS and dependencies -->
-
-  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
   <script src="asset/vendor/dist/jquery.min.js"></script>
-  <script src="asset/js/vertical-carousel.js"></script>
-  <script src="asset/js/main.js"></script>
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="asset/js/main.js"></script>
+<script>
+// Settings panel toggle
+(function() {
+  const themeBtn = document.getElementById('themeBtn');
+  const themeDropdown = document.getElementById('themeDropdown');
+  if (!themeBtn || !themeDropdown) return;
+
+  const closeBtn = themeDropdown.querySelector('button[aria-label="closeBtn"]');
+
+  // Toggle panel on button click
+  themeBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    themeDropdown.classList.toggle('show');
+  });
+
+  // Close panel on panel close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      themeDropdown.classList.remove('show');
+    });
+  }
+
+  // Click outside to close
+  document.addEventListener('click', function(e) {
+    if (!themeDropdown.contains(e.target) && e.target !== themeBtn) {
+      themeDropdown.classList.remove('show');
+    }
+  });
+})();
+</script>
   <!-- <script src="asset/js/canvas.js"></script> -->
+   </body>
 </html>

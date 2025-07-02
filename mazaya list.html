@@ -58,7 +58,8 @@
               </div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown has-submenu">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     Welcome to QM
                   </a>
                   <div class="dropdown-menu mega-menu small-menu">
@@ -207,9 +208,9 @@
   </header>
 
   <main id="main-content" class="marketplace-page">
-       <section>
+    <section>
       <!-- Carousel Wrapper -->
-      <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div id="qmCarousel" class="carousel slide carousel-fade mazaya-carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
 
           <!-- Slide 1 -->
@@ -286,69 +287,62 @@
         <div class="row">
           <!-- Filters Sidebar -->
           <div class="col-lg-3">
-            <div class="card card-color">
+            <div class="card card-color mb-4">
               <div class="card-header bg-transparent border-bottom">
                 <h5 class="mb-0 fw-bold head-color">Filters</h5>
               </div>
               <div class="card-body">
-                <!-- Item Name Search -->
-                <div class="mb-4">
-                  <label class="form-label fw-semibold">Item Name</label>
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search items...">
-                    <button class="btn btn-outline-secondary" type="button">
+                <form class="filters-form">
+                  <div class="mb-3 position-relative">
+                    <input type="text" class="form-control" placeholder="Search"
+                      style="font-weight:600; font-size:1.2rem;">
+                    <span class="position-absolute end-0 top-0 mt-3 me-3 text-muted" style="z-index:2;">
                       <i class="bi bi-search"></i>
-                    </button>
+                    </span>
                   </div>
-                </div>
-
-                <!-- Category Filter -->
-                <div class="mb-4">
-                  <label class="form-label fw-semibold">Category</label>
-                  <select class="form-select">
-                    <option value="">All Categories</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="furniture">Furniture</option>
-                    <option value="books">Books</option>
-                    <option value="clothing">Clothing</option>
-                    <option value="sports">Sports & Recreation</option>
-                  </select>
-                </div>
-
-                <!-- Type Filter -->
-                <div class="mb-4">
-                  <label class="form-label fw-semibold">Type</label>
-                  <div class="row g-2">
-                    <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="modalTypeNew" value="new" checked>
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="modalTypeNew">New</label>
-                    </div>
-                    <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="modalTypeUsed" value="used">
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="modalTypeUsed">Used</label>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold" style="font-size:1.2rem;">Category</label>
+                    <select class="form-select">
+                      <option>All Categories</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold" style="font-size:1.2rem;">Brand</label>
+                    <select class="form-select">
+                      <option>All Brands</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold" style="font-size:1.1rem;">Offer Type</label>
+                    <div class="d-flex gap-2">
+                      <button type="button" class="btn btn-outline-secondary w-50 fw-bold py-2">Ongoing</button>
+                      <button type="button" class="btn btn-outline-secondary w-50 fw-bold py-2">Limted</button>
                     </div>
                   </div>
-                </div>
-
-                <!-- Create Date Filter -->
-                <div class="mb-4">
-                  <label class="form-label fw-semibold">Create Date</label>
-                  <div class="row g-2">
-                    <div class="col-6">
-                      <input type="text" class="form-control datepicker" placeholder="From">
-                    </div>
-                    <div class="col-6">
-                      <input type="text" class="form-control datepicker" placeholder="To">
+                  <div class="mb-3">
+                    <label class="form-label fw-bold" style="font-size:1.1rem;">Offer Date</label>
+                    <div class="row g-2">
+                      <div class="col-6 position-relative">
+                        <input type="text" class="form-control" placeholder="From" style="font-weight:600;">
+                        <span class="position-absolute end-0 top-0 mt-2 me-2 text-pink" style="z-index:2;">
+                          <i class="bi bi-calendar-event"></i>
+                        </span>
+                      </div>
+                      <div class="col-6 position-relative">
+                        <input type="text" class="form-control" placeholder="To" style="font-weight:600;">
+                        <span class="position-absolute end-0 top-0 mt-2 me-2 text-pink" style="z-index:2;">
+                          <i class="bi bi-calendar-event"></i>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-
-                <!-- Filter Buttons -->
-                <div class="d-grid gap-2">
-                  <button class="btn btn-main text-white">Apply Filter</button>
-                  <button class="btn btn-outline-secondary">Reset</button>
-                </div>
+                  <div class="d-grid gap-2 mt-4">
+                    <button type="button" class="btn btn-main text-white fw-bold py-3" style="font-size:1.2rem;">Apply
+                      Filter</button>
+                    <button type="reset" class="btn btn-outline-secondary fw-bold py-3"
+                      style="font-size:1.2rem;">Reset</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -356,407 +350,109 @@
           <!-- Main Content Area -->
           <div class="col-lg-9">
             <div class="card card-color p-3">
-    <!-- Tabs and Actions -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <!-- Tabs -->
-              <ul class="nav nav-tabs marketplace-tabs" id="marketplaceTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="all-items-tab" data-bs-toggle="tab" data-bs-target="#all-items" type="button" role="tab">
-                    All Items
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="wishlist-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button" role="tab">
-                    wishlist
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="my-items-tab" data-bs-toggle="tab" data-bs-target="#my-items" type="button" role="tab">
-                    My Items
-                  </button>
-                </li>
-              </ul>
+              <!-- Tabs and Actions -->
+              <div class="d-flex justify-content-end align-items-center mb-4">
 
-              <!-- Sort and Sell Button -->
-              <div class="d-flex align-items-center gap-3 flex-wrap">
-                <div class="d-flex align-items-center">
 
-                  <div class="dropdown ms-2">
-                    <button class="btn dropdown-toggle head-color"ype="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Sort by: New Date
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="sortDropdown">
-                      <li><a class="dropdown-item" href="#" data-value="newest">Create Date (Newest)</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="oldest">Create Date (Oldest)</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="price-low">Price (Low to High)</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="price-high">Price (High to Low)</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="name">Name (A-Z)</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <button type="button" class="btn btn-main text-white px-4 py-2 " data-bs-toggle="modal" data-bs-target="#sellItemModal">
-                    <i class="bi bi-plus-circle me-2"></i>
-                Sell Your Item
-                  </button>
-              </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="sellItemModal" tabindex="-1" aria-labelledby="sellItemModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content card-color">
-                  <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title fw-bold head-color" id="sellItemModalLabel">Sell your Item</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-4 py-3">
-                    <form id="sellItemForm">
-                      <!-- Item Title -->
-                      <div class="mb-3">
-                        <label for="itemTitle" class="form-label fw-semibold text-color">Item Title <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="itemTitle" rows="3" placeholder="Enter item title..." required></textarea>
-                      </div>
-
-                      <!-- Description -->
-                      <div class="mb-3">
-                        <label for="itemDescription" class="form-label fw-semibold text-color">Description <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="itemDescription" rows="4" placeholder="Enter item description..." required></textarea>
-                      </div>
-
-                      <!-- Category and Price Row -->
-                      <div class="row mb-3">
-                        <div class="col-md-6">
-                          <label for="itemCategory" class="form-label fw-semibold text-color">Category <span class="text-danger">*</span></label>
-                          <select class="form-select" id="itemCategory" required>
-                            <option value="">Select category...</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="furniture">Furniture</option>
-                            <option value="books">Books</option>
-                            <option value="clothing">Clothing</option>
-                            <option value="sports">Sports & Recreation</option>
-                            <option value="automotive">Automotive</option>
-                            <option value="home">Home & Garden</option>
-                            <option value="other">Other</option>
-                          </select>
-                        </div>
-                        <div class="col-md-6">
-                          <label for="itemPrice" class="form-label fw-semibold text-color">Price <span class="text-danger">*</span></label>
-                          <div class="input-group">
-                            <input type="number" class="form-control" id="itemPrice" placeholder="0.00" min="0" step="0.01" required>
-                            <span class="input-group-text">QAR</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row mb-3">
-                        
+   <div class="dropdown ms-2 ">
+                      <button class="btn dropdown-toggle head-color" ype="button" id="sortDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort by: New Date
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                        <li><a class="dropdown-item" href="#" data-value="newest">Create Date (Newest)</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="oldest">Create Date (Oldest)</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="price-low">Price (Low to High)</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="price-high">Price (High to Low)</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="name">Name (A-Z)</a></li>
+                      </ul>
+                    </div>
              
-                        <div class="col-md-6">
-                              <label class="form-label fw-semibold">Type</label>
-                  <div class="row g-2">
-                    <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="typeNew" value="new" checked>
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeNew">New</label>
-                    </div>
-                    <div class="col-6">
-                      <input class="btn-check" type="radio" name="itemType" id="typeUsed" value="used">
-                      <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="typeUsed">Used</label>
-                    </div>
-                  </div>
-                    
-                        </div>
-                        <div class="col-md-6">
-                          <label class="form-label fw-semibold text-color">Status <span class="text-danger">*</span></label>
-                          <div class="row g-2">
-                            <div class="col-6">
-                              <input class="btn-check" type="radio" name="itemStatus" id="statusActive" value="active" checked>
-                              <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="statusActive">Active</label>
-                            </div>
-                            <div class="col-6">
-                              <input class="btn-check" type="radio" name="itemStatus" id="statusSold" value="sold">
-                              <label class="btn btn-outline-secondary w-100 custom-radio-btn" for="statusSold">Sold</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Upload Item Images -->
-                      <div class="mb-4">
-                        <label class="form-label fw-semibold text-color">Upload Item Images <span class="text-danger">*</span></label>
-                        <div class="upload-area border border-2 border-dashed rounded p-4 text-center">
-                          <div id="uploadPlaceholder">
-                            <div class="upload-icon mb-3">
-                              <i class="bi bi-cloud-upload text-main" style="font-size: 2rem;"></i>
-                            </div>
-                            <p class="mb-2 text-color">
-                              <span class="fw-semibold text-main">Upload files</span>
-                            </p>
-                            <input type="file" class="form-control d-none" id="itemImages" multiple accept="image/*" required>
-                            <label for="itemImages" class="btn btn-outline-main btn-sm upload-btn">
-                              <i class="bi bi-plus-circle me-1"></i>
-                              Upload files
-                            </label>
-                          </div>
-                          <div id="uploadedImagesContainer" class="row g-2 mt-2" style="display: none;">
-                            <!-- Uploaded images will be displayed here -->
-                          </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-2">
-                          <small class="text-color">You can upload multiple images (JPG, PNG, GIF)</small>
-                          <button type="button" id="addMoreImages" class="btn btn-sm btn-outline-main" style="display: none;">
-                            <i class="bi bi-plus-circle me-1"></i>Add more
-                          </button>
-                        </div>
-                      </div>
-                      
-                      <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                          const itemImagesInput = document.getElementById('itemImages');
-                          const uploadPlaceholder = document.getElementById('uploadPlaceholder');
-                          const uploadedImagesContainer = document.getElementById('uploadedImagesContainer');
-                          const addMoreImagesBtn = document.getElementById('addMoreImages');
-                          
-                          // Handle file selection
-                          itemImagesInput.addEventListener('change', function(e) {
-                            if (this.files.length > 0) {
-                              // Hide placeholder, show container and add more button
-                              uploadPlaceholder.style.display = 'none';
-                              uploadedImagesContainer.style.display = 'flex';
-                              addMoreImagesBtn.style.display = 'block';
-                              
-                              // Display selected images
-                              displaySelectedImages(this.files);
-                            }
-                          });
-                          
-                          // Add more images button
-                          addMoreImagesBtn.addEventListener('click', function() {
-                            itemImagesInput.click();
-                          });
-                          
-                          // Function to display selected images
-                          function displaySelectedImages(files) {
-                            for (let i = 0; i < files.length; i++) {
-                              const file = files[i];
-                              
-                              // Create image preview element
-                              const imageCol = document.createElement('div');
-                              imageCol.className = 'col-4 col-md-3 mb-2';
-                              imageCol.dataset.filename = file.name;
-                              
-                              const imagePreview = document.createElement('div');
-                              imagePreview.className = 'position-relative';
-                              
-                              // Create image element
-                              const img = document.createElement('img');
-                              img.className = 'img-thumbnail w-100';
-                              img.style.height = '80px';
-                              img.style.objectFit = 'cover';
-                              
-                              // Create delete button
-                              const deleteBtn = document.createElement('button');
-                              deleteBtn.className = 'btn btn-sm btn-danger position-absolute top-0 end-0';
-                              deleteBtn.innerHTML = '<i class="bi bi-x"></i>';
-                              deleteBtn.style.padding = '0.1rem 0.3rem';
-                              deleteBtn.style.fontSize = '0.7rem';
-                              
-                              // Delete functionality
-                              deleteBtn.addEventListener('click', function() {
-                                imageCol.remove();
-                                
-                                // If no images left, show placeholder again
-                                if (uploadedImagesContainer.children.length === 0) {
-                                  uploadPlaceholder.style.display = 'block';
-                                  uploadedImagesContainer.style.display = 'none';
-                                  addMoreImagesBtn.style.display = 'none';
-                                }
-                              });
-                              
-                              // Read and display the image
-                              const reader = new FileReader();
-                              reader.onload = function(e) {
-                                img.src = e.target.result;
-                              };
-                              reader.readAsDataURL(file);
-                              
-                              // Append elements
-                              imagePreview.appendChild(img);
-                              imagePreview.appendChild(deleteBtn);
-                              imageCol.appendChild(imagePreview);
-                              uploadedImagesContainer.appendChild(imageCol);
-                            }
-                          }
-                        });
-                      </script>
-                    </form>
-                  </div>
-                  <div class="modal-footer border-0 pt-0 px-4 pb-4">
-                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" form="sellItemForm" class="btn btn-main text-white px-4">Save</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                       <!-- Tab Content -->
-            <div class="tab-content" id="marketplaceTabContent">
-              <!-- All Items Tab -->
-              <div class="tab-pane fade show active" id="all-items" role="tabpanel">
-                <div class="row g-4">
-                  <!-- Product Card 1 -->
-                  <div class="col-12">
-                    <div class="card product-card h-100">
-                      <div class="card-img-container">
-                        <!-- Image Slider -->
-                        <div id="productSlider1" class="carousel slide product-slider" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="asset/imgs/Marketplace product.jpg" class="card-img-top modal-trigger" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Nikon D90 DSLR Camera - Main">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="asset/imgs/silder banner.jpg" class="card-img-top modal-trigger" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Nikon D90 DSLR Camera - Lens">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="asset/imgs/page-bg.jpg" class="card-img-top modal-trigger" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Nikon D90 DSLR Camera - Accessories">
-                            </div>
-                          </div>
-
-                          <!-- Slider Controls -->
-                          <button class="carousel-control-prev" type="button" data-bs-target="#productSlider1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
-                          <button class="carousel-control-next" type="button" data-bs-target="#productSlider1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                          </button>
-
-                          <!-- Slide Indicators -->
-                          <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#productSlider1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#productSlider1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#productSlider1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          </div>
-                        </div>
-                        <div class="product-actions">
-                          <button class="btn btn-sm btn-light" title="Add to wishlist">
-                            <i class="bi bi-heart"></i>
-                          </button>
-
-
-                        </div>
-                        <span class="badge bg-success position-absolute top-0 start-0 m-2">Used</span>
-                      </div>
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-
-                          <span class="text-color"><i class="icon-Calendar main-color"></i> 12.12.2024</span>
-                          <div class="dropdown ms-auto">
-                <a class="text-decoration-none text-color d-flex align-items-center" href="#" id="shareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-share main-color me-1"></i> Share
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="shareDropdown" >
-                  <li>
-                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                      <i class="bi bi-send main-color"></i> Send
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                      <i class="bi bi-clipboard main-color"></i> Copy Link
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                      <i class="bi bi-share-fill main-color"></i> Share to Engage
-                    </a>
-                  </li>
-                </ul>
               </div>
 
-                        </div>
-                        <h6 class="card-title fw-bold">Nikon D90 DSLR Camera with Extra Lens & Accessories - Capture Stunning Moments</h6>
-                        <p class="card-text text-color  small">Great condition, works perfectly. Comes with an extra lens for more shooting options, a camera bag for easy carrying, battery and charger, lens hood to reduce glare, 16GB memory card, and a cleaning kit. Perfect for beginners or hobbyists looking to take amazing photos and videos.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <span class="h5 text-main fw-bold mb-0 head-color">1 2,500.00 <spam class="">QAR</spam></span>
-                          <div class="btn-group marketplace-actions" role="group">
-                            <button class="btn btn-outline-main btn-sm marketplace-action-btn">
-                              <i class="bi bi-envelope me-1"></i>
-                              Send Email
-                            </button>
-                            <button class="btn btn-outline-main btn-sm marketplace-action-btn">
-                              <i class="bi bi-chat-dots me-1"></i>
-                              Start Chat
-                            </button>
-                          </div>
-                        </div>
-
+              <div class="row g-4"> <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="p-2">
+                    <div class="card card-color rounded-4 overflow-hidden h-100">
+                      <div class="position-relative"> <img src="https://i.pinimg.com/736x/f7/f2/10/f7f2105b8ea9c6866bd1410ef831872b.jpg"
+                          class="w-100 object-fit-cover rounded-4" style="height:180px;" alt="Adidas Deal"> <span
+                          class="position-absolute bottom-0 start-0  px-3 py-2 bg-dark bg-opacity-75 text-white  w-100"
+                          style="font-size:1.5rem; font-weight:600;">40% discount</span> </div>
+                      <div class="d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2"> <img  class="rounded-5 p-1" src="https://i.pinimg.com/736x/8b/7b/fa/8b7bfa40460a48aff5fa938fe7a553da.jpg" alt="Adidas"
+                            style="height:28px;"> <span class="fw-bold head-color" style="font-size:1.1rem;">Adidas</span> </div>
+                        <span class="small text-color">EX Date <span class="text-pink fw-bold">20.10.2024</span></span>
                       </div>
                     </div>
                   </div>
+                </div> <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="p-2">
+                    <div class="card card-color rounded-4 overflow-hidden h-100">
+                      <div class="position-relative"> <img src="https://i.pinimg.com/736x/08/80/d9/0880d990464dba62ce3445a50e55b90a.jpg"
+                          class="w-100 object-fit-cover rounded-4" style="height:180px;" alt="Agoda Deal"> <span
+                          class="position-absolute bottom-0 start-0  px-3 py-2 bg-dark bg-opacity-75 text-white  w-100"
+                          style="font-size:1.5rem; font-weight:600;">10% discount</span> </div>
+                      <div class="d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2"> <img class="rounded-5 p-1" src="https://i.pinimg.com/736x/f2/20/a8/f220a8821aea63492821d3b61e5e9d69.jpg" alt="Agoda"
+                            style="height:28px;"> <span class="fw-bold head-color" style="font-size:1.1rem;">Agoda</span> </div>
+                        <span class="small text-color">EX Date <span class="text-pink fw-bold">20.10.2024</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="p-2">
+                    <div class="card card-color rounded-4 overflow-hidden h-100">
+                      <div class="position-relative"> <img src="https://i.pinimg.com/736x/37/bc/df/37bcdf8b43f008950f49bc0e63e46684.jpg"
+                          class="w-100 object-fit-cover rounded-4" style="height:180px;" alt="Hotel Deal"> <span
+                          class="position-absolute bottom-0 start-0  px-3 py-2 bg-dark bg-opacity-75 text-white  w-100"
+                          style="font-size:1.5rem; font-weight:600;">10% discount</span> </div>
+                      <div class="d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2"> <img class="rounded-5 p-1" src="https://i.pinimg.com/736x/74/66/05/74660592f846565b00cabb70cf2354cd.jpg" alt="Hotel"
+                            style="height:28px;"> <span class="fw-bold head-color" style="font-size:1.1rem;">Car Brand</span> </div>
+                        <span class="small text-color">EX Date <span class="text-pink fw-bold">20.10.2024</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+            
 
-                </div>
-              </div>
+              <!-- Pagination -->
+              <nav aria-label="Marketplace pagination" class="mt-5">
+                <div class="d-flex justify-content-between align-items-center">
+                  <button class="btn btn-outline-secondary" disabled>
+                    <i class="bi bi-chevron-left me-1"></i>
+                    Previous
+                  </button>
 
-              <!-- Wishlist Tab -->
-              <div class="tab-pane fade" id="wishlist" role="tabpanel">
-                <div class="text-center py-5">
-                  <i class="bi bi-heart display-1 text-color"></i>
-                  <h4 class="mt-3 head-color">Your Wishlist is Empty</h4>
-                  <p class="text-color">Start adding items to your wishlist by clicking the heart icon on products.</p>
-                </div>
-              </div>
+                  <ul class="pagination mb-0">
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                      <span class="page-link">...55</span>
+                    </li>
+                  </ul>
 
-              <!-- My Items Tab -->
-              <div class="tab-pane fade" id="my-items" role="tabpanel">
-                <div class="text-center py-5">
-                  <i class="bi bi-bag display-1 text-color"></i>
-                  <h4 class="mt-3 head-color">No Items Listed</h4>
-                  <p class="text-color">You haven't listed any items for sale yet.</p>
-                  <button class="btn btn-main text-white">
-                    <i class="bi bi-plus-circle me-1"></i>
-                    List Your First Item
+                  <button class="btn btn-outline-secondary">
+                    Next
+                    <i class="bi bi-chevron-right ms-1"></i>
                   </button>
                 </div>
-              </div>
-            </div>
-
-            <!-- Pagination -->
-            <nav aria-label="Marketplace pagination" class="mt-5">
-              <div class="d-flex justify-content-between align-items-center">
-                <button class="btn btn-outline-secondary" disabled>
-                  <i class="bi bi-chevron-left me-1"></i>
-                  Previous
-                </button>
-
-                <ul class="pagination mb-0">
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">4</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">5</a>
-                  </li>
-                  <li class="page-item">
-                    <span class="page-link">...55</span>
-                  </li>
-                </ul>
-
-                <button class="btn btn-outline-secondary">
-                  Next
-                  <i class="bi bi-chevron-right ms-1"></i>
-                </button>
-              </div>
-            </nav>
+              </nav>
             </div>
 
 
@@ -852,7 +548,7 @@
 
   <!-- Marketplace specific JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Initialize flatpickr for date inputs
       flatpickr(".datepicker", {
         dateFormat: "d.m.Y",
@@ -867,7 +563,7 @@
       const wishlistButtons = document.querySelectorAll('.product-actions .btn');
       wishlistButtons.forEach(button => {
         if (button.querySelector('.bi-heart')) {
-          button.addEventListener('click', function(e) {
+          button.addEventListener('click', function (e) {
             e.preventDefault();
             const icon = this.querySelector('i');
             if (icon.classList.contains('bi-heart')) {
@@ -886,14 +582,14 @@
       const resetFilterBtn = document.querySelector('.btn-outline-secondary');
 
       if (applyFilterBtn) {
-        applyFilterBtn.addEventListener('click', function() {
+        applyFilterBtn.addEventListener('click', function () {
           // Add filter logic here
           console.log('Applying filters...');
         });
       }
 
       if (resetFilterBtn) {
-        resetFilterBtn.addEventListener('click', function() {
+        resetFilterBtn.addEventListener('click', function () {
           // Reset all form inputs
           const form = this.closest('.card-body');
           const inputs = form.querySelectorAll('input, select');
@@ -910,7 +606,7 @@
       // Sort functionality
       const sortSelect = document.querySelector('select[style*="width: auto"]');
       if (sortSelect) {
-        sortSelect.addEventListener('change', function() {
+        sortSelect.addEventListener('change', function () {
           console.log('Sorting by:', this.value);
           // Add sorting logic here
         });
@@ -925,7 +621,7 @@
         // Handle modal opening when clicking on images
         const modalTriggers = document.querySelectorAll('.modal-trigger');
         modalTriggers.forEach(trigger => {
-          trigger.addEventListener('click', function() {
+          trigger.addEventListener('click', function () {
             // Get current active slide from product slider
             const activeSlide = productSlider.querySelector('.carousel-item.active');
             const activeIndex = Array.from(productSlider.querySelectorAll('.carousel-item')).indexOf(activeSlide);
@@ -957,7 +653,7 @@
       <div class="modal-content bg-transparent border-0">
         <div class="modal-header border-0 position-absolute top-0 end-0 z-3">
           <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close">
-         <i class="bi bi-x-lg icon-md text-white"></i>
+            <i class="bi bi-x-lg icon-md text-white"></i>
           </button>
         </div>
         <div class="modal-body p-0">
@@ -965,29 +661,35 @@
           <div id="modalSlider" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="asset/imgs/Marketplace product.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Main">
+                <img src="asset/imgs/Marketplace product.jpg" class="d-block w-100 modal-image"
+                  alt="Nikon D90 DSLR Camera - Main">
               </div>
               <div class="carousel-item">
-                <img src="asset/imgs/silder banner.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Lens">
+                <img src="asset/imgs/silder banner.jpg" class="d-block w-100 modal-image"
+                  alt="Nikon D90 DSLR Camera - Lens">
               </div>
               <div class="carousel-item">
-                <img src="asset/imgs/page-bg.jpg" class="d-block w-100 modal-image" alt="Nikon D90 DSLR Camera - Accessories">
+                <img src="asset/imgs/page-bg.jpg" class="d-block w-100 modal-image"
+                  alt="Nikon D90 DSLR Camera - Accessories">
               </div>
             </div>
 
             <!-- Modal Slider Controls -->
-            <button class="carousel-control-prev modal-control" type="button" data-bs-target="#modalSlider" data-bs-slide="prev">
+            <button class="carousel-control-prev modal-control" type="button" data-bs-target="#modalSlider"
+              data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next modal-control" type="button" data-bs-target="#modalSlider" data-bs-slide="next">
+            <button class="carousel-control-next modal-control" type="button" data-bs-target="#modalSlider"
+              data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
 
             <!-- Modal Slide Indicators -->
             <div class="carousel-indicators modal-indicators">
-              <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#modalSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
@@ -997,4 +699,5 @@
     </div>
   </div>
 </body>
+
 </html>

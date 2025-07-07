@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Intranet </title>
+  <meta name="description" content="QM Intranet">
+  <meta name="theme-color" content="#1a1a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>html{background:#1a1a1a!important;}</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/vendor/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+
+  <!-- style CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="asset/css/style.css">
+
+
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+
+  <!--  Birthday canvas CSS -->
+  <link rel="stylesheet" href="asset/css/canvas.css">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <style>
+  /* News Ticker Styles */
+  .breack-newas .news-ticker {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .breack-newas .news-ticker .ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .breack-newas .ticker-label {
+    background: #c1272d;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+  .breack-newas .ticker-date {
+    font-size: 14px;
+    color: #333;
+  }
+  .breack-newas .ticker-text {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+  }
+  .breack-newas .ticker-source {
+    background: #444;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  /* Arrow Button Overrides */
+  .breack-newas .slick-prev,
+  .breack-newas .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    right: 50px;
+    left: auto;
+  }
+  .breack-newas .slick-next {
+    right: 10px;
+  }
+  </style>
+
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- <section class="canvas">
+    <a id="startbtn" class="btn bg-main bg-main-hover text-white " href="#">
+      <i class="bi bi-balloon-fill"></i>
+
+        Start
+    </a>
+        <canvas id="birthday"></canvas>
+
+        <h1>Happy Birthday   <br>
+          <span class="text-center d-block">
+            <span class="main-color">Elisa</span>
+            <i class="bi bi-balloon-heart-fill main-color"></i>
+
+
+              </span>
+          </h1>
+        <button id="closeButton" aria-label="closeButton"><i class="bi bi-x-circle"></i></button>
+  </section> -->
+
+  <!-- Header with Navigation -->
+  <header class="py-2 border-bottom ">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <!-- Logo -->
+        <div class="logo-container d-flex align-items-center">
+          <a href="#" class="d-flex align-items-center text-decoration-none">
+            <img class="logo-b" src="asset/imgs/logo.svg" alt="Qatar Museums Logo" height="50">
+            <img class="logo-w" src="asset/imgs/logo-w.svg" alt="Qatar Museums Logo" height="50">
+          </a>
+        </div>
+
+        <!-- Main Navigation -->
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler d-lg-none" aria-label="menuToggle" id="menuToggle" type="button">
+              <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="responsive-menu" id="mainMenu">
+              <div class="d-flex justify-content-end d-lg-none">
+                <button type="button" id="closeMenuBtn" aria-label="closeMenuBtn"
+                  class="btn btn-outline-secondary btn-sm mb-3">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Welcome to QM
+                  </a>
+
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+
+                        <div class="col-md-12">
+                          <!-- <h6 class="text-uppercase fw-bold mb-3">Departments</h6> -->
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mission And Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Structure</a></li>
+                <li class="nav-item dropdown has-submenu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Teams
+                  </a>
+
+                  <div class="dropdown-menu mega-menu">
+                    <!-- <i class="bi bi-triangle-fill"></i> -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Museums & Galleries</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">National Museum of Qatar</a></li>
+                            <li><a href="#" class="dropdown-item">Museum of Islamic Art</a></li>
+                            <li><a href="#" class="dropdown-item">Mathaf: Arab Museum</a></li>
+                            <li><a href="#" class="dropdown-item">Fire Station</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Departments</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h6 class="text-uppercase fw-bold mb-3">Resources</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Team Directory</a></li>
+                            <li><a href="#" class="dropdown-item">Organization Chart</a></li>
+                            <li><a href="#" class="dropdown-item">Contact Information</a></li>
+                            <li><a href="#" class="dropdown-item">New Employee Guide</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">IN-Q</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Work Applications
+                  </a>
+                  <div class="dropdown-menu mega-menu small-menu">
+                    <div class="container">
+                      <div class="row">
+
+                        <div class="col-md-12">
+                          <!-- <h6 class="text-uppercase fw-bold mb-3">Departments</h6> -->
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Human Resources</a></li>
+                            <li><a href="#" class="dropdown-item">Finance</a></li>
+                            <li><a href="#" class="dropdown-item">IT & Digital</a></li>
+                            <li><a href="#" class="dropdown-item">Marketing</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side - Search, Notifications, Language -->
+        <div class="d-flex align-items-center wrap-checker ">
+          <!-- Search Form -->
+          <form class="d-flex me-3 position-relative">
+            <input class="form-control " type="search" placeholder="" aria-label="Search">
+            <button class="btn position-absolute end-0 top-0 bottom-0 btn-main" aria-label="Search" type="submit">
+              <i class="icon-Search icon-white"></i>
+            </button>
+          </form>
+
+          <!-- Notifications -->
+          <!-- Notifications Dropdown -->
+          <div class="dropdown position-relative me-3 notifi">
+            <a href="#" class="text-decoration-none position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Wrapper div for the icon with animation -->
+              <div class="icon-wrapper d-inline-block animate__animated animate__headShake animate__infinite">
+                <i class="bi bi-megaphone-fill btn-main-link icon-md "></i>
+              </div>
+
+              <!-- Badge without animation -->
+              <span class="position-absolute top-0 start-100 translate-top badge rounded-pill bg-danger">
+                2
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 320px; max-width: 360px;">
+
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Happy Birthday</strong><br>
+                  <small class="text-color">Your birthday celebration is scheduled for today</small><br>
+                  <small class="text-color">03/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-calendar-check-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Leave Approval</strong><br>
+                  <small class="text-color">Your leave request has been approved</small><br>
+                  <small class="text-color">02/12/2024</small>
+                </div>
+              </a>
+
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-gear-fill icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">System Maintenance</strong><br>
+                  <small class="text-color">Scheduled maintenance on Friday evening</small><br>
+                  <small class="text-color">05/12/2024</small>
+                </div>
+              </a>
+              <hr class="my-2">
+              <a href="#" class="mb-3 d-flex align-items-start text-decoration-none">
+                <div class="me-3 bg-main-30 rounded p-2 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-tools icon-md text-primary"></i>
+                </div>
+                <div>
+                  <strong class="head-color">Office Renovations</strong><br>
+                  <small class="text-color">3rd floor will be closed for renovations</small><br>
+                  <small class="text-color">10/12/2024</small>
+                </div>
+              </a>
+
+
+
+
+              <hr class="my-2">
+
+              <div class="text-end">
+                <a href="#" class="fw-bold text-pink text-decoration-none btn-main-link">View All</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <a href="#" class="btn btn-sm btn-main-link   d-flex">
+              عربي
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+  <section class="breack-newas">
+    <div id="newsTicker" class="news-ticker">
+      <div class="ticker-item">
+        <span class="ticker-label">NEWS</span>
+        <span class="ticker-date">June 8, 2023</span>
+        <span class="ticker-text">Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.</span>
+        <span class="ticker-source">BBC: Sport</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-label">UPDATE</span>
+        <span class="ticker-date">July 1, 2023</span>
+        <span class="ticker-text">New exhibit opening at the museum next week.</span>
+        <span class="ticker-source">QM News</span>
+      </div>
+    </div>
+  </section>
+    <section>
+      <!-- Carousel Wrapper -->
+      <div id="qmCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="asset/imgs/silder banner.jpg" class="d-block w-100 object-fit-cover" alt="Slide 1" />
+
+            <!-- Text Overlay -->
+            <div class="carousel-caption  text-start  slider-over    shadow qm-caption-box">
+              <h2 class="fw-bold head-color mb-3">AI Digital Centre Unveils Gazan Students Robotics</h2>
+              <p class="text-color d-none d-md-block">
+                Qatar Museums has recently signed twomemorans of understanding (MoU) with the Capital Museum of China
+                and with the National Museum of Mongolia. Both MoUs were signed by Sheikh Abdulaziz Al Thani, Director
+                of National Museum of Qatar, on behalf of
+              </p>
+              <a href="#" class="btn btn-link text-decoration-none fw-bold btn-main-link">
+                Discover More →
+              </a>
+            </div>
+          </div>
+
+          <!-- Add More Slides Here... -->
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" aria-label="prev" data-bs-target="#qmCarousel"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" aria-label="next" data-bs-target="#qmCarousel"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Added Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#qmCarousel" aria-label="0" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="1" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#qmCarousel" aria-label="2" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="teams-section">
+    <div class="teams-btn ">
+      <a href="https://teams.microsoft.com/l/chat/0/0?users=zahra.ashraf@8bzfr2.onmicrosoft.com"
+        class="btn bg-main bg-main-hover text-white d-flex align-items-center gap-2" target="_blank">
+        <i class="bi bi-microsoft-teams icon-md"></i>
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <footer class="mt-4 container-fluid">
+    <span>
+      © <a class=" text-decoration-none footer-text" href="https://qm.org.qa/en/">Qatar Museums </a> <span
+        id="currentYear"></span>
+    </span>
+
+    <span class="">
+      <a href="#" class="text-decoration-none mx-4 text-white">
+        Disclaimer </a>
+    </span>
+
+  </footer>
+
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="asset/vendor/dist/jquery.min.js"></script>
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="asset/js/main.js"></script>
+ <!-- Slick Carousel JS -->
+ <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script>
+   $(document).ready(function(){
+     $('#newsTicker').slick({
+       infinite: true,
+       autoplay: true,
+       autoplaySpeed: 3000,
+       arrows: true,
+       dots: false,
+       prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+       nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+       speed: 500,
+       slidesToShow: 1,
+       adaptiveHeight: true
+     });
+   });
+ </script>
+<script>
+// Settings panel toggle
+(function() {
+  const themeBtn = document.getElementById('themeBtn');
+  const themeDropdown = document.getElementById('themeDropdown');
+  if (!themeBtn || !themeDropdown) return;
+
+  const closeBtn = themeDropdown.querySelector('button[aria-label="closeBtn"]');
+
+  // Toggle panel on button click
+  themeBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    themeDropdown.classList.toggle('show');
+  });
+
+  // Close panel on panel close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      themeDropdown.classList.remove('show');
+    });
+  }
+
+  // Click outside to close
+  document.addEventListener('click', function(e) {
+    if (!themeDropdown.contains(e.target) && e.target !== themeBtn) {
+      themeDropdown.classList.remove('show');
+    }
+  });
+})();
+</script>
+  <!-- <script src="asset/js/canvas.js"></script> -->
+   </body>
+</html>

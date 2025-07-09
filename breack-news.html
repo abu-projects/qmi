@@ -19,11 +19,7 @@
   <!-- IcoMoon Font CSS -->
   <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
 
-  <!-- style CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+
   <link rel="stylesheet" href="asset/css/style.css">
 
 
@@ -33,67 +29,98 @@
   <!--  Birthday canvas CSS -->
   <link rel="stylesheet" href="asset/css/canvas.css">
 
-  <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
 
   <style>
   /* News Ticker Styles */
   .breack-newas .news-ticker {
     position: relative;
     overflow: hidden;
-    width: 100%;
+
+    height: 50px; /* Adjust as needed */
   }
-  .breack-newas .news-ticker .ticker-item {
+  .breack-newas .ticker-track {
+    display: flex;
+    width: 200%; /* twice the original content width */
+    animation: ticker-scroll 20s linear infinite;
+  }
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-wrapper{
+    position: relative;
+  }
+  .breack-newas .ticker-item {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px;
+    white-space: nowrap;
   }
-  .breack-newas .ticker-label {
-    background: #c1272d;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
+  .breack-newas .ticker-item:not(:last-child)::after {
+    content: "•";         /* bullet character */
+    margin: 0 15px;       /* spacing around the separator */
+    color: var(--main-color);       /* match your label color */
   }
+
   .breack-newas .ticker-date {
     font-size: 14px;
-    color: #333;
+    color: var(--text-color); 
   }
   .breack-newas .ticker-text {
     font-size: 16px;
-    color: #333;
+    color:var(--text-color); 
     flex: 1;
   }
-  .breack-newas .ticker-source {
-    background: #444;
-    color: #fff;
-    padding: 3px 6px;
-    border-radius: 3px;
-    font-size: 12px;
-  }
-  /* Arrow Button Overrides */
-  .breack-newas .slick-prev,
-  .breack-newas .slick-next {
+
+  /* Static label next to ticker */
+  .breack-newas .ticker-static {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    left: 0;
+    top: 0px;
+    height: 50px;           /* Match ticker height */
+    width: 100px;           /* Fixed label width */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    right: 50px;
-    left: auto;
+    background: var(--main-color); 
+    color: #fff;
+    font-weight: bold;
+    padding: 0 15px;
+    z-index: 2;
   }
-  .breack-newas .slick-next {
-    right: 10px;
+  /* Adjust ticker margins to accommodate static label */
+  .breack-newas .news-ticker {
+    margin: 0 40px 0 40px;
   }
+    /* RTL  */
+html[dir="rtl"] {
+   /* target only RTL instances */
+.breack-newas .ticker-track {
+  /* reverse the animation so it moves right-to-left */
+  animation-direction: reverse;
+}
+    @keyframes ticker-scroll {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.breack-newas .ticker-track {
+  animation-name: ticker-scroll;
+  /* keep your duration, timing, iteration */
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.breack-newas .ticker-static{
+  right:0;
+  left:unset
+  
+}
+}
+ 
+
   </style>
 
 </head>
@@ -340,18 +367,27 @@
   </header>
   <main id="main-content">
   <section class="breack-newas">
-    <div id="newsTicker" class="news-ticker">
-      <div class="ticker-item">
-        <span class="ticker-label">NEWS</span>
-        <span class="ticker-date">June 8, 2023</span>
-        <span class="ticker-text">Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.</span>
-        <span class="ticker-source">BBC: Sport</span>
-      </div>
-      <div class="ticker-item">
-        <span class="ticker-label">UPDATE</span>
-        <span class="ticker-date">July 1, 2023</span>
-        <span class="ticker-text">New exhibit opening at the museum next week.</span>
-        <span class="ticker-source">QM News</span>
+    <div class="ticker-wrapper">
+ 
+      <div class="news-ticker">
+        <div class="ticker-track">
+          <div class="ticker-item">
+            <span class="ticker-date">June 8, 2023</span>
+            <span class="ticker-text">Alexis Mac Allister: Liverpool sign Brighton Argentina midfielder for £35m.</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-date">July 1, 2023</span>
+            <span class="ticker-text">New exhibit opening at the museum next week.</span>
+          </div>
+            <div class="ticker-item">
+            <span class="ticker-date">July 1, 2023</span>
+            <span class="ticker-text">New exhibit opening at the museum next week.</span>
+          </div>
+            <div class="ticker-item">
+            <span class="ticker-date">July 1, 2023</span>
+            <span class="ticker-text">New exhibit opening at the museum next week.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -489,55 +525,38 @@
   <script src="asset/vendor/dist/jquery.min.js"></script>
   <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
  <script src="asset/js/main.js"></script>
- <!-- Slick Carousel JS -->
- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- <script>
-   $(document).ready(function(){
-     $('#newsTicker').slick({
-       infinite: true,
-       autoplay: true,
-       autoplaySpeed: 3000,
-       arrows: true,
-       dots: false,
-       prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-       nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-       speed: 500,
-       slidesToShow: 1,
-       adaptiveHeight: true
-     });
-   });
- </script>
-<script>
-// Settings panel toggle
-(function() {
-  const themeBtn = document.getElementById('themeBtn');
-  const themeDropdown = document.getElementById('themeDropdown');
-  if (!themeBtn || !themeDropdown) return;
 
-  const closeBtn = themeDropdown.querySelector('button[aria-label="closeBtn"]');
 
-  // Toggle panel on button click
-  themeBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    themeDropdown.classList.toggle('show');
-  });
 
-  // Close panel on panel close button
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      themeDropdown.classList.remove('show');
-    });
-  }
-
-  // Click outside to close
-  document.addEventListener('click', function(e) {
-    if (!themeDropdown.contains(e.target) && e.target !== themeBtn) {
-      themeDropdown.classList.remove('show');
-    }
-  });
-})();
-</script>
   <!-- <script src="asset/js/canvas.js"></script> -->
+  <script>
+    (function() {
+      const wrapper = document.querySelector('.breack-newas .ticker-wrapper');
+      const track = wrapper.querySelector('.ticker-track');
+
+      // Duplicate items for seamless loop
+      track.innerHTML = track.innerHTML + track.innerHTML;
+      // Restart animation from the beginning with duplicated content
+      track.style.animation = 'none';
+      // Force reflow to apply changes
+      void track.offsetWidth;
+      track.style.animation = 'ticker-scroll 20s linear infinite';
+
+      function resetAnimation() {
+        track.style.animation = 'none';
+        // Force reflow to restart animation
+        void track.offsetWidth;
+        track.style.animation = '';
+        track.style.animationPlayState = 'running';
+      }
+
+      wrapper.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+      });
+      wrapper.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+      });
+    })();
+  </script>
    </body>
 </html>

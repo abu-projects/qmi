@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> loader
+ - QM Intranet</title>
+  <meta name="description" content="QM Intranet Marketplace">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asset/imgs/favicon.png">
+  <link rel="apple-touch-icon" href="asset/imgs/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/vendor/font/bootstrap-icons.css">
+  <!-- Bootstrap Icons CDN Fallback -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- IcoMoon Font CSS -->
+  <link rel="stylesheet" href="asset/imgs/icomoon/icomoon.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/responsive.css">
+
+  <!-- Flat pickers CSS -->
+  <link rel="stylesheet" href="asset/vendor/dist/flatpickr.min.css">
+</head>
+
+  <style>
+    .loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--bg-color);
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #loader-svg {
+      width: 78px;
+      height: 50px;
+      display: block;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+    #final-svg {
+      width: 130px;
+ 
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+    .dark-theme #final-svg  g#Group_1 {
+      fill: #fff;
+    }
+   
+    .hidden {
+      opacity: 0 !important;
+    }
+  </style>
+
+<body>
+  <div class="loader-overlay">
+    <svg id="loader-svg" viewBox="0 0 40 40">
+      <!-- Main morphing path (starts as circle) -->
+      <path id="morph" fill="#78aafa" stroke="#000" stroke-width="1"
+        d="M20,5
+          a15,15 0 1,0 0.00001,0
+          z"/>
+      <!-- Hidden morph targets -->
+      <path id="circle" fill="#78aafa" stroke="#000" stroke-width="1" style="display:none"
+        d="M20,5
+          a15,15 0 1,0 0.00001,0
+          z"/>
+      <path id="square" fill="#ffc201" stroke="#000" stroke-width="1" style="display:none"
+        d="M5,5 h30 v30 h-30 z"/>
+      <path id="diamond" fill="#ec3c8a" stroke="#000" stroke-width="1" style="display:none"
+        d="M20,5 L35,20 L20,35 L5,20 Z"/>
+      <path id="triangle" fill="#faff1d" stroke="#000" stroke-width="1" style="display:none"
+        d="M20,7 L35,33 L5,33 Z"/>
+    </svg>
+
+
+
+
+
+    <!-- Final SVG with all shapes in original positions -->
+
+    <svg  id="final-svg" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 111.433 82.072">
+  <g id="Group_55620" data-name="Group 55620" transform="translate(3337 156.78)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-3337 -100.78)">
+      <path id="Path_6" data-name="Path 6" d="M4.544,48.242c1.883,0,2.987-.844,3.247-2.533h36.17V38.177c-1.364-.032-2.046-.032-3.117-.032-2.922,0-3.864,1.558-3.864,3.312v.195a3.356,3.356,0,0,0,.455,1.883v.1H27.792v-1.4c0-2.695-1.169-4.091-3.994-4.091h-.357a6.393,6.393,0,0,0-2.6.519V34.8H18.7v8.8H7.856v-5H5.681v6.266c0,1.007-.422,1.494-1.429,1.494H3.7v1.883h.844ZM56.137,43.6c-1.753,0-2.89-.487-2.89-2.662V39.768H51.3c-.065.649-.1,1.3-.1,1.591,0,3.214,1.721,4.351,4.578,4.351h6.331a11.714,11.714,0,0,0,3.117-.39,10.345,10.345,0,0,0,2.987.39H82.079V42.2c0-2.695-1.169-4.091-3.961-4.091a5.278,5.278,0,0,0-2.89.844l.844,1.591a4.35,4.35,0,0,1,1.981-.455c1.331,0,1.948.584,1.948,1.981v1.558H67.728v-.065A2.808,2.808,0,0,0,68.8,41.261v-.227c0-2.143-1.753-3.085-3.572-3.085-1.721,0-3.572.844-3.572,3.085v.227a2.667,2.667,0,0,0,1.007,2.305v.065H56.137Zm55.164-5c-2.922,0-3.994,1.4-3.994,4.091v.1c0,.292.032.584.032.844h-8.9v-5h-2.11v5H87.079V34.8H84.937V45.709h23.248a4.34,4.34,0,0,0,2.565.714h.357a3.183,3.183,0,0,0,3.409-3.507V38.631c-1.364-.032-2.143-.032-3.214-.032Zm-87.8,1.494c1.331,0,2.175.584,2.175,2.046v1.494h-4.87V40.644a4.546,4.546,0,0,1,2.24-.519h.455Zm87.276,4.318c-.877,0-1.364-.52-1.364-1.688V42.43c0-1.4.487-1.883,1.916-1.883h1.071v2.175c0,1.169-.422,1.688-1.4,1.688h-.227Zm-70.2-.812c-1.039,0-1.591-.487-1.591-1.851v-.162c0-1.169.617-1.623,1.818-1.623h1.1v3.669H40.584ZM63.6,41.1c0-1.007.617-1.461,1.591-1.461A1.389,1.389,0,0,1,66.754,41.1v.227A1.653,1.653,0,0,1,65.2,43.242,1.711,1.711,0,0,1,63.6,41.326Zm.649-4.156H66.4V34.8H64.254Zm-26.04,0h1.981V34.8H38.214v2.143Zm56.658,0h1.981V34.8H94.872Zm-53.638,0h1.981V34.8H41.234Zm56.658,0h1.981V34.8H97.892Z" transform="translate(-3.278 -34.8)"/>
+      <path id="Path_7" data-name="Path 7" d="M2.4,89c0,2.435,1.3,3.734,3.636,3.734a3.927,3.927,0,0,0,1.883-.422l1.039.909,1.558-1.3L9.446,90.915a4.492,4.492,0,0,0,.617-2.468V86.434c0-2.435-1.4-3.734-3.831-3.734A3.551,3.551,0,0,0,2.4,86.434V89Zm50,3.572V87.375h.1l1.526,3.085h1.4l1.526-3.117h.065V92.57H59.09V82.862H57.207l-2.435,4.9-2.533-4.9H50.356V92.57H52.4Zm46.105,0V87.375h.065l1.558,3.085h1.4l1.526-3.117h.1V92.57h2.078V82.862h-1.883l-2.435,4.9-2.533-4.9H96.494V92.57h2.013ZM43.57,92.6,41.59,88.642a2.831,2.831,0,0,0,1.753-2.792,2.977,2.977,0,0,0-3.279-2.955H36.232V92.6h2.175V88.934h1.169L41.265,92.6Zm25.163-9.741H66.558v5.909c0,1.4-.52,1.948-1.591,1.948-1.039,0-1.591-.552-1.591-1.948V82.862h-2.24v6.1c0,2.435,1.364,3.734,3.831,3.734a3.5,3.5,0,0,0,3.766-3.734v-6.1Zm25.683,0H92.241v5.909c0,1.4-.552,1.948-1.591,1.948s-1.591-.552-1.591-1.948V82.862H86.851v6.1c0,2.435,1.364,3.734,3.831,3.734a3.5,3.5,0,0,0,3.766-3.734v-6.1ZM28.245,92.6l.584-1.721h2.987l.552,1.721h2.4L31.33,82.895H29.511L25.972,92.6Zm-14.838,0,.584-1.721h2.987L17.53,92.6h2.4l-3.442-9.708H14.673L11.134,92.6h2.273Zm71.106-5.877H81.072V84.713H85.13V82.862h-6.3V92.57H85.39V90.72H81.072v-2.11h3.442ZM69.9,91.531a5.305,5.305,0,0,0,3.7,1.2c1.981,0,3.636-1.039,3.636-3.052,0-1.526-.649-2.565-2.662-2.922L73.539,86.6c-.649-.1-.974-.39-.974-.942s.422-.974,1.266-.974a3.18,3.18,0,0,1,2.046.649l1.2-1.591a4.769,4.769,0,0,0-3.214-1.007c-2.143,0-3.474,1.2-3.474,2.955,0,1.656.812,2.565,2.63,2.89l1.136.227c.617.1.909.39.909.909,0,.617-.552,1.007-1.494,1.007a3.449,3.449,0,0,1-2.4-.779Zm36.592,0a5.305,5.305,0,0,0,3.7,1.2c1.981,0,3.636-1.039,3.636-3.052,0-1.526-.649-2.565-2.662-2.922l-1.039-.162c-.649-.1-.974-.39-.974-.942s.422-.974,1.266-.974a3.18,3.18,0,0,1,2.046.649l1.2-1.591a4.825,4.825,0,0,0-3.214-1.007c-2.143,0-3.442,1.2-3.442,2.955,0,1.656.812,2.565,2.63,2.89l1.136.227c.617.1.909.39.909.909,0,.617-.552,1.007-1.494,1.007a3.449,3.449,0,0,1-2.4-.779l-1.3,1.591ZM26.784,82.895h-7.6V84.94h2.695V92.6h2.24V84.94h2.695V82.895ZM4.608,86.564c0-1.4.552-1.948,1.623-1.948,1.039,0,1.623.552,1.623,1.948V88.9c0,.26-.032.487-.032.682l-.617-.617L5.907,90.2l.714.617a1.332,1.332,0,0,1-.357.032C5.257,90.85,4.64,90.3,4.64,88.9V86.564Zm33.767.617V84.648h1.331c.909,0,1.461.39,1.461,1.234s-.552,1.3-1.461,1.3ZM15.55,86.044h.065l.909,3.052H14.511Zm14.806,0h.065L31.33,89.1H29.317Z" transform="translate(-2.4 -67.148)"/>
+    </g>
+    <g id="Group_55619" data-name="Group 55619" transform="translate(-39.247 -3)">
+      <g id="Ellipse_37" data-name="Ellipse 37" transform="translate(-3281.753 -143)" fill="#78aafa" stroke="#000" stroke-width="1">
+        <circle cx="15" cy="15" r="15" stroke="none"/>
+        <circle cx="15" cy="15" r="14.5" fill="none"/>
+      </g>
+      <g id="Rectangle_6723" data-name="Rectangle 6723" transform="translate(-3232.753 -143)" fill="#ffc201" stroke="#000" stroke-width="1" opacity="0.993">
+        <rect width="29" height="30" stroke="none"/>
+        <rect x="0.5" y="0.5" width="28" height="29" fill="none"/>
+      </g>
+      <g id="Rectangle_6724" data-name="Rectangle 6724" transform="translate(-3261.675 -117.873) rotate(-46)" fill="#ec3c8a" stroke="#000" stroke-width="1">
+        <rect width="20.454" height="20.454" stroke="none"/>
+        <rect x="0.5" y="0.5" width="19.454" height="19.454" fill="none"/>
+      </g>
+      <g id="Polygon_1" data-name="Polygon 1" transform="translate(-3215.488 -153.78) rotate(89)" fill="#faff1d">
+        <path d="M 30.15171241760254 27.5 L 0.8482895493507385 27.5 L 15.50000095367432 1.032392263412476 L 30.15171241760254 27.5 Z" stroke="none"/>
+        <path d="M 15.50000095367432 2.064765930175781 L 1.696567535400391 27 L 29.30343437194824 27 L 15.50000095367432 2.064765930175781 M 15.50000095367432 0 L 31 28 L 1.9073486328125e-06 28 L 15.50000095367432 0 Z" stroke="none" fill="#000"/>
+      </g>
+    </g>
+  </g>
+</svg>
+   
+  </div>
+
+
+  <script>
+  const morph = document.getElementById('morph');
+  const loaderSvg = document.getElementById('loader-svg');
+  const finalSvg = document.getElementById('final-svg');
+  const colors = [
+    '#78aafa', // circle
+    '#ffc201', // square
+    '#ec3c8a', // diamond
+    '#faff1d'  // triangle
+  ];
+  const paths = [
+    document.getElementById('circle').getAttribute('d'),
+    document.getElementById('square').getAttribute('d'),
+    document.getElementById('diamond').getAttribute('d'),
+    document.getElementById('triangle').getAttribute('d')
+  ];
+  let i = 0;
+  let morphCount = 0;
+  const totalMorphs = 8; // 2 seconds with 0.25s per morph
+  let intervalId;
+
+  function showFinalView() {
+    loaderSvg.style.transition = 'opacity 0.5s ease-in-out';
+    loaderSvg.style.opacity = 0;
+    setTimeout(() => {
+      loaderSvg.style.display = 'none';
+      finalSvg.style.display = 'block';
+      finalSvg.style.opacity = 0;
+      finalSvg.style.transition = 'opacity 0.8s ease-out';
+      setTimeout(() => {
+        finalSvg.style.opacity = 1;
+        setTimeout(() => {
+          finalSvg.style.opacity = 0;
+          setTimeout(() => {
+            finalSvg.style.display = 'none';
+            startLoaderSequence();
+          }, 500);
+        }, 2000);
+      }, 100);
+    }, 500);
+  }
+
+  function startLoaderSequence() {
+    i = 0;
+    morphCount = 0;
+    loaderSvg.style.display = 'block';
+    loaderSvg.style.opacity = '1';
+    finalSvg.style.display = 'none';
+    finalSvg.style.opacity = '0';
+    morph.setAttribute('d', paths[0]);
+    morph.setAttribute('fill', colors[0]);
+
+    setTimeout(nextMorph, 100);
+  }
+
+  function nextMorph() {
+    if (morphCount >= totalMorphs) {
+      showFinalView();
+      return;
+    }
+    const startPath = morph.getAttribute('d');
+    const endPath = paths[(i + 1) % paths.length];
+    const startColor = colors[i];
+    const endColor = colors[(i + 1) % colors.length];
+    const duration = 600;
+    const startTime = performance.now();
+
+    function hexToRgb(hex) {
+      const bigint = parseInt(hex.replace('#', ''), 16);
+      return [ (bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255 ];
+    }
+
+    function rgbToHex([r, g, b]) {
+      return `#${[r, g, b].map(x => x.toString(16).padStart(2, '0')).join('')}`;
+    }
+
+    const fromRGB = hexToRgb(startColor);
+    const toRGB = hexToRgb(endColor);
+
+    function animate(time) {
+      const t = Math.min(1, (time - startTime) / duration);
+      const easedT = t * t * (3 - 2 * t); // smoothstep easing
+
+      const currentColor = rgbToHex([
+        Math.round(fromRGB[0] + (toRGB[0] - fromRGB[0]) * easedT),
+        Math.round(fromRGB[1] + (toRGB[1] - fromRGB[1]) * easedT),
+        Math.round(fromRGB[2] + (toRGB[2] - fromRGB[2]) * easedT)
+      ]);
+      morph.setAttribute('fill', currentColor);
+
+      if (t < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        morph.setAttribute('d', endPath);
+        morph.setAttribute('fill', endColor);
+        i = (i + 1) % paths.length;
+        morphCount++;
+        setTimeout(nextMorph, 100);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  setTimeout(startLoaderSequence, 500);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="setting-section">
+    <!-- Fixed Settings Button -->
+    <div class="theme-toggle-btn ">
+      <button class="btn bg-main bg-main-hover text-white " aria-label="themeBtn" id="themeBtn">
+        <span class="icon-Setting mx-1 icon-md "></span>
+
+      </button>
+      <div class="dropdown-panel g-3" id="themeDropdown">
+        <div class="py-3 px-4 panel-container">
+          <div class="d-flex justify-content-between">
+            <h3 class="head-color"> Setting</h3>
+            <!-- close btn -->
+            <button type="button" aria-label="closeBtn" class="btn btn-outline-secondary btn-sm mb-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <hr>
+
+          <div class="theme py-2">
+            <h3 class="head-color">
+              Theme
+            </h3>
+            <!-- Theme Toggle Options -->
+            <div class="theme-options d-flex gap-1 mt-2">
+              <div class="theme-choice d-flex align-items-center gap-1 selected" id="lightOption">
+                <i class="bi bi-sun"></i>
+                <span>Light</span>
+              </div>
+              <div class="theme-choice d-flex align-items-center gap-1" id="darkOption">
+                <i class="bi bi-moon"></i>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="colors py-2">
+            <h3 class="head-color">
+              Colors
+            </h3>
+            <div class="color-palette d-flex gap-2">
+              <div class="color-circle bg-pink" data-color="--pink"></div>
+              <div class="color-circle bg-orange" data-color="--orange"></div>
+              <div class="color-circle bg-blue" data-color="--blue"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Bootstrap JS -->
+  <script src="asset/vendor/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Flatpickr JS -->
+  <script src="asset/vendor/dist/flatpickr.min.js"></script>
+  <!-- Main JS -->
+  <script src="asset/js/main.js"></script>
+
+  <!-- Marketplace specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize flatpickr for date inputs
+      flatpickr(".datepicker", {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        placeholder: "Select date..."
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Wishlist functionality
+      const wishlistButtons = document.querySelectorAll('.product-actions .btn');
+      wishlistButtons.forEach(button => {
+        if (button.querySelector('.bi-heart')) {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('bi-heart')) {
+              icon.classList.remove('bi-heart');
+              icon.classList.add('bi-heart-fill', 'text-danger');
+            } else {
+              icon.classList.remove('bi-heart-fill', 'text-danger');
+              icon.classList.add('bi-heart');
+            }
+          });
+        }
+      });
+
+      // Filter functionality
+      const applyFilterBtn = document.querySelector('.btn-main');
+      const resetFilterBtn = document.querySelector('.btn-outline-secondary');
+
+      if (applyFilterBtn) {
+        applyFilterBtn.addEventListener('click', function() {
+          // Add filter logic here
+          console.log('Applying filters...');
+        });
+      }
+
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', function() {
+          // Reset all form inputs
+          const form = this.closest('.card-body');
+          const inputs = form.querySelectorAll('input, select');
+          inputs.forEach(input => {
+            if (input.type === 'radio') {
+              input.checked = input.value === 'new';
+            } else {
+              input.value = '';
+            }
+          });
+        });
+      }
+
+      // Sort functionality
+      const sortSelect = document.querySelector('select[style*="width: auto"]');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+          console.log('Sorting by:', this.value);
+          // Add sorting logic here
+        });
+      }
+
+      // Image Modal functionality
+      const imageModal = document.getElementById('imageModal');
+      const productSlider = document.getElementById('productSlider1');
+      const modalSlider = document.getElementById('modalSlider');
+
+      if (imageModal && productSlider && modalSlider) {
+        // Handle modal opening when clicking on images
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+        modalTriggers.forEach(trigger => {
+          trigger.addEventListener('click', function() {
+            // Get current active slide from product slider
+            const activeSlide = productSlider.querySelector('.carousel-item.active');
+            const activeIndex = Array.from(productSlider.querySelectorAll('.carousel-item')).indexOf(activeSlide);
+
+            // Set the same slide as active in modal
+            const modalSlides = modalSlider.querySelectorAll('.carousel-item');
+            const modalIndicators = modalSlider.querySelectorAll('.carousel-indicators button');
+
+            // Remove active class from all modal slides and indicators
+            modalSlides.forEach(slide => slide.classList.remove('active'));
+            modalIndicators.forEach(indicator => indicator.classList.remove('active'));
+
+            // Add active class to corresponding slide and indicator
+            if (modalSlides[activeIndex]) {
+              modalSlides[activeIndex].classList.add('active');
+            }
+            if (modalIndicators[activeIndex]) {
+              modalIndicators[activeIndex].classList.add('active');
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
